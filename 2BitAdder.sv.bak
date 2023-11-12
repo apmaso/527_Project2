@@ -13,11 +13,11 @@
 
 
 
-module 2bit_full_adder (
+module two_bit_adder (
     input logic 	[1:0] 		a, b,  
-    input logic 				Cin, 
+    input logic 			in, 
     output logic 	[1:0] 		sum, 
-    output logic 				Cout);
+    output logic 			Cout);
 
     // Internal carry signal
     logic carry;
@@ -47,7 +47,8 @@ module full_adder (
     input logic 		a, b, Cin,
     output logic 		sum, Cout);
 
-    assign {Cout, sum} = a + b + Cin;
+    assign sum= a ^ b ^ Cin;
+    assign Cout = (a & b) | (a & Cin) | (b & Cin);
 
 endmodule
 

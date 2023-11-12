@@ -1,16 +1,23 @@
-/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv {1 {vlog -work work -vopt -sv -stats=none /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv
+/home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder.sv {1 {vlog -work work -vopt -sv -stats=none /home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder.sv
+QuestaSim-64 vlog 2019.2_1 Compiler 2019.05 May 13 2019
+-- Compiling module four_bit_select_adder
+
+Top level modules:
+	four_bit_select_adder
+
+} {} {}} /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv {1 {vlog -work work -vopt -sv -stats=none /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv
 QuestaSim-64 vlog 2019.2_1 Compiler 2019.05 May 13 2019
 -- Compiling module test_2bit
 
 Top level modules:
 	test_2bit
 
-} {} {}} /home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv {1 {vlog -work work -vopt -sv -stats=none /home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv
+} {} {}} /home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder_TB.sv {1 {vlog -work work -vopt -sv -stats=none /home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder_TB.sv
 QuestaSim-64 vlog 2019.2_1 Compiler 2019.05 May 13 2019
--- Compiling module dataflow_adder
+-- Compiling module four_bit_select_adder_test
 
 Top level modules:
-	dataflow_adder
+	four_bit_select_adder_test
 
 } {} {}} /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv {1 {vlog -work work -vopt -sv -stats=none /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv
 QuestaSim-64 vlog 2019.2_1 Compiler 2019.05 May 13 2019

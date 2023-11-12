@@ -15,8 +15,8 @@ module four_bit_select_adder (
     input logic clk, reset_n,
     input logic [3:0] A, B, 
     input logic Cin,
-    output logic [3:0] output_sum,
-    output logic output_Cout
+    output logic [3:0] sum,
+    output logic Cout
 );
 
     // Input flip-flops
@@ -38,8 +38,6 @@ module four_bit_select_adder (
     // Carry select adder logic
     logic [1:0] sum0, sum1, sum2;
     logic Cout0, Cout1, Cout2;
-    logic [3:0] sum;
-    logic Cout;
 
     // Lower 2 bits
     two_bit_adder lower_adder (
@@ -95,7 +93,7 @@ module four_bit_select_adder (
     end
 
     // Output assignment
-    assign output_sum = sum_reg;
-    assign output_Cout = Cout_reg;
+    assign sum = sum_reg;
+    assign Cout = Cout_reg;
 
 endmodule
