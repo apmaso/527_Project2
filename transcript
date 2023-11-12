@@ -13,16 +13,6 @@
 # //  18 U.S.C. Section 1905.
 # //
 # Loading project 527_Project2
-# Compile of 2BitAdder.sv failed with 1 errors.
-# Compile of 2BitAdder_TB.sv was successful.
-# Compile of 4BitCSelectAdder.sv failed with 2 errors.
-# Compile of 4BitCSelectAdder_TB.sv was successful.
-# 4 compiles, 2 failed with 3 errors.
-# Compile of 2BitAdder.sv was successful.
-# Compile of 2BitAdder_TB.sv was successful.
-# Compile of 4BitCSelectAdder.sv failed with 2 errors.
-# Compile of 4BitCSelectAdder_TB.sv was successful.
-# 4 compiles, 1 failed with 2 errors.
 # Compile of 2BitAdder.sv was successful.
 # Compile of 2BitAdder_TB.sv was successful.
 # Compile of 4BitCSelectAdder.sv was successful.
@@ -30,54 +20,529 @@
 # 4 compiles, 0 failed with no errors.
 vsim work.four_bit_select_adder_test -voptargs=+acc
 # vsim work.four_bit_select_adder_test -voptargs="+acc" 
-# Start time: 13:26:32 on Nov 12,2023
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error (suppressible): /home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder.sv(45): (vopt-2912) Port 'Cin' not found in module 'two_bit_adder' (3rd connection).
-# ** Error (suppressible): /home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder.sv(54): (vopt-2912) Port 'Cin' not found in module 'two_bit_adder' (3rd connection).
-# ** Error (suppressible): /home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder.sv(63): (vopt-2912) Port 'Cin' not found in module 'two_bit_adder' (3rd connection).
-# ** Error (suppressible): /home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder_TB.sv(13): (vopt-2912) Port 'reset' not found in module 'four_bit_select_adder' (2nd connection).
-# Optimization failed
-# Error loading design
-# End time: 13:26:33 on Nov 12,2023, Elapsed time: 0:00:01
-# Errors: 4, Warnings: 0
-# Compile of 2BitAdder.sv was successful.
-# Compile of 2BitAdder_TB.sv was successful.
-# Compile of 4BitCSelectAdder.sv was successful.
-# Compile of 4BitCSelectAdder_TB.sv was successful.
-# 4 compiles, 0 failed with no errors.
-vsim -voptargs=+acc work.four_bit_select_adder_test
-# vsim -voptargs="+acc" work.four_bit_select_adder_test 
-# Start time: 13:28:02 on Nov 12,2023
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error (suppressible): /home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder_TB.sv(13): (vopt-2912) Port 'reset' not found in module 'four_bit_select_adder' (2nd connection).
-# Optimization failed
-# Error loading design
-# End time: 13:28:03 on Nov 12,2023, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# Compile of 2BitAdder.sv was successful.
-# Compile of 2BitAdder_TB.sv was successful.
-# Compile of 4BitCSelectAdder.sv was successful.
-# Compile of 4BitCSelectAdder_TB.sv was successful.
-# 4 compiles, 0 failed with no errors.
-vsim -voptargs=+acc work.four_bit_select_adder_test
-# vsim -voptargs="+acc" work.four_bit_select_adder_test 
-# Start time: 13:30:03 on Nov 12,2023
-# ** Note: (vsim-3812) Design is being optimized...
+# Start time: 13:53:23 on Nov 12,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
 # Loading work.four_bit_select_adder_test(fast)
 # Loading work.four_bit_select_adder(fast)
 # Loading work.two_bit_adder(fast)
 # Loading work.full_adder(fast)
+# Load canceled
 run
-#                    0 ns -- A: 0000, B: 0000, Cin: 0 | Sum: xxxx, Cout: x
-#                    5 ns -- A: 0000, B: 0000, Cin: 0 | Sum: 0000, Cout: 0
-#                   65 ns -- A: 0001, B: 0100, Cin: 1 | Sum: 0000, Cout: 0
-#                   85 ns -- A: 0010, B: 1011, Cin: 0 | Sum: 0000, Cout: 0
-#                   90 ns -- A: 0010, B: 1011, Cin: 0 | Sum: 0110, Cout: 0
+# A: 0000, B: 0000, Cin: 0 | Sum: 0000, Cout: 0
+# ERROR: A: 0000, B: 0001, Cin: 0 | Sum: 0000, Cout: 0
+# ERROR: A: 0000, B: 0010, Cin: 0 | Sum: 0001, Cout: 0
+# ERROR: A: 0000, B: 0011, Cin: 0 | Sum: 0010, Cout: 0
+# ERROR: A: 0000, B: 0100, Cin: 0 | Sum: 0011, Cout: 0
+# ERROR: A: 0000, B: 0101, Cin: 0 | Sum: 0100, Cout: 0
+# ERROR: A: 0000, B: 0110, Cin: 0 | Sum: 0101, Cout: 0
+# ERROR: A: 0000, B: 0111, Cin: 0 | Sum: 0110, Cout: 0
+# ERROR: A: 0000, B: 1000, Cin: 0 | Sum: 0111, Cout: 0
+# ERROR: A: 0000, B: 1001, Cin: 0 | Sum: 1000, Cout: 0
+# ERROR: A: 0000, B: 1010, Cin: 0 | Sum: 1001, Cout: 0
+# ERROR: A: 0000, B: 1011, Cin: 0 | Sum: 1010, Cout: 0
+# ERROR: A: 0000, B: 1100, Cin: 0 | Sum: 1011, Cout: 0
+# ERROR: A: 0000, B: 1101, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 0000, B: 1110, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 0000, B: 1111, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 0001, B: 0000, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 0001, B: 0001, Cin: 0 | Sum: 0001, Cout: 0
+# ERROR: A: 0001, B: 0010, Cin: 0 | Sum: 0010, Cout: 0
+# ERROR: A: 0001, B: 0011, Cin: 0 | Sum: 0011, Cout: 0
+# ERROR: A: 0001, B: 0100, Cin: 0 | Sum: 0100, Cout: 0
+# ERROR: A: 0001, B: 0101, Cin: 0 | Sum: 0101, Cout: 0
+# ERROR: A: 0001, B: 0110, Cin: 0 | Sum: 0110, Cout: 0
+# ERROR: A: 0001, B: 0111, Cin: 0 | Sum: 0111, Cout: 0
+# ERROR: A: 0001, B: 1000, Cin: 0 | Sum: 1000, Cout: 0
+# ERROR: A: 0001, B: 1001, Cin: 0 | Sum: 1001, Cout: 0
+# ERROR: A: 0001, B: 1010, Cin: 0 | Sum: 1010, Cout: 0
+# ERROR: A: 0001, B: 1011, Cin: 0 | Sum: 1011, Cout: 0
+# ERROR: A: 0001, B: 1100, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 0001, B: 1101, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 0001, B: 1110, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 0001, B: 1111, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 0010, B: 0000, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 0010, B: 0001, Cin: 0 | Sum: 0010, Cout: 0
+# ERROR: A: 0010, B: 0010, Cin: 0 | Sum: 0011, Cout: 0
+# ERROR: A: 0010, B: 0011, Cin: 0 | Sum: 0100, Cout: 0
+# ERROR: A: 0010, B: 0100, Cin: 0 | Sum: 0101, Cout: 0
+# ERROR: A: 0010, B: 0101, Cin: 0 | Sum: 0110, Cout: 0
+# ERROR: A: 0010, B: 0110, Cin: 0 | Sum: 0111, Cout: 0
+# ERROR: A: 0010, B: 0111, Cin: 0 | Sum: 1000, Cout: 0
+# ERROR: A: 0010, B: 1000, Cin: 0 | Sum: 1001, Cout: 0
+# ERROR: A: 0010, B: 1001, Cin: 0 | Sum: 1010, Cout: 0
+# ERROR: A: 0010, B: 1010, Cin: 0 | Sum: 1011, Cout: 0
+# ERROR: A: 0010, B: 1011, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 0010, B: 1100, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 0010, B: 1101, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 0010, B: 1110, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 0010, B: 1111, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 0011, B: 0000, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 0011, B: 0001, Cin: 0 | Sum: 0011, Cout: 0
+# ERROR: A: 0011, B: 0010, Cin: 0 | Sum: 0100, Cout: 0
+# ERROR: A: 0011, B: 0011, Cin: 0 | Sum: 0101, Cout: 0
+# ERROR: A: 0011, B: 0100, Cin: 0 | Sum: 0110, Cout: 0
+# ERROR: A: 0011, B: 0101, Cin: 0 | Sum: 0111, Cout: 0
+# ERROR: A: 0011, B: 0110, Cin: 0 | Sum: 1000, Cout: 0
+# ERROR: A: 0011, B: 0111, Cin: 0 | Sum: 1001, Cout: 0
+# ERROR: A: 0011, B: 1000, Cin: 0 | Sum: 1010, Cout: 0
+# ERROR: A: 0011, B: 1001, Cin: 0 | Sum: 1011, Cout: 0
+# ERROR: A: 0011, B: 1010, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 0011, B: 1011, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 0011, B: 1100, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 0011, B: 1101, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 0011, B: 1110, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 0011, B: 1111, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 0100, B: 0000, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 0100, B: 0001, Cin: 0 | Sum: 0100, Cout: 0
+# ERROR: A: 0100, B: 0010, Cin: 0 | Sum: 0101, Cout: 0
+# ERROR: A: 0100, B: 0011, Cin: 0 | Sum: 0110, Cout: 0
+# ERROR: A: 0100, B: 0100, Cin: 0 | Sum: 0111, Cout: 0
+# ERROR: A: 0100, B: 0101, Cin: 0 | Sum: 1000, Cout: 0
+# ERROR: A: 0100, B: 0110, Cin: 0 | Sum: 1001, Cout: 0
+# ERROR: A: 0100, B: 0111, Cin: 0 | Sum: 1010, Cout: 0
+# ERROR: A: 0100, B: 1000, Cin: 0 | Sum: 1011, Cout: 0
+# ERROR: A: 0100, B: 1001, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 0100, B: 1010, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 0100, B: 1011, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 0100, B: 1100, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 0100, B: 1101, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 0100, B: 1110, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 0100, B: 1111, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 0101, B: 0000, Cin: 0 | Sum: 0011, Cout: 1
+# ERROR: A: 0101, B: 0001, Cin: 0 | Sum: 0101, Cout: 0
+# ERROR: A: 0101, B: 0010, Cin: 0 | Sum: 0110, Cout: 0
+# ERROR: A: 0101, B: 0011, Cin: 0 | Sum: 0111, Cout: 0
+# ERROR: A: 0101, B: 0100, Cin: 0 | Sum: 1000, Cout: 0
+# ERROR: A: 0101, B: 0101, Cin: 0 | Sum: 1001, Cout: 0
+# ERROR: A: 0101, B: 0110, Cin: 0 | Sum: 1010, Cout: 0
+# ERROR: A: 0101, B: 0111, Cin: 0 | Sum: 1011, Cout: 0
+# ERROR: A: 0101, B: 1000, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 0101, B: 1001, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 0101, B: 1010, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 0101, B: 1011, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 0101, B: 1100, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 0101, B: 1101, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 0101, B: 1110, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 0101, B: 1111, Cin: 0 | Sum: 0011, Cout: 1
+# ERROR: A: 0110, B: 0000, Cin: 0 | Sum: 0100, Cout: 1
+# ERROR: A: 0110, B: 0001, Cin: 0 | Sum: 0110, Cout: 0
+# ERROR: A: 0110, B: 0010, Cin: 0 | Sum: 0111, Cout: 0
+# ERROR: A: 0110, B: 0011, Cin: 0 | Sum: 1000, Cout: 0
+# ERROR: A: 0110, B: 0100, Cin: 0 | Sum: 1001, Cout: 0
+# ERROR: A: 0110, B: 0101, Cin: 0 | Sum: 1010, Cout: 0
+# ERROR: A: 0110, B: 0110, Cin: 0 | Sum: 1011, Cout: 0
+# ERROR: A: 0110, B: 0111, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 0110, B: 1000, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 0110, B: 1001, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 0110, B: 1010, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 0110, B: 1011, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 0110, B: 1100, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 0110, B: 1101, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 0110, B: 1110, Cin: 0 | Sum: 0011, Cout: 1
+# ERROR: A: 0110, B: 1111, Cin: 0 | Sum: 0100, Cout: 1
+# ERROR: A: 0111, B: 0000, Cin: 0 | Sum: 0101, Cout: 1
+# ERROR: A: 0111, B: 0001, Cin: 0 | Sum: 0111, Cout: 0
+# ERROR: A: 0111, B: 0010, Cin: 0 | Sum: 1000, Cout: 0
+# ERROR: A: 0111, B: 0011, Cin: 0 | Sum: 1001, Cout: 0
+# ERROR: A: 0111, B: 0100, Cin: 0 | Sum: 1010, Cout: 0
+# ERROR: A: 0111, B: 0101, Cin: 0 | Sum: 1011, Cout: 0
+# ERROR: A: 0111, B: 0110, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 0111, B: 0111, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 0111, B: 1000, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 0111, B: 1001, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 0111, B: 1010, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 0111, B: 1011, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 0111, B: 1100, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 0111, B: 1101, Cin: 0 | Sum: 0011, Cout: 1
+# ERROR: A: 0111, B: 1110, Cin: 0 | Sum: 0100, Cout: 1
+# ERROR: A: 0111, B: 1111, Cin: 0 | Sum: 0101, Cout: 1
+# ERROR: A: 1000, B: 0000, Cin: 0 | Sum: 0110, Cout: 1
+# ERROR: A: 1000, B: 0001, Cin: 0 | Sum: 1000, Cout: 0
+# ERROR: A: 1000, B: 0010, Cin: 0 | Sum: 1001, Cout: 0
+# ERROR: A: 1000, B: 0011, Cin: 0 | Sum: 1010, Cout: 0
+# ERROR: A: 1000, B: 0100, Cin: 0 | Sum: 1011, Cout: 0
+# ERROR: A: 1000, B: 0101, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 1000, B: 0110, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 1000, B: 0111, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 1000, B: 1000, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 1000, B: 1001, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 1000, B: 1010, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 1000, B: 1011, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 1000, B: 1100, Cin: 0 | Sum: 0011, Cout: 1
+# ERROR: A: 1000, B: 1101, Cin: 0 | Sum: 0100, Cout: 1
+# ERROR: A: 1000, B: 1110, Cin: 0 | Sum: 0101, Cout: 1
+# ERROR: A: 1000, B: 1111, Cin: 0 | Sum: 0110, Cout: 1
+# ERROR: A: 1001, B: 0000, Cin: 0 | Sum: 0111, Cout: 1
+# ERROR: A: 1001, B: 0001, Cin: 0 | Sum: 1001, Cout: 0
+# ERROR: A: 1001, B: 0010, Cin: 0 | Sum: 1010, Cout: 0
+# ERROR: A: 1001, B: 0011, Cin: 0 | Sum: 1011, Cout: 0
+# ERROR: A: 1001, B: 0100, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 1001, B: 0101, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 1001, B: 0110, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 1001, B: 0111, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 1001, B: 1000, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 1001, B: 1001, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 1001, B: 1010, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 1001, B: 1011, Cin: 0 | Sum: 0011, Cout: 1
+# ERROR: A: 1001, B: 1100, Cin: 0 | Sum: 0100, Cout: 1
+# ERROR: A: 1001, B: 1101, Cin: 0 | Sum: 0101, Cout: 1
+# ERROR: A: 1001, B: 1110, Cin: 0 | Sum: 0110, Cout: 1
+# ERROR: A: 1001, B: 1111, Cin: 0 | Sum: 0111, Cout: 1
+# ERROR: A: 1010, B: 0000, Cin: 0 | Sum: 1000, Cout: 1
+# ERROR: A: 1010, B: 0001, Cin: 0 | Sum: 1010, Cout: 0
+# ERROR: A: 1010, B: 0010, Cin: 0 | Sum: 1011, Cout: 0
+# ERROR: A: 1010, B: 0011, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 1010, B: 0100, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 1010, B: 0101, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 1010, B: 0110, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 1010, B: 0111, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 1010, B: 1000, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 1010, B: 1001, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 1010, B: 1010, Cin: 0 | Sum: 0011, Cout: 1
+# ERROR: A: 1010, B: 1011, Cin: 0 | Sum: 0100, Cout: 1
+# ERROR: A: 1010, B: 1100, Cin: 0 | Sum: 0101, Cout: 1
+# ERROR: A: 1010, B: 1101, Cin: 0 | Sum: 0110, Cout: 1
+# ERROR: A: 1010, B: 1110, Cin: 0 | Sum: 0111, Cout: 1
+# ERROR: A: 1010, B: 1111, Cin: 0 | Sum: 1000, Cout: 1
+# ERROR: A: 1011, B: 0000, Cin: 0 | Sum: 1001, Cout: 1
+# ERROR: A: 1011, B: 0001, Cin: 0 | Sum: 1011, Cout: 0
+# ERROR: A: 1011, B: 0010, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 1011, B: 0011, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 1011, B: 0100, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 1011, B: 0101, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 1011, B: 0110, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 1011, B: 0111, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 1011, B: 1000, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 1011, B: 1001, Cin: 0 | Sum: 0011, Cout: 1
+# ERROR: A: 1011, B: 1010, Cin: 0 | Sum: 0100, Cout: 1
+# ERROR: A: 1011, B: 1011, Cin: 0 | Sum: 0101, Cout: 1
+# ERROR: A: 1011, B: 1100, Cin: 0 | Sum: 0110, Cout: 1
+# ERROR: A: 1011, B: 1101, Cin: 0 | Sum: 0111, Cout: 1
+# ERROR: A: 1011, B: 1110, Cin: 0 | Sum: 1000, Cout: 1
+# ERROR: A: 1011, B: 1111, Cin: 0 | Sum: 1001, Cout: 1
+# ERROR: A: 1100, B: 0000, Cin: 0 | Sum: 1010, Cout: 1
+# ERROR: A: 1100, B: 0001, Cin: 0 | Sum: 1100, Cout: 0
+# ERROR: A: 1100, B: 0010, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 1100, B: 0011, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 1100, B: 0100, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 1100, B: 0101, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 1100, B: 0110, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 1100, B: 0111, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 1100, B: 1000, Cin: 0 | Sum: 0011, Cout: 1
+# ERROR: A: 1100, B: 1001, Cin: 0 | Sum: 0100, Cout: 1
+# ERROR: A: 1100, B: 1010, Cin: 0 | Sum: 0101, Cout: 1
+# ERROR: A: 1100, B: 1011, Cin: 0 | Sum: 0110, Cout: 1
+# ERROR: A: 1100, B: 1100, Cin: 0 | Sum: 0111, Cout: 1
+# ERROR: A: 1100, B: 1101, Cin: 0 | Sum: 1000, Cout: 1
+# ERROR: A: 1100, B: 1110, Cin: 0 | Sum: 1001, Cout: 1
+# ERROR: A: 1100, B: 1111, Cin: 0 | Sum: 1010, Cout: 1
+# ERROR: A: 1101, B: 0000, Cin: 0 | Sum: 1011, Cout: 1
+# ERROR: A: 1101, B: 0001, Cin: 0 | Sum: 1101, Cout: 0
+# ERROR: A: 1101, B: 0010, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 1101, B: 0011, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 1101, B: 0100, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 1101, B: 0101, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 1101, B: 0110, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 1101, B: 0111, Cin: 0 | Sum: 0011, Cout: 1
+# ERROR: A: 1101, B: 1000, Cin: 0 | Sum: 0100, Cout: 1
+# ERROR: A: 1101, B: 1001, Cin: 0 | Sum: 0101, Cout: 1
+# ERROR: A: 1101, B: 1010, Cin: 0 | Sum: 0110, Cout: 1
+# ERROR: A: 1101, B: 1011, Cin: 0 | Sum: 0111, Cout: 1
+# ERROR: A: 1101, B: 1100, Cin: 0 | Sum: 1000, Cout: 1
+# ERROR: A: 1101, B: 1101, Cin: 0 | Sum: 1001, Cout: 1
+# ERROR: A: 1101, B: 1110, Cin: 0 | Sum: 1010, Cout: 1
+# ERROR: A: 1101, B: 1111, Cin: 0 | Sum: 1011, Cout: 1
+# ERROR: A: 1110, B: 0000, Cin: 0 | Sum: 1100, Cout: 1
+# ERROR: A: 1110, B: 0001, Cin: 0 | Sum: 1110, Cout: 0
+# ERROR: A: 1110, B: 0010, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 1110, B: 0011, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 1110, B: 0100, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 1110, B: 0101, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 1110, B: 0110, Cin: 0 | Sum: 0011, Cout: 1
+# ERROR: A: 1110, B: 0111, Cin: 0 | Sum: 0100, Cout: 1
+# ERROR: A: 1110, B: 1000, Cin: 0 | Sum: 0101, Cout: 1
+# ERROR: A: 1110, B: 1001, Cin: 0 | Sum: 0110, Cout: 1
+# ERROR: A: 1110, B: 1010, Cin: 0 | Sum: 0111, Cout: 1
+# ERROR: A: 1110, B: 1011, Cin: 0 | Sum: 1000, Cout: 1
+# ERROR: A: 1110, B: 1100, Cin: 0 | Sum: 1001, Cout: 1
+# ERROR: A: 1110, B: 1101, Cin: 0 | Sum: 1010, Cout: 1
+# ERROR: A: 1110, B: 1110, Cin: 0 | Sum: 1011, Cout: 1
+# ERROR: A: 1110, B: 1111, Cin: 0 | Sum: 1100, Cout: 1
+# ERROR: A: 1111, B: 0000, Cin: 0 | Sum: 1101, Cout: 1
+# ERROR: A: 1111, B: 0001, Cin: 0 | Sum: 1111, Cout: 0
+# ERROR: A: 1111, B: 0010, Cin: 0 | Sum: 0000, Cout: 1
+# ERROR: A: 1111, B: 0011, Cin: 0 | Sum: 0001, Cout: 1
+# ERROR: A: 1111, B: 0100, Cin: 0 | Sum: 0010, Cout: 1
+# ERROR: A: 1111, B: 0101, Cin: 0 | Sum: 0011, Cout: 1
+# ERROR: A: 1111, B: 0110, Cin: 0 | Sum: 0100, Cout: 1
+# ERROR: A: 1111, B: 0111, Cin: 0 | Sum: 0101, Cout: 1
+# ERROR: A: 1111, B: 1000, Cin: 0 | Sum: 0110, Cout: 1
+# ERROR: A: 1111, B: 1001, Cin: 0 | Sum: 0111, Cout: 1
+# ERROR: A: 1111, B: 1010, Cin: 0 | Sum: 1000, Cout: 1
+# ERROR: A: 1111, B: 1011, Cin: 0 | Sum: 1001, Cout: 1
+# ERROR: A: 1111, B: 1100, Cin: 0 | Sum: 1010, Cout: 1
+# ERROR: A: 1111, B: 1101, Cin: 0 | Sum: 1011, Cout: 1
+# ERROR: A: 1111, B: 1110, Cin: 0 | Sum: 1100, Cout: 1
+# ERROR: A: 1111, B: 1111, Cin: 0 | Sum: 1101, Cout: 1
+# ERROR: A: 0000, B: 0000, Cin: 1 | Sum: 1110, Cout: 1
+# ERROR: A: 0000, B: 0001, Cin: 1 | Sum: 0001, Cout: 0
+# ERROR: A: 0000, B: 0010, Cin: 1 | Sum: 0010, Cout: 0
+# ERROR: A: 0000, B: 0011, Cin: 1 | Sum: 0011, Cout: 0
+# ERROR: A: 0000, B: 0100, Cin: 1 | Sum: 0100, Cout: 0
+# ERROR: A: 0000, B: 0101, Cin: 1 | Sum: 0101, Cout: 0
+# ERROR: A: 0000, B: 0110, Cin: 1 | Sum: 0110, Cout: 0
+# ERROR: A: 0000, B: 0111, Cin: 1 | Sum: 0111, Cout: 0
+# ERROR: A: 0000, B: 1000, Cin: 1 | Sum: 1000, Cout: 0
+# ERROR: A: 0000, B: 1001, Cin: 1 | Sum: 1001, Cout: 0
+# ERROR: A: 0000, B: 1010, Cin: 1 | Sum: 1010, Cout: 0
+# ERROR: A: 0000, B: 1011, Cin: 1 | Sum: 1011, Cout: 0
+# ERROR: A: 0000, B: 1100, Cin: 1 | Sum: 1100, Cout: 0
+# ERROR: A: 0000, B: 1101, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 0000, B: 1110, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 0000, B: 1111, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 0001, B: 0000, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 0001, B: 0001, Cin: 1 | Sum: 0010, Cout: 0
+# ERROR: A: 0001, B: 0010, Cin: 1 | Sum: 0011, Cout: 0
+# ERROR: A: 0001, B: 0011, Cin: 1 | Sum: 0100, Cout: 0
+# ERROR: A: 0001, B: 0100, Cin: 1 | Sum: 0101, Cout: 0
+# ERROR: A: 0001, B: 0101, Cin: 1 | Sum: 0110, Cout: 0
+# ERROR: A: 0001, B: 0110, Cin: 1 | Sum: 0111, Cout: 0
+# ERROR: A: 0001, B: 0111, Cin: 1 | Sum: 1000, Cout: 0
+# ERROR: A: 0001, B: 1000, Cin: 1 | Sum: 1001, Cout: 0
+# ERROR: A: 0001, B: 1001, Cin: 1 | Sum: 1010, Cout: 0
+# ERROR: A: 0001, B: 1010, Cin: 1 | Sum: 1011, Cout: 0
+# ERROR: A: 0001, B: 1011, Cin: 1 | Sum: 1100, Cout: 0
+# ERROR: A: 0001, B: 1100, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 0001, B: 1101, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 0001, B: 1110, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 0001, B: 1111, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 0010, B: 0000, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 0010, B: 0001, Cin: 1 | Sum: 0011, Cout: 0
+# ERROR: A: 0010, B: 0010, Cin: 1 | Sum: 0100, Cout: 0
+# ERROR: A: 0010, B: 0011, Cin: 1 | Sum: 0101, Cout: 0
+# ERROR: A: 0010, B: 0100, Cin: 1 | Sum: 0110, Cout: 0
+# ERROR: A: 0010, B: 0101, Cin: 1 | Sum: 0111, Cout: 0
+# ERROR: A: 0010, B: 0110, Cin: 1 | Sum: 1000, Cout: 0
+# ERROR: A: 0010, B: 0111, Cin: 1 | Sum: 1001, Cout: 0
+# ERROR: A: 0010, B: 1000, Cin: 1 | Sum: 1010, Cout: 0
+# ERROR: A: 0010, B: 1001, Cin: 1 | Sum: 1011, Cout: 0
+# ERROR: A: 0010, B: 1010, Cin: 1 | Sum: 1100, Cout: 0
+# ERROR: A: 0010, B: 1011, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 0010, B: 1100, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 0010, B: 1101, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 0010, B: 1110, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 0010, B: 1111, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 0011, B: 0000, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 0011, B: 0001, Cin: 1 | Sum: 0100, Cout: 0
+# ERROR: A: 0011, B: 0010, Cin: 1 | Sum: 0101, Cout: 0
+# ERROR: A: 0011, B: 0011, Cin: 1 | Sum: 0110, Cout: 0
+# ERROR: A: 0011, B: 0100, Cin: 1 | Sum: 0111, Cout: 0
+# ERROR: A: 0011, B: 0101, Cin: 1 | Sum: 1000, Cout: 0
+# ERROR: A: 0011, B: 0110, Cin: 1 | Sum: 1001, Cout: 0
+# ERROR: A: 0011, B: 0111, Cin: 1 | Sum: 1010, Cout: 0
+# ERROR: A: 0011, B: 1000, Cin: 1 | Sum: 1011, Cout: 0
+# ERROR: A: 0011, B: 1001, Cin: 1 | Sum: 1100, Cout: 0
+# ERROR: A: 0011, B: 1010, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 0011, B: 1011, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 0011, B: 1100, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 0011, B: 1101, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 0011, B: 1110, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 0011, B: 1111, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 0100, B: 0000, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 0100, B: 0001, Cin: 1 | Sum: 0101, Cout: 0
+# ERROR: A: 0100, B: 0010, Cin: 1 | Sum: 0110, Cout: 0
+# ERROR: A: 0100, B: 0011, Cin: 1 | Sum: 0111, Cout: 0
+# ERROR: A: 0100, B: 0100, Cin: 1 | Sum: 1000, Cout: 0
+# ERROR: A: 0100, B: 0101, Cin: 1 | Sum: 1001, Cout: 0
+# ERROR: A: 0100, B: 0110, Cin: 1 | Sum: 1010, Cout: 0
+# ERROR: A: 0100, B: 0111, Cin: 1 | Sum: 1011, Cout: 0
+# ERROR: A: 0100, B: 1000, Cin: 1 | Sum: 1100, Cout: 0
+# ERROR: A: 0100, B: 1001, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 0100, B: 1010, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 0100, B: 1011, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 0100, B: 1100, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 0100, B: 1101, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 0100, B: 1110, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 0100, B: 1111, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 0101, B: 0000, Cin: 1 | Sum: 0100, Cout: 1
+# ERROR: A: 0101, B: 0001, Cin: 1 | Sum: 0110, Cout: 0
+# ERROR: A: 0101, B: 0010, Cin: 1 | Sum: 0111, Cout: 0
+# ERROR: A: 0101, B: 0011, Cin: 1 | Sum: 1000, Cout: 0
+# ERROR: A: 0101, B: 0100, Cin: 1 | Sum: 1001, Cout: 0
+# ERROR: A: 0101, B: 0101, Cin: 1 | Sum: 1010, Cout: 0
+# ERROR: A: 0101, B: 0110, Cin: 1 | Sum: 1011, Cout: 0
+# ERROR: A: 0101, B: 0111, Cin: 1 | Sum: 1100, Cout: 0
+# ERROR: A: 0101, B: 1000, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 0101, B: 1001, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 0101, B: 1010, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 0101, B: 1011, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 0101, B: 1100, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 0101, B: 1101, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 0101, B: 1110, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 0101, B: 1111, Cin: 1 | Sum: 0100, Cout: 1
+# ERROR: A: 0110, B: 0000, Cin: 1 | Sum: 0101, Cout: 1
+# ERROR: A: 0110, B: 0001, Cin: 1 | Sum: 0111, Cout: 0
+# ERROR: A: 0110, B: 0010, Cin: 1 | Sum: 1000, Cout: 0
+# ERROR: A: 0110, B: 0011, Cin: 1 | Sum: 1001, Cout: 0
+# ERROR: A: 0110, B: 0100, Cin: 1 | Sum: 1010, Cout: 0
+# ERROR: A: 0110, B: 0101, Cin: 1 | Sum: 1011, Cout: 0
+# ERROR: A: 0110, B: 0110, Cin: 1 | Sum: 1100, Cout: 0
+# ERROR: A: 0110, B: 0111, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 0110, B: 1000, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 0110, B: 1001, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 0110, B: 1010, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 0110, B: 1011, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 0110, B: 1100, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 0110, B: 1101, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 0110, B: 1110, Cin: 1 | Sum: 0100, Cout: 1
+# ERROR: A: 0110, B: 1111, Cin: 1 | Sum: 0101, Cout: 1
+# ERROR: A: 0111, B: 0000, Cin: 1 | Sum: 0110, Cout: 1
+# ERROR: A: 0111, B: 0001, Cin: 1 | Sum: 1000, Cout: 0
+# ERROR: A: 0111, B: 0010, Cin: 1 | Sum: 1001, Cout: 0
+# ERROR: A: 0111, B: 0011, Cin: 1 | Sum: 1010, Cout: 0
+# ERROR: A: 0111, B: 0100, Cin: 1 | Sum: 1011, Cout: 0
+# ERROR: A: 0111, B: 0101, Cin: 1 | Sum: 1100, Cout: 0
+# ERROR: A: 0111, B: 0110, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 0111, B: 0111, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 0111, B: 1000, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 0111, B: 1001, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 0111, B: 1010, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 0111, B: 1011, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 0111, B: 1100, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 0111, B: 1101, Cin: 1 | Sum: 0100, Cout: 1
+# ERROR: A: 0111, B: 1110, Cin: 1 | Sum: 0101, Cout: 1
+# ERROR: A: 0111, B: 1111, Cin: 1 | Sum: 0110, Cout: 1
+# ERROR: A: 1000, B: 0000, Cin: 1 | Sum: 0111, Cout: 1
+# ERROR: A: 1000, B: 0001, Cin: 1 | Sum: 1001, Cout: 0
+# ERROR: A: 1000, B: 0010, Cin: 1 | Sum: 1010, Cout: 0
+# ERROR: A: 1000, B: 0011, Cin: 1 | Sum: 1011, Cout: 0
+# ERROR: A: 1000, B: 0100, Cin: 1 | Sum: 1100, Cout: 0
+# ERROR: A: 1000, B: 0101, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 1000, B: 0110, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 1000, B: 0111, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 1000, B: 1000, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 1000, B: 1001, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 1000, B: 1010, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 1000, B: 1011, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 1000, B: 1100, Cin: 1 | Sum: 0100, Cout: 1
+# ERROR: A: 1000, B: 1101, Cin: 1 | Sum: 0101, Cout: 1
+# ERROR: A: 1000, B: 1110, Cin: 1 | Sum: 0110, Cout: 1
+# ERROR: A: 1000, B: 1111, Cin: 1 | Sum: 0111, Cout: 1
+# ERROR: A: 1001, B: 0000, Cin: 1 | Sum: 1000, Cout: 1
+# ERROR: A: 1001, B: 0001, Cin: 1 | Sum: 1010, Cout: 0
+# ERROR: A: 1001, B: 0010, Cin: 1 | Sum: 1011, Cout: 0
+# ERROR: A: 1001, B: 0011, Cin: 1 | Sum: 1100, Cout: 0
+# ERROR: A: 1001, B: 0100, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 1001, B: 0101, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 1001, B: 0110, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 1001, B: 0111, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 1001, B: 1000, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 1001, B: 1001, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 1001, B: 1010, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 1001, B: 1011, Cin: 1 | Sum: 0100, Cout: 1
+# ERROR: A: 1001, B: 1100, Cin: 1 | Sum: 0101, Cout: 1
+# ERROR: A: 1001, B: 1101, Cin: 1 | Sum: 0110, Cout: 1
+# ERROR: A: 1001, B: 1110, Cin: 1 | Sum: 0111, Cout: 1
+# ERROR: A: 1001, B: 1111, Cin: 1 | Sum: 1000, Cout: 1
+# ERROR: A: 1010, B: 0000, Cin: 1 | Sum: 1001, Cout: 1
+# ERROR: A: 1010, B: 0001, Cin: 1 | Sum: 1011, Cout: 0
+# ERROR: A: 1010, B: 0010, Cin: 1 | Sum: 1100, Cout: 0
+# ERROR: A: 1010, B: 0011, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 1010, B: 0100, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 1010, B: 0101, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 1010, B: 0110, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 1010, B: 0111, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 1010, B: 1000, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 1010, B: 1001, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 1010, B: 1010, Cin: 1 | Sum: 0100, Cout: 1
+# ERROR: A: 1010, B: 1011, Cin: 1 | Sum: 0101, Cout: 1
+# ERROR: A: 1010, B: 1100, Cin: 1 | Sum: 0110, Cout: 1
+# ERROR: A: 1010, B: 1101, Cin: 1 | Sum: 0111, Cout: 1
+# ERROR: A: 1010, B: 1110, Cin: 1 | Sum: 1000, Cout: 1
+# ERROR: A: 1010, B: 1111, Cin: 1 | Sum: 1001, Cout: 1
+# ERROR: A: 1011, B: 0000, Cin: 1 | Sum: 1010, Cout: 1
+# ERROR: A: 1011, B: 0001, Cin: 1 | Sum: 1100, Cout: 0
+# ERROR: A: 1011, B: 0010, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 1011, B: 0011, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 1011, B: 0100, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 1011, B: 0101, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 1011, B: 0110, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 1011, B: 0111, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 1011, B: 1000, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 1011, B: 1001, Cin: 1 | Sum: 0100, Cout: 1
+# ERROR: A: 1011, B: 1010, Cin: 1 | Sum: 0101, Cout: 1
+# ERROR: A: 1011, B: 1011, Cin: 1 | Sum: 0110, Cout: 1
+# ERROR: A: 1011, B: 1100, Cin: 1 | Sum: 0111, Cout: 1
+# ERROR: A: 1011, B: 1101, Cin: 1 | Sum: 1000, Cout: 1
+# ERROR: A: 1011, B: 1110, Cin: 1 | Sum: 1001, Cout: 1
+# ERROR: A: 1011, B: 1111, Cin: 1 | Sum: 1010, Cout: 1
+# ERROR: A: 1100, B: 0000, Cin: 1 | Sum: 1011, Cout: 1
+# ERROR: A: 1100, B: 0001, Cin: 1 | Sum: 1101, Cout: 0
+# ERROR: A: 1100, B: 0010, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 1100, B: 0011, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 1100, B: 0100, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 1100, B: 0101, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 1100, B: 0110, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 1100, B: 0111, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 1100, B: 1000, Cin: 1 | Sum: 0100, Cout: 1
+# ERROR: A: 1100, B: 1001, Cin: 1 | Sum: 0101, Cout: 1
+# ERROR: A: 1100, B: 1010, Cin: 1 | Sum: 0110, Cout: 1
+# ERROR: A: 1100, B: 1011, Cin: 1 | Sum: 0111, Cout: 1
+# ERROR: A: 1100, B: 1100, Cin: 1 | Sum: 1000, Cout: 1
+# ERROR: A: 1100, B: 1101, Cin: 1 | Sum: 1001, Cout: 1
+# ERROR: A: 1100, B: 1110, Cin: 1 | Sum: 1010, Cout: 1
+# ERROR: A: 1100, B: 1111, Cin: 1 | Sum: 1011, Cout: 1
+# ERROR: A: 1101, B: 0000, Cin: 1 | Sum: 1100, Cout: 1
+# ERROR: A: 1101, B: 0001, Cin: 1 | Sum: 1110, Cout: 0
+# ERROR: A: 1101, B: 0010, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 1101, B: 0011, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 1101, B: 0100, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 1101, B: 0101, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 1101, B: 0110, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 1101, B: 0111, Cin: 1 | Sum: 0100, Cout: 1
+# ERROR: A: 1101, B: 1000, Cin: 1 | Sum: 0101, Cout: 1
+# ERROR: A: 1101, B: 1001, Cin: 1 | Sum: 0110, Cout: 1
+# ERROR: A: 1101, B: 1010, Cin: 1 | Sum: 0111, Cout: 1
+# ERROR: A: 1101, B: 1011, Cin: 1 | Sum: 1000, Cout: 1
+# ERROR: A: 1101, B: 1100, Cin: 1 | Sum: 1001, Cout: 1
+# ERROR: A: 1101, B: 1101, Cin: 1 | Sum: 1010, Cout: 1
+# ERROR: A: 1101, B: 1110, Cin: 1 | Sum: 1011, Cout: 1
+# ERROR: A: 1101, B: 1111, Cin: 1 | Sum: 1100, Cout: 1
+# ERROR: A: 1110, B: 0000, Cin: 1 | Sum: 1101, Cout: 1
+# ERROR: A: 1110, B: 0001, Cin: 1 | Sum: 1111, Cout: 0
+# ERROR: A: 1110, B: 0010, Cin: 1 | Sum: 0000, Cout: 1
+# ERROR: A: 1110, B: 0011, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 1110, B: 0100, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 1110, B: 0101, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 1110, B: 0110, Cin: 1 | Sum: 0100, Cout: 1
+# ERROR: A: 1110, B: 0111, Cin: 1 | Sum: 0101, Cout: 1
+# ERROR: A: 1110, B: 1000, Cin: 1 | Sum: 0110, Cout: 1
+# ERROR: A: 1110, B: 1001, Cin: 1 | Sum: 0111, Cout: 1
+# ERROR: A: 1110, B: 1010, Cin: 1 | Sum: 1000, Cout: 1
+# ERROR: A: 1110, B: 1011, Cin: 1 | Sum: 1001, Cout: 1
+# ERROR: A: 1110, B: 1100, Cin: 1 | Sum: 1010, Cout: 1
+# ERROR: A: 1110, B: 1101, Cin: 1 | Sum: 1011, Cout: 1
+# ERROR: A: 1110, B: 1110, Cin: 1 | Sum: 1100, Cout: 1
+# ERROR: A: 1110, B: 1111, Cin: 1 | Sum: 1101, Cout: 1
+# ERROR: A: 1111, B: 0000, Cin: 1 | Sum: 1110, Cout: 1
+# ERROR: A: 1111, B: 0001, Cin: 1 | Sum: 0000, Cout: 1
 run
-#                  105 ns -- A: 0011, B: 1111, Cin: 1 | Sum: 0110, Cout: 0
-#                  110 ns -- A: 0011, B: 1111, Cin: 1 | Sum: 1101, Cout: 0
-# ** Note: $finish    : /home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder_TB.sv(49)
-#    Time: 125 ns  Iteration: 0  Instance: /four_bit_select_adder_test
-# End time: 13:30:29 on Nov 12,2023, Elapsed time: 0:00:26
+# ERROR: A: 1111, B: 0010, Cin: 1 | Sum: 0001, Cout: 1
+# ERROR: A: 1111, B: 0011, Cin: 1 | Sum: 0010, Cout: 1
+# ERROR: A: 1111, B: 0100, Cin: 1 | Sum: 0011, Cout: 1
+# ERROR: A: 1111, B: 0101, Cin: 1 | Sum: 0100, Cout: 1
+# ERROR: A: 1111, B: 0110, Cin: 1 | Sum: 0101, Cout: 1
+# ERROR: A: 1111, B: 0111, Cin: 1 | Sum: 0110, Cout: 1
+# ERROR: A: 1111, B: 1000, Cin: 1 | Sum: 0111, Cout: 1
+# ERROR: A: 1111, B: 1001, Cin: 1 | Sum: 1000, Cout: 1
+# ERROR: A: 1111, B: 1010, Cin: 1 | Sum: 1001, Cout: 1
+# ERROR: A: 1111, B: 1011, Cin: 1 | Sum: 1010, Cout: 1
+# ERROR: A: 1111, B: 1100, Cin: 1 | Sum: 1011, Cout: 1
+# ERROR: A: 1111, B: 1101, Cin: 1 | Sum: 1100, Cout: 1
+# ERROR: A: 1111, B: 1110, Cin: 1 | Sum: 1101, Cout: 1
+# ERROR: A: 1111, B: 1111, Cin: 1 | Sum: 1110, Cout: 1
+# ** Note: $finish    : /home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder_TB.sv(62)
+#    Time: 10265 ns  Iteration: 0  Instance: /four_bit_select_adder_test
+# End time: 13:54:26 on Nov 12,2023, Elapsed time: 0:01:03
 # Errors: 0, Warnings: 0

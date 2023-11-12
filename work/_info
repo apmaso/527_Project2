@@ -20,10 +20,10 @@ n@_opt
 Z3 OL;O;2019.2_1;69
 R0
 T_opt1
-!s110 1699824604
-VE:oL>RLA>X=cc[9bAHkZ30
+!s110 1699826003
+VkSQFfBI4JaV^EX7?YN5Kb3
 04 26 4 work four_bit_select_adder_test fast 0
-=1-525400b63b2a-655143db-9cf0e-34b8
+=1-525400b63b2a-65514953-7fabd-339c
 R1
 R2
 n@_opt1
@@ -37,12 +37,12 @@ Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
 Id2MaaLU=i5aNZNYhiAZ@X3
 Z5 VDg1SIo80bB@j0V0VzS_@n1
 S1
-Z6 d/home/amaso/common/Documents/ECE527/527_Project2
+d/home/amaso/common/Documents/ECE527/527_Project2
 w1699307019
 8/home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv
 F/home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv
-Z7 L0 16
-Z8 OL;L;2019.2_1;69
+Z6 L0 16
+Z7 OL;L;2019.2_1;69
 r1
 !s85 0
 31
@@ -50,95 +50,95 @@ r1
 !s107 /home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv|
 !i113 0
-Z9 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 vfour_bit_select_adder
 R4
-Z10 !s110 1699824588
+Z9 !s110 1699825986
 !i10b 1
 !s100 MkokfNL^``oh?Ml>8VLIS0
 !s11b cm927:`d1=68N2N[EoC_[1
 Io`h8cAfihSFCzX:Ez0<M@2
 R5
 S1
-R6
+Z10 d/u/amaso/Documents/ECE527/527_Project2
 w1699824327
 8/home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder.sv
 F/home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder.sv
 Z11 L0 14
-R8
+R7
 r1
 !s85 0
 31
-Z12 !s108 1699824588.000000
+Z12 !s108 1699825985.000000
 !s107 /home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder.sv|
 !i113 0
-R9
+R8
 R2
 vfour_bit_select_adder_test
 R4
-R10
+R9
 !i10b 1
-!s100 XdYY0@EChCfb=ARjmh_C21
-!s11b jP=FiY[oEWMb?X<ZY3CO_3
-I0l60E?4V0l9?3N@a7coeE1
+!s100 1QGVX`gf=Y?o4Ye?CfZeG0
+!s11b oM_Y7AE5oRIjb7m[Ik`X[3
+II2jCzF4;VlOk^aIa:o`RO0
 R5
 S1
-R6
-w1699824585
+R10
+w1699825967
 8/home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder_TB.sv
 F/home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder_TB.sv
 L0 3
-R8
+R7
 r1
 !s85 0
 31
-R12
+!s108 1699825986.000000
 !s107 /home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder_TB.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/amaso/common/Documents/ECE527/527_Project2/4BitCSelectAdder_TB.sv|
 !i113 0
-R9
+R8
 R2
 vfull_adder
 R4
-R10
+Z13 !s110 1699825985
 !i10b 1
 !s100 e3`B1^k9c=n:bQ>4U[UzM3
 !s11b UQIn@CTh2Zz[h4j7=Uoo?2
 I_zm7_Bm42_HE0DAhhHgJh2
 R5
 S1
-R6
-Z13 w1699824460
-Z14 8/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv
-Z15 F/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv
+R10
+Z14 w1699824460
+Z15 8/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv
+Z16 F/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv
 L0 46
-R8
+R7
 r1
 !s85 0
 31
 R12
-Z16 !s107 /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv|
-Z17 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv|
+Z17 !s107 /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv|
+Z18 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv|
 !i113 0
-R9
+R8
 R2
 vtest_2bit
 R4
-R10
+R13
 !i10b 1
 !s100 _Hc41n;NDog^U6S?:<ikL1
 !s11b fL^H]GJ`^Q0<7YSF_:@k91
 I52@;mZZn<>0ieI;j@j:P71
 R5
 S1
-R6
+R10
 w1699770263
 8/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv
 F/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv
 R11
-R8
+R7
 r1
 !s85 0
 31
@@ -146,29 +146,29 @@ R12
 !s107 /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv|
 !i113 0
-R9
+R8
 R2
 vtwo_bit_adder
 R4
-R10
+R13
 !i10b 1
 !s100 aUo7o4OX2n^nD@bC;25`13
 !s11b NN4jH=Tn=n9WG]Olz;S3l1
 IGVdbZXeg9KX]C@9Ph9KeJ2
 R5
 S1
-R6
-R13
+R10
 R14
 R15
+R16
+R6
 R7
-R8
 r1
 !s85 0
 31
 R12
-R16
 R17
+R18
 !i113 0
-R9
+R8
 R2
