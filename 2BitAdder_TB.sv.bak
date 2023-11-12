@@ -21,9 +21,9 @@ module test_2bit();
 	two_bit_adder inst(
             .a(a),
             .b(b),  
-            .Cin(c_in), 
-            .sum(s), 
-            .Cout(c_out));
+            .Cin(Cin), 
+            .sum(sum), 
+            .Cout(Cout));
 
 	// For Cin of 0, cycle through all 2 bit values for a & b 
 	initial

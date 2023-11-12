@@ -1,0 +1,116 @@
+m255
+K4
+z2
+!s11f vlog 2019.2_1 2019.05, May 13 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/amaso/common/Documents/ECE171/vsim
+T_opt
+!s110 1699763980
+VW2^Zo5JAWjQSLhkV_>G9_0
+04 9 4 work test_2bit fast 0
+=1-525400b63b2a-6550570c-88341-7a26
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2019.2_1;69
+vdataflow_adder
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z2 !s110 1699763966
+!i10b 1
+!s100 jWlL8ZIM4d5Zh6eP:n]Xd1
+!s11b zLjiTf2?1l05:eL3f9>I62
+Id2MaaLU=i5aNZNYhiAZ@X3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 d/home/amaso/common/Documents/ECE527/527_Project2
+w1699307019
+8/home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv
+F/home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv
+Z5 L0 16
+Z6 OL;L;2019.2_1;69
+r1
+!s85 0
+31
+Z7 !s108 1699763966.000000
+!s107 /home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv|
+!i113 0
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vfull_adder
+R1
+R2
+!i10b 1
+!s100 2j_d5cF6>BO5Kmhdn@fMT3
+!s11b o0=g]2h]8<mMz1F50hocY0
+I@nI<H<c8?]EXT19`ceWOd3
+R3
+S1
+R4
+Z9 w1699762728
+Z10 8/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv
+Z11 F/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv
+L0 46
+R6
+r1
+!s85 0
+31
+R7
+Z12 !s107 /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv|
+!i113 0
+R8
+R0
+vtest_2bit
+R1
+R2
+!i10b 1
+!s100 ]:O4PGXCmc0Mc^CmnnlPo3
+!s11b 0eNN@bT6ZaQd=TXmmD;eM1
+I;^@`j_>kQ?6fIG9Zl5gKD3
+R3
+S1
+R4
+w1699763940
+8/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv
+F/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv
+L0 14
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv|
+!i113 0
+R8
+R0
+vtwo_bit_adder
+R1
+R2
+!i10b 1
+!s100 aUo7o4OX2n^nD@bC;25`13
+!s11b NN4jH=Tn=n9WG]Olz;S3l1
+IGVdbZXeg9KX]C@9Ph9KeJ2
+R3
+S1
+R4
+R9
+R10
+R11
+R5
+R6
+r1
+!s85 0
+31
+R7
+R12
+R13
+!i113 0
+R8
+R0
