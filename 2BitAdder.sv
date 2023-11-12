@@ -47,7 +47,8 @@ module full_adder (
     input logic 		a, b, Cin,
     output logic 		sum, Cout);
 
-    assign {Cout, sum} = a + b + Cin;
+    assign sum= a ^ b ^ Cin;
+    assign Cout = (a & b) | (a & Cin) | (b & Cin);
 
 endmodule
 
