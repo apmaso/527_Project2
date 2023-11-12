@@ -46,8 +46,8 @@ module test_2bit();
 			end
 		end
 	        c_in = 1;
-		for(int k=0; k<8; k++) begin
-			for(int l=0; l<8; l++) begin
+		for(int k=0; k<4; k++) begin
+			for(int l=0; l<4; l++) begin
 				a = k;
 				b = l;
 				#1;
