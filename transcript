@@ -19,73 +19,7 @@
 # 3 compiles, 0 failed with no errors.
 vsim work.test_2bit -voptargs=+acc
 # vsim work.test_2bit -voptargs="+acc" 
-# Start time: 20:53:01 on Nov 11,2023
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.test_2bit(fast)
-# Loading work.two_bit_adder(fast)
-# Loading work.full_adder(fast)
-run
-# PASS |   a = 00, b= 00, c_in = 0  |->  Adder:  s = 00, c_out = 0
-# PASS |   a = 00, b= 01, c_in = 0  |->  Adder:  s = 01, c_out = 0
-# PASS |   a = 00, b= 10, c_in = 0  |->  Adder:  s = 10, c_out = 0
-# PASS |   a = 00, b= 11, c_in = 0  |->  Adder:  s = 11, c_out = 0
-# PASS |   a = 01, b= 00, c_in = 0  |->  Adder:  s = 01, c_out = 0
-# PASS |   a = 01, b= 01, c_in = 0  |->  Adder:  s = 10, c_out = 0
-# PASS |   a = 01, b= 10, c_in = 0  |->  Adder:  s = 11, c_out = 0
-# PASS |   a = 01, b= 11, c_in = 0  |->  Adder:  s = 00, c_out = 1
-# PASS |   a = 10, b= 00, c_in = 0  |->  Adder:  s = 10, c_out = 0
-# PASS |   a = 10, b= 01, c_in = 0  |->  Adder:  s = 11, c_out = 0
-# PASS |   a = 10, b= 10, c_in = 0  |->  Adder:  s = 00, c_out = 1
-# PASS |   a = 10, b= 11, c_in = 0  |->  Adder:  s = 01, c_out = 1
-# PASS |   a = 11, b= 00, c_in = 0  |->  Adder:  s = 11, c_out = 0
-# PASS |   a = 11, b= 01, c_in = 0  |->  Adder:  s = 00, c_out = 1
-# PASS |   a = 11, b= 10, c_in = 0  |->  Adder:  s = 01, c_out = 1
-# PASS |   a = 11, b= 11, c_in = 0  |->  Adder:  s = 10, c_out = 1
-# a = 00, b= 00, c_in = 1   |->   Adder:  s = 01, c_out = 0
-# a = 00, b= 01, c_in = 1   |->   Adder:  s = 10, c_out = 0
-# a = 00, b= 10, c_in = 1   |->   Adder:  s = 11, c_out = 0
-# a = 00, b= 11, c_in = 1   |->   Adder:  s = 00, c_out = 1
-# a = 00, b= 00, c_in = 1   |->   Adder:  s = 01, c_out = 0
-# a = 00, b= 01, c_in = 1   |->   Adder:  s = 10, c_out = 0
-# a = 00, b= 10, c_in = 1   |->   Adder:  s = 11, c_out = 0
-# a = 00, b= 11, c_in = 1   |->   Adder:  s = 00, c_out = 1
-# a = 01, b= 00, c_in = 1   |->   Adder:  s = 10, c_out = 0
-# a = 01, b= 01, c_in = 1   |->   Adder:  s = 11, c_out = 0
-# a = 01, b= 10, c_in = 1   |->   Adder:  s = 00, c_out = 1
-# a = 01, b= 11, c_in = 1   |->   Adder:  s = 01, c_out = 1
-# a = 01, b= 00, c_in = 1   |->   Adder:  s = 10, c_out = 0
-# a = 01, b= 01, c_in = 1   |->   Adder:  s = 11, c_out = 0
-# a = 01, b= 10, c_in = 1   |->   Adder:  s = 00, c_out = 1
-# a = 01, b= 11, c_in = 1   |->   Adder:  s = 01, c_out = 1
-# a = 10, b= 00, c_in = 1   |->   Adder:  s = 11, c_out = 0
-# a = 10, b= 01, c_in = 1   |->   Adder:  s = 00, c_out = 1
-# a = 10, b= 10, c_in = 1   |->   Adder:  s = 01, c_out = 1
-# a = 10, b= 11, c_in = 1   |->   Adder:  s = 10, c_out = 1
-# a = 10, b= 00, c_in = 1   |->   Adder:  s = 11, c_out = 0
-# a = 10, b= 01, c_in = 1   |->   Adder:  s = 00, c_out = 1
-# a = 10, b= 10, c_in = 1   |->   Adder:  s = 01, c_out = 1
-# a = 10, b= 11, c_in = 1   |->   Adder:  s = 10, c_out = 1
-# a = 11, b= 00, c_in = 1   |->   Adder:  s = 00, c_out = 1
-# a = 11, b= 01, c_in = 1   |->   Adder:  s = 01, c_out = 1
-# a = 11, b= 10, c_in = 1   |->   Adder:  s = 10, c_out = 1
-# a = 11, b= 11, c_in = 1   |->   Adder:  s = 11, c_out = 1
-# a = 11, b= 00, c_in = 1   |->   Adder:  s = 00, c_out = 1
-# a = 11, b= 01, c_in = 1   |->   Adder:  s = 01, c_out = 1
-# a = 11, b= 10, c_in = 1   |->   Adder:  s = 10, c_out = 1
-# a = 11, b= 11, c_in = 1   |->   Adder:  s = 11, c_out = 1
-# a = 00, b= 00, c_in = 1   |->   Adder:  s = 01, c_out = 0
-# a = 00, b= 01, c_in = 1   |->   Adder:  s = 10, c_out = 0
-quit -sim
-# End time: 20:53:45 on Nov 11,2023, Elapsed time: 0:00:44
-# Errors: 14, Warnings: 0
-# Compile of 1BitAdder.sv was successful.
-# Compile of 2BitAdder.sv was successful.
-# Compile of 2BitAdder_TB.sv was successful.
-# 3 compiles, 0 failed with no errors.
-vsim -voptargs=+acc work.test_2bit
-# vsim -voptargs="+acc" work.test_2bit 
-# Start time: 20:55:04 on Nov 11,2023
+# Start time: 22:26:39 on Nov 11,2023
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
 # Loading work.test_2bit(fast)
@@ -112,35 +46,18 @@ run
 # PASS |   a = 00, b= 01, c_in = 1  |->  Adder:  s = 10, c_out = 0
 # PASS |   a = 00, b= 10, c_in = 1  |->  Adder:  s = 11, c_out = 0
 # PASS |   a = 00, b= 11, c_in = 1  |->  Adder:  s = 00, c_out = 1
-# FAIL |   a = 00, b= 00, c_in = 1  |->  Adder:  s = 01, c_out = 0
-# FAIL |   a = 00, b= 01, c_in = 1  |->  Adder:  s = 10, c_out = 0
-# FAIL |   a = 00, b= 10, c_in = 1  |->  Adder:  s = 11, c_out = 0
-# FAIL |   a = 00, b= 11, c_in = 1  |->  Adder:  s = 00, c_out = 1
 # PASS |   a = 01, b= 00, c_in = 1  |->  Adder:  s = 10, c_out = 0
 # PASS |   a = 01, b= 01, c_in = 1  |->  Adder:  s = 11, c_out = 0
 # PASS |   a = 01, b= 10, c_in = 1  |->  Adder:  s = 00, c_out = 1
 # PASS |   a = 01, b= 11, c_in = 1  |->  Adder:  s = 01, c_out = 1
-# FAIL |   a = 01, b= 00, c_in = 1  |->  Adder:  s = 10, c_out = 0
-# FAIL |   a = 01, b= 01, c_in = 1  |->  Adder:  s = 11, c_out = 0
-# FAIL |   a = 01, b= 10, c_in = 1  |->  Adder:  s = 00, c_out = 1
-# FAIL |   a = 01, b= 11, c_in = 1  |->  Adder:  s = 01, c_out = 1
 # PASS |   a = 10, b= 00, c_in = 1  |->  Adder:  s = 11, c_out = 0
 # PASS |   a = 10, b= 01, c_in = 1  |->  Adder:  s = 00, c_out = 1
 # PASS |   a = 10, b= 10, c_in = 1  |->  Adder:  s = 01, c_out = 1
 # PASS |   a = 10, b= 11, c_in = 1  |->  Adder:  s = 10, c_out = 1
-# FAIL |   a = 10, b= 00, c_in = 1  |->  Adder:  s = 11, c_out = 0
-# FAIL |   a = 10, b= 01, c_in = 1  |->  Adder:  s = 00, c_out = 1
-# FAIL |   a = 10, b= 10, c_in = 1  |->  Adder:  s = 01, c_out = 1
-# FAIL |   a = 10, b= 11, c_in = 1  |->  Adder:  s = 10, c_out = 1
 # PASS |   a = 11, b= 00, c_in = 1  |->  Adder:  s = 00, c_out = 1
 # PASS |   a = 11, b= 01, c_in = 1  |->  Adder:  s = 01, c_out = 1
 # PASS |   a = 11, b= 10, c_in = 1  |->  Adder:  s = 10, c_out = 1
 # PASS |   a = 11, b= 11, c_in = 1  |->  Adder:  s = 11, c_out = 1
-# FAIL |   a = 11, b= 00, c_in = 1  |->  Adder:  s = 00, c_out = 1
-# FAIL |   a = 11, b= 01, c_in = 1  |->  Adder:  s = 01, c_out = 1
-# FAIL |   a = 11, b= 10, c_in = 1  |->  Adder:  s = 10, c_out = 1
-# FAIL |   a = 11, b= 11, c_in = 1  |->  Adder:  s = 11, c_out = 1
-# FAIL |   a = 00, b= 00, c_in = 1  |->  Adder:  s = 01, c_out = 0
-# FAIL |   a = 00, b= 01, c_in = 1  |->  Adder:  s = 10, c_out = 0
-# End time: 20:55:52 on Nov 11,2023, Elapsed time: 0:00:48
-# Errors: 9, Warnings: 0
+run
+# End time: 22:28:06 on Nov 11,2023, Elapsed time: 0:01:27
+# Errors: 0, Warnings: 0

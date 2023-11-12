@@ -10,17 +10,17 @@ z2
 cModel Technology
 d/home/amaso/common/Documents/ECE171/vsim
 T_opt
-!s110 1699764905
-V>o1offC3=8a2JF74Pn=OZ2
+!s110 1699770400
+VR3>=^k0E>n_Yci5JWbDAQ2
 04 9 4 work test_2bit fast 0
-=1-525400b63b2a-65505aa8-ccd3b-49eb
+=1-525400b63b2a-6550701f-d45df-2c8d
 o-quiet -auto_acc_if_foreign -work work +acc
 Z0 tCvgOpt 0
 n@_opt
 OL;O;2019.2_1;69
 vdataflow_adder
 Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z2 !s110 1699764889
+Z2 !s110 1699770371
 !i10b 1
 !s100 jWlL8ZIM4d5Zh6eP:n]Xd1
 !s11b zLjiTf2?1l05:eL3f9>I62
@@ -36,7 +36,7 @@ Z6 OL;L;2019.2_1;69
 r1
 !s85 0
 31
-Z7 !s108 1699764889.000000
+Z7 !s108 1699770371.000000
 !s107 /home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv|
 !i113 0
@@ -46,13 +46,13 @@ vfull_adder
 R1
 R2
 !i10b 1
-!s100 2j_d5cF6>BO5Kmhdn@fMT3
-!s11b o0=g]2h]8<mMz1F50hocY0
-I@nI<H<c8?]EXT19`ceWOd3
+!s100 e3`B1^k9c=n:bQ>4U[UzM3
+!s11b UQIn@CTh2Zz[h4j7=Uoo?2
+I_zm7_Bm42_HE0DAhhHgJh2
 R3
 S1
 R4
-Z9 w1699762728
+Z9 w1699770263
 Z10 8/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv
 Z11 F/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv
 L0 46
@@ -68,15 +68,15 @@ R8
 R0
 vtest_2bit
 R1
-R2
+!s110 1699770372
 !i10b 1
-!s100 14ZmQki^lPXY3PB^UMYN_1
-!s11b HE7P^enI75Pc2bz552Sjo1
-I>:BJVVRgMk7=ZjRS]T^S=2
+!s100 _Hc41n;NDog^U6S?:<ikL1
+!s11b fL^H]GJ`^Q0<7YSF_:@k91
+I52@;mZZn<>0ieI;j@j:P71
 R3
 S1
 R4
-w1699764886
+R9
 8/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv
 F/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv
 L0 14
@@ -84,7 +84,7 @@ R6
 r1
 !s85 0
 31
-R7
+!s108 1699770372.000000
 !s107 /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv|
 !i113 0
