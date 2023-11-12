@@ -16,6 +16,7 @@ module test_2bit();
 	// Internal Signals 
 	logic 			[1:0]		a, b, s;
 	logic				        c_in, c_out;
+	logic			[2:0]		TB_sum;
 
 	// Instantiate our module, connect our TB signals to the inputs/outputs of the adder
 	two_bit_adder inst(
@@ -33,8 +34,14 @@ module test_2bit();
 			for(int j=0; j<4; j++) begin
 				a = i;
 				b = j;
+				TB_sum = i + j;
 				#1;
-				$display("a = %b, b= %b, c_in = %b   |->   Adder:  s = %b, c_out = %b", a, b, c_in, s, c_out);
+				if({c_out,s}==TB_sum) begin
+					$display("PASS |   a = %b, b= %b, c_in = %b  |->  Adder:  s = %b, c_out = %b", a, b, c_in, s, c_out);
+				end
+				else begin
+					$display("FAIL |   a = %b, b= %b, c_in = %b  |->  Adder:  s = %b, c_out = %b", a, b, c_in, s, c_out);
+				end
 				#1;
 			end
 		end
@@ -43,8 +50,14 @@ module test_2bit();
 			for(int l=0; l<8; l++) begin
 				a = k;
 				b = l;
+				TB_sum = k + l + 1;
 				#1;
-				$display("a = %b, b= %b, c_in = %b   |->   Adder:  s = %b, c_out = %b", a, b, c_in, s, c_out);
+				if({c_out,s}==TB_sum) begin
+					$display("PASS |   a = %b, b= %b, c_in = %b  |->  Adder:  s = %b, c_out = %b", a, b, c_in, s, c_out);
+				end
+				else begin
+					$display("FAIL |   a = %b, b= %b, c_in = %b  |->  Adder:  s = %b, c_out = %b", a, b, c_in, s, c_out);
+				end
 				#1;
 			end
 

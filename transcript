@@ -12,218 +12,36 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# Loading project 527Project2
-# reading /pkgs/mentor/questa/2019.2_1/questasim/linux_x86_64/../modelsim.ini
 # Loading project 527_Project2
-# Compile of 1BitAdder.sv was successful.
-# Compile of 2BitAdder.sv failed with 1 errors.
-# Compile of 2BitAdder_TB.sv failed with 1 errors.
-# 3 compiles, 2 failed with 2 errors.
-# Error opening /home/amaso/common/Documents/ECE527/527_Project2/(vlog-13069) /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv
-# Path name '/home/amaso/common/Documents/ECE527/527_Project2/(vlog-13069) /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv' doesn't exist.
-# Compile of 1BitAdder.sv was successful.
-# Compile of 2BitAdder.sv was successful.
-# Compile of 2BitAdder_TB.sv failed with 1 errors.
-# 3 compiles, 1 failed with 1 error.
-# Compile of 1BitAdder.sv was successful.
-# Compile of 2BitAdder.sv was successful.
-# Compile of 2BitAdder_TB.sv failed with 9 errors.
-# 3 compiles, 1 failed with 9 errors.
 # Compile of 1BitAdder.sv was successful.
 # Compile of 2BitAdder.sv was successful.
 # Compile of 2BitAdder_TB.sv was successful.
 # 3 compiles, 0 failed with no errors.
 vsim work.test_2bit -voptargs=+acc
 # vsim work.test_2bit -voptargs="+acc" 
-# Start time: 20:22:00 on Nov 11,2023
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading sv_std.std
-# Loading work.test_2bit(fast)
-# Loading work.two_bit_adder(fast)
-# Loading work.full_adder(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sum'. The port definition is at: /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv(19).
-#    Time: 0 ns  Iteration: 0  Instance: /test_2bit/inst File: /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv Line: 21
-run
-# a = 00, b= 00, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 01, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 10, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 11, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 00, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 01, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 10, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 11, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 00, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 01, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 10, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 11, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 00, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 01, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 10, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 11, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.test_2bit(fast)
-# Loading work.two_bit_adder(fast)
-# Loading work.full_adder(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'sum'. The port definition is at: /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder.sv(19).
-#    Time: 0 ns  Iteration: 0  Instance: /test_2bit/inst File: /home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv Line: 21
-run
-# a = 00, b= 00, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 01, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 10, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 11, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 00, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 01, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 10, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 11, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 00, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 01, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 10, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 11, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 00, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 01, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 10, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 11, c_in = 0   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-add wave -r /*
-run
-# a = 00, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 00, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 01, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 10, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 00, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 01, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 10, c_in = 1   |->   Adder:  s = xx, c_out = x
-# a = 11, b= 11, c_in = 1   |->   Adder:  s = xx, c_out = x
-# Causality operation skipped due to absence of debug database file
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Compile of 1BitAdder.sv was successful.
-# Compile of 2BitAdder.sv was successful.
-# Compile of 2BitAdder_TB.sv was successful.
-# 3 compiles, 0 failed with no errors.
-quit -sim
-# End time: 20:39:17 on Nov 11,2023, Elapsed time: 0:17:17
-# Errors: 6, Warnings: 2
-# Compile of 1BitAdder.sv was successful.
-# Compile of 2BitAdder.sv was successful.
-# Compile of 2BitAdder_TB.sv was successful.
-# 3 compiles, 0 failed with no errors.
-vsim -voptargs=+acc work.test_2bit
-# vsim -voptargs="+acc" work.test_2bit 
-# Start time: 20:39:40 on Nov 11,2023
+# Start time: 20:53:01 on Nov 11,2023
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
 # Loading work.test_2bit(fast)
 # Loading work.two_bit_adder(fast)
 # Loading work.full_adder(fast)
 run
-# a = 00, b= 00, c_in = 0   |->   Adder:  s = 00, c_out = 0
-# a = 00, b= 01, c_in = 0   |->   Adder:  s = 01, c_out = 0
-# a = 00, b= 10, c_in = 0   |->   Adder:  s = 10, c_out = 0
-# a = 00, b= 11, c_in = 0   |->   Adder:  s = 11, c_out = 0
-# a = 01, b= 00, c_in = 0   |->   Adder:  s = 01, c_out = 0
-# a = 01, b= 01, c_in = 0   |->   Adder:  s = 10, c_out = 0
-# a = 01, b= 10, c_in = 0   |->   Adder:  s = 11, c_out = 0
-# a = 01, b= 11, c_in = 0   |->   Adder:  s = 00, c_out = 1
-# a = 10, b= 00, c_in = 0   |->   Adder:  s = 10, c_out = 0
-# a = 10, b= 01, c_in = 0   |->   Adder:  s = 11, c_out = 0
-# a = 10, b= 10, c_in = 0   |->   Adder:  s = 00, c_out = 1
-# a = 10, b= 11, c_in = 0   |->   Adder:  s = 01, c_out = 1
-# a = 11, b= 00, c_in = 0   |->   Adder:  s = 11, c_out = 0
-# a = 11, b= 01, c_in = 0   |->   Adder:  s = 00, c_out = 1
-# a = 11, b= 10, c_in = 0   |->   Adder:  s = 01, c_out = 1
-# a = 11, b= 11, c_in = 0   |->   Adder:  s = 10, c_out = 1
+# PASS |   a = 00, b= 00, c_in = 0  |->  Adder:  s = 00, c_out = 0
+# PASS |   a = 00, b= 01, c_in = 0  |->  Adder:  s = 01, c_out = 0
+# PASS |   a = 00, b= 10, c_in = 0  |->  Adder:  s = 10, c_out = 0
+# PASS |   a = 00, b= 11, c_in = 0  |->  Adder:  s = 11, c_out = 0
+# PASS |   a = 01, b= 00, c_in = 0  |->  Adder:  s = 01, c_out = 0
+# PASS |   a = 01, b= 01, c_in = 0  |->  Adder:  s = 10, c_out = 0
+# PASS |   a = 01, b= 10, c_in = 0  |->  Adder:  s = 11, c_out = 0
+# PASS |   a = 01, b= 11, c_in = 0  |->  Adder:  s = 00, c_out = 1
+# PASS |   a = 10, b= 00, c_in = 0  |->  Adder:  s = 10, c_out = 0
+# PASS |   a = 10, b= 01, c_in = 0  |->  Adder:  s = 11, c_out = 0
+# PASS |   a = 10, b= 10, c_in = 0  |->  Adder:  s = 00, c_out = 1
+# PASS |   a = 10, b= 11, c_in = 0  |->  Adder:  s = 01, c_out = 1
+# PASS |   a = 11, b= 00, c_in = 0  |->  Adder:  s = 11, c_out = 0
+# PASS |   a = 11, b= 01, c_in = 0  |->  Adder:  s = 00, c_out = 1
+# PASS |   a = 11, b= 10, c_in = 0  |->  Adder:  s = 01, c_out = 1
+# PASS |   a = 11, b= 11, c_in = 0  |->  Adder:  s = 10, c_out = 1
 # a = 00, b= 00, c_in = 1   |->   Adder:  s = 01, c_out = 0
 # a = 00, b= 01, c_in = 1   |->   Adder:  s = 10, c_out = 0
 # a = 00, b= 10, c_in = 1   |->   Adder:  s = 11, c_out = 0
@@ -258,5 +76,71 @@ run
 # a = 11, b= 11, c_in = 1   |->   Adder:  s = 11, c_out = 1
 # a = 00, b= 00, c_in = 1   |->   Adder:  s = 01, c_out = 0
 # a = 00, b= 01, c_in = 1   |->   Adder:  s = 10, c_out = 0
-# End time: 20:40:00 on Nov 11,2023, Elapsed time: 0:00:20
-# Errors: 4, Warnings: 0
+quit -sim
+# End time: 20:53:45 on Nov 11,2023, Elapsed time: 0:00:44
+# Errors: 14, Warnings: 0
+# Compile of 1BitAdder.sv was successful.
+# Compile of 2BitAdder.sv was successful.
+# Compile of 2BitAdder_TB.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.test_2bit
+# vsim -voptargs="+acc" work.test_2bit 
+# Start time: 20:55:04 on Nov 11,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.test_2bit(fast)
+# Loading work.two_bit_adder(fast)
+# Loading work.full_adder(fast)
+run
+# PASS |   a = 00, b= 00, c_in = 0  |->  Adder:  s = 00, c_out = 0
+# PASS |   a = 00, b= 01, c_in = 0  |->  Adder:  s = 01, c_out = 0
+# PASS |   a = 00, b= 10, c_in = 0  |->  Adder:  s = 10, c_out = 0
+# PASS |   a = 00, b= 11, c_in = 0  |->  Adder:  s = 11, c_out = 0
+# PASS |   a = 01, b= 00, c_in = 0  |->  Adder:  s = 01, c_out = 0
+# PASS |   a = 01, b= 01, c_in = 0  |->  Adder:  s = 10, c_out = 0
+# PASS |   a = 01, b= 10, c_in = 0  |->  Adder:  s = 11, c_out = 0
+# PASS |   a = 01, b= 11, c_in = 0  |->  Adder:  s = 00, c_out = 1
+# PASS |   a = 10, b= 00, c_in = 0  |->  Adder:  s = 10, c_out = 0
+# PASS |   a = 10, b= 01, c_in = 0  |->  Adder:  s = 11, c_out = 0
+# PASS |   a = 10, b= 10, c_in = 0  |->  Adder:  s = 00, c_out = 1
+# PASS |   a = 10, b= 11, c_in = 0  |->  Adder:  s = 01, c_out = 1
+# PASS |   a = 11, b= 00, c_in = 0  |->  Adder:  s = 11, c_out = 0
+# PASS |   a = 11, b= 01, c_in = 0  |->  Adder:  s = 00, c_out = 1
+# PASS |   a = 11, b= 10, c_in = 0  |->  Adder:  s = 01, c_out = 1
+# PASS |   a = 11, b= 11, c_in = 0  |->  Adder:  s = 10, c_out = 1
+# PASS |   a = 00, b= 00, c_in = 1  |->  Adder:  s = 01, c_out = 0
+# PASS |   a = 00, b= 01, c_in = 1  |->  Adder:  s = 10, c_out = 0
+# PASS |   a = 00, b= 10, c_in = 1  |->  Adder:  s = 11, c_out = 0
+# PASS |   a = 00, b= 11, c_in = 1  |->  Adder:  s = 00, c_out = 1
+# FAIL |   a = 00, b= 00, c_in = 1  |->  Adder:  s = 01, c_out = 0
+# FAIL |   a = 00, b= 01, c_in = 1  |->  Adder:  s = 10, c_out = 0
+# FAIL |   a = 00, b= 10, c_in = 1  |->  Adder:  s = 11, c_out = 0
+# FAIL |   a = 00, b= 11, c_in = 1  |->  Adder:  s = 00, c_out = 1
+# PASS |   a = 01, b= 00, c_in = 1  |->  Adder:  s = 10, c_out = 0
+# PASS |   a = 01, b= 01, c_in = 1  |->  Adder:  s = 11, c_out = 0
+# PASS |   a = 01, b= 10, c_in = 1  |->  Adder:  s = 00, c_out = 1
+# PASS |   a = 01, b= 11, c_in = 1  |->  Adder:  s = 01, c_out = 1
+# FAIL |   a = 01, b= 00, c_in = 1  |->  Adder:  s = 10, c_out = 0
+# FAIL |   a = 01, b= 01, c_in = 1  |->  Adder:  s = 11, c_out = 0
+# FAIL |   a = 01, b= 10, c_in = 1  |->  Adder:  s = 00, c_out = 1
+# FAIL |   a = 01, b= 11, c_in = 1  |->  Adder:  s = 01, c_out = 1
+# PASS |   a = 10, b= 00, c_in = 1  |->  Adder:  s = 11, c_out = 0
+# PASS |   a = 10, b= 01, c_in = 1  |->  Adder:  s = 00, c_out = 1
+# PASS |   a = 10, b= 10, c_in = 1  |->  Adder:  s = 01, c_out = 1
+# PASS |   a = 10, b= 11, c_in = 1  |->  Adder:  s = 10, c_out = 1
+# FAIL |   a = 10, b= 00, c_in = 1  |->  Adder:  s = 11, c_out = 0
+# FAIL |   a = 10, b= 01, c_in = 1  |->  Adder:  s = 00, c_out = 1
+# FAIL |   a = 10, b= 10, c_in = 1  |->  Adder:  s = 01, c_out = 1
+# FAIL |   a = 10, b= 11, c_in = 1  |->  Adder:  s = 10, c_out = 1
+# PASS |   a = 11, b= 00, c_in = 1  |->  Adder:  s = 00, c_out = 1
+# PASS |   a = 11, b= 01, c_in = 1  |->  Adder:  s = 01, c_out = 1
+# PASS |   a = 11, b= 10, c_in = 1  |->  Adder:  s = 10, c_out = 1
+# PASS |   a = 11, b= 11, c_in = 1  |->  Adder:  s = 11, c_out = 1
+# FAIL |   a = 11, b= 00, c_in = 1  |->  Adder:  s = 00, c_out = 1
+# FAIL |   a = 11, b= 01, c_in = 1  |->  Adder:  s = 01, c_out = 1
+# FAIL |   a = 11, b= 10, c_in = 1  |->  Adder:  s = 10, c_out = 1
+# FAIL |   a = 11, b= 11, c_in = 1  |->  Adder:  s = 11, c_out = 1
+# FAIL |   a = 00, b= 00, c_in = 1  |->  Adder:  s = 01, c_out = 0
+# FAIL |   a = 00, b= 01, c_in = 1  |->  Adder:  s = 10, c_out = 0
+# End time: 20:55:52 on Nov 11,2023, Elapsed time: 0:00:48
+# Errors: 9, Warnings: 0

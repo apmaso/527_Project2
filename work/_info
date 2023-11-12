@@ -10,17 +10,17 @@ z2
 cModel Technology
 d/home/amaso/common/Documents/ECE171/vsim
 T_opt
-!s110 1699763980
-VW2^Zo5JAWjQSLhkV_>G9_0
+!s110 1699764905
+V>o1offC3=8a2JF74Pn=OZ2
 04 9 4 work test_2bit fast 0
-=1-525400b63b2a-6550570c-88341-7a26
+=1-525400b63b2a-65505aa8-ccd3b-49eb
 o-quiet -auto_acc_if_foreign -work work +acc
 Z0 tCvgOpt 0
 n@_opt
 OL;O;2019.2_1;69
 vdataflow_adder
 Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z2 !s110 1699763966
+Z2 !s110 1699764889
 !i10b 1
 !s100 jWlL8ZIM4d5Zh6eP:n]Xd1
 !s11b zLjiTf2?1l05:eL3f9>I62
@@ -36,7 +36,7 @@ Z6 OL;L;2019.2_1;69
 r1
 !s85 0
 31
-Z7 !s108 1699763966.000000
+Z7 !s108 1699764889.000000
 !s107 /home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/amaso/common/Documents/ECE527/527_Project2/1BitAdder.sv|
 !i113 0
@@ -70,13 +70,13 @@ vtest_2bit
 R1
 R2
 !i10b 1
-!s100 ]:O4PGXCmc0Mc^CmnnlPo3
-!s11b 0eNN@bT6ZaQd=TXmmD;eM1
-I;^@`j_>kQ?6fIG9Zl5gKD3
+!s100 14ZmQki^lPXY3PB^UMYN_1
+!s11b HE7P^enI75Pc2bz552Sjo1
+I>:BJVVRgMk7=ZjRS]T^S=2
 R3
 S1
 R4
-w1699763940
+w1699764886
 8/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv
 F/home/amaso/common/Documents/ECE527/527_Project2/2BitAdder_TB.sv
 L0 14
