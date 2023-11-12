@@ -15,9 +15,9 @@
 
 module two_bit_adder (
     input logic 	[1:0] 		a, b,  
-    input logic 			Cin, 
+    input logic 			    Cin, 
     output logic 	[1:0] 		sum, 
-    output logic 			Cout);
+    output logic 			i   Cout);
 
     // Internal carry signal
     logic carry;
