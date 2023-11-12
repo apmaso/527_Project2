@@ -13,17 +13,41 @@
 
 
 
-module 2BitAdder(
-	input logic     [1:0]		a, b,
-	input logic 	        	c_in,
-	output logic 	[1:0]       s,
-	output logic 	            c_out);
+module two_bit_full_adder (
+    input logic 	[1:0] 		a, b,  
+    input logic 				Cin, 
+    output logic 	[1:0] 		sum, 
+    output logic 				Cout);
 
+    // Internal carry signal
+    logic carry;
 
+    // First 1bit adder
+    full_adder fa0 (
+        .a(a[0]),
+        .b(b[0]),
+        .Cin(Cin),
+        .sum(sum[0]),
+        .Cout(carry)
+    );
 
-	assign s = a ^ b ^ c_in;
-	assign c_out = (a & b) | (a & c_in) | (b & c_in);
+    // Second 1bit adder
+    full_adder fa1 (
+        .a(a[1]),
+        .b(b[1]),
+        .Cin(carry),
+        .sum(sum[1]),
+        .Cout(Cout)
+    );
 
 endmodule
 
+// Full adder module for a single bit
+module full_adder (
+    input logic 		a, b, Cin,
+    output logic 		sum, Cout);
+
+    assign {Cout, sum} = a + b + Cin;
+
+endmodule
 
