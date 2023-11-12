@@ -13,7 +13,7 @@
 
 
 
-module two_bit_full_adder (
+module 2bit_full_adder (
     input logic 	[1:0] 		a, b,  
     input logic 				Cin, 
     output logic 	[1:0] 		sum, 
