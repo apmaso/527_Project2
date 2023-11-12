@@ -1,5 +1,18 @@
-module four_bit_pipelined_carry_select_adder (
-    input logic clk, reset,
+/////////////////////////////////////////////////
+//
+//   This is a pipelined, 4Bit carry select adder 
+//   module.  This module uses three 2Bit Adders
+//   to perform the addition.  The addtional adder
+//   is used to calculate the carry out of the
+//   upper 2 bits.  One adder for if the carry in
+//   is 0 and the other for if the carry in is 1. 
+//
+//  Created by Alexander Maso
+//
+///////////////////////////////////////////////
+
+module four_bit_select_adder (
+    input logic clk, reset_n,
     input logic [3:0] A, B, 
     input logic Cin,
     output logic [3:0] sum,
@@ -10,8 +23,8 @@ module four_bit_pipelined_carry_select_adder (
     logic [3:0] A_reg, B_reg;
     logic Cin_reg;
 
-    always_ff @(posedge clk or negedge reset) begin
-        if (!reset) begin
+    always_ff @(posedge clk or negedge reset_n) begin
+        if (!reset_n) begin
             A_reg <= 4'b0;
             B_reg <= 4'b0;
             Cin_reg <= 1'b0;
@@ -69,8 +82,8 @@ module four_bit_pipelined_carry_select_adder (
     logic [3:0] sum_reg;
     logic Cout_reg;
 
-    always_ff @(posedge clk or negedge reset) begin
-        if (!reset) begin
+    always_ff @(posedge clk or negedge reset_n) begin
+        if (!reset_n) begin
             sum_reg <= 4'b0;
             Cout_reg <= 1'b0;
         end else begin
