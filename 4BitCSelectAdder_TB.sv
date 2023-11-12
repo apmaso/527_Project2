@@ -38,21 +38,29 @@ module four_bit_select_adder_test();
         #5 reset_n = 0;
         #20 reset_n = 1;
 
-        // Apply test vectors
-        #20 {A, B, Cin} = 7'b0000_000;
-        #20 {A, B, Cin} = 7'b0101_001;
-        #20 {A, B, Cin} = 7'b1010_110;
-        #20 {A, B, Cin} = 7'b1111_111;
-        #20;
+        // Fully exhaustive test of inputs 
+        for (int c = 0; c < 2; c++) begin
+            for (int i = 0; i < 16; i++) begin
+                for (int j=0; j < 16; j++) begin
+                    A = i;
+                    B = j;
+                    Cin = c;
+                    #20;
+                    if (sum !== (i + j + c)) begin
+                        $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
+                                 A, B, Cin, sum, Cout);
+                    end
+                    else begin
+                        $display("A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
+                                 A, B, Cin, sum, Cout);
+                    end
+                end
+            end
+        end
 
         // End simulation
         $finish;
     end
 
-    // Monitor and check results
-    initial begin
-        $monitor($time, " ns -- A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                 A, B, Cin, sum, Cout);
-    end
 
 endmodule
