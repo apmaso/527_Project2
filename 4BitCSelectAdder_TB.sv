@@ -9,6 +9,11 @@ module four_bit_select_adder_test();
     logic [3:0] sum;
     logic Cout;
 
+    // Regs to hold value of a, b 
+    // and c_in from previous cycle
+    logic [3:0] a_reg, b_reg;
+    logic c_in_reg;
+
     // Instantiate the 4-bit pipelined carry select adder
     four_bit_select_adder dut (
         .clk(clk),
@@ -38,6 +43,8 @@ module four_bit_select_adder_test();
         #5 reset_n = 0;
         #20 reset_n = 1;
 
+        
+
         // Fully exhaustive test of inputs 
         for (int c = 0; c < 2; c++) begin
             for (int i = 0; i < 16; i++) begin
@@ -46,13 +53,13 @@ module four_bit_select_adder_test();
                     B = j;
                     Cin = c;
                     #20;
-                    if (sum !== (i + j + c)) begin
+                    if ({Cout,sum} != (a_reg + b_reg + c_in_reg)) begin
                         $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                                 A, B, Cin, sum, Cout);
+                                 a_reg, b_reg, c_in_reg, sum, Cout);
                     end
                     else begin
                         $display("A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                                 A, B, Cin, sum, Cout);
+                                 a_reg, b_reg, c_in_reg, sum, Cout);
                     end
                 end
             end
@@ -61,6 +68,17 @@ module four_bit_select_adder_test();
         // End simulation
         $finish;
     end
+
+    always_ff @(posedge clk) begin
+
+        // Store the values of a, b and c_in
+        // from previous cycle
+        a_reg <= A;
+        b_reg <= B;
+        c_in_reg <= Cin;
+
+    end
+
 
 
 endmodule
