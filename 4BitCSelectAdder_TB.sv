@@ -69,13 +69,21 @@ module four_bit_select_adder_test();
         $finish;
     end
 
-    always_ff @(posedge clk) begin
+    always_ff @(posedge clk or negedge reset_n) begin
 
-        // Store the values of a, b and c_in
-        // from previous cycle
-        a_reg <= A;
-        b_reg <= B;
-        c_in_reg <= Cin;
+        if (!reset_n) begin
+            // Reset the system
+            a_reg <= '0;
+            b_reg <= '0;
+            c_in_reg <= '0;
+        end
+        else begin
+            // Store the values of a, b and c_in
+            // from previous cycle
+            a_reg <= A;
+            b_reg <= B;
+            c_in_reg <= Cin;
+        end
 
     end
 
