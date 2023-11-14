@@ -13,6 +13,8 @@ module four_bit_select_adder_test();
     // and c_in from previous cycle
     logic [3:0] a_reg, b_reg;
     logic c_in_reg;
+    logic [3:0] a_last, b_last;
+    logic c_in_last;
 
     // Instantiate the 4-bit pipelined carry select adder
     four_bit_select_adder dut (
@@ -38,7 +40,7 @@ module four_bit_select_adder_test();
         A = 0;
         B = 0;
         Cin = 0;
-
+        
         // reset_n the system
         #5 reset_n = 0;
         #20 reset_n = 1;
@@ -52,15 +54,17 @@ module four_bit_select_adder_test();
                     A = i;
                     B = j;
                     Cin = c;
-                    #20;
-                    if ({Cout,sum} != (a_reg + b_reg + c_in_reg)) begin
+                    #10;
+                    // Compare against value saved in last cycle since adder is pipelined
+                    if ({Cout,sum} != (a_last + b_last + c_in_last)) begin
                         $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                                 a_reg, b_reg, c_in_reg, sum, Cout);
+                                 a_last, b_last, c_in_last, sum, Cout);
                     end
                     else begin
-                        $display("A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                                 a_reg, b_reg, c_in_reg, sum, Cout);
+                        $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
+                                 a_last, b_last, c_in_last, sum, Cout);
                     end
+                    #10;
                 end
             end
         end
@@ -68,7 +72,8 @@ module four_bit_select_adder_test();
         // End simulation
         $finish;
     end
-
+    
+    // Two-stage shift register to hold the output from last cycle
     always_ff @(posedge clk or negedge reset_n) begin
 
         if (!reset_n) begin
@@ -76,6 +81,9 @@ module four_bit_select_adder_test();
             a_reg <= '0;
             b_reg <= '0;
             c_in_reg <= '0;
+            a_last <= '0;
+            b_last <= '0;
+            c_in_last <= '0;
         end
         else begin
             // Store the values of a, b and c_in
@@ -83,6 +91,9 @@ module four_bit_select_adder_test();
             a_reg <= A;
             b_reg <= B;
             c_in_reg <= Cin;
+	    a_last <= a_reg;
+	    b_last <= b_reg;
+	    c_in_last <= c_in_reg;
         end
 
     end
