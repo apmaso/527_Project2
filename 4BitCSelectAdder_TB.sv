@@ -9,8 +9,9 @@ module four_bit_select_adder_test();
     logic [3:0] sum;
     logic Cout;
 
-    // Regs to hold value of a, b 
-    // and c_in from previous cycle
+    // Registers for use in 2-stage shift register
+    // Shift reg needed to store the values of 
+    // a, b and c_in from last cycle
     logic [3:0] a_reg, b_reg;
     logic c_in_reg;
     logic [3:0] a_last, b_last;
@@ -91,9 +92,9 @@ module four_bit_select_adder_test();
             a_reg <= A;
             b_reg <= B;
             c_in_reg <= Cin;
-	    a_last <= a_reg;
-	    b_last <= b_reg;
-	    c_in_last <= c_in_reg;
+    	    a_last <= a_reg;
+	        b_last <= b_reg;
+	        c_in_last <= c_in_reg;
         end
 
     end
