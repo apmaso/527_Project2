@@ -57,13 +57,13 @@ module four_bit_select_adder_test();
                     Cin = c;
                     #10;
                     // Compare against value saved in last cycle since adder is pipelined
-                    if ({Cout,sum} != (a_last + b_last + c_in_last)) begin
+                    if ({Cout,sum} != (a_last + b_last + c_in_reg)) begin
                         $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                                 a_last, b_last, c_in_last, sum, Cout);
+                                 a_last, b_last, c_in_reg, sum, Cout);
                     end
                     else begin
                         $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                                 a_last, b_last, c_in_last, sum, Cout);
+                                 a_last, b_last, c_in_reg, sum, Cout);
                     end
                     #10;
                 end
@@ -72,17 +72,22 @@ module four_bit_select_adder_test();
 
         // Fully randomized stimulus to cover additional state transitions
         // Primary area of concern: state transitions as Cin changes
+        $display("####################################################");
+        $display("Exhaustive Test Complete....");
+        $display("####################################################");
+        $display("Switching to randomized stimulus....");
+        $display("####################################################");
         for (int count = 0; count < (512*8); count++) begin
             A = $random;
             B = $random;
             Cin = $random;
                 #10;
                 // Compare against value saved in last cycle since adder is pipelined
-                if ({Cout,sum} != (a_last + b_last + c_in_last)) begin
-                    $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_last, b_last, c_in_last, sum, Cout);
+                if ({Cout,sum} != (a_last + b_last + c_in_reg)) begin
+                    $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_last, b_last, c_in_reg, sum, Cout);
                 end
                 else begin
-                    $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_last, b_last, c_in_last, sum, Cout);
+                    $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_last, b_last, c_in_reg, sum, Cout);
                 end
                 #10;
         end
