@@ -42,7 +42,7 @@ module four_bit_select_adder_test();
         B = 0;
         Cin = 0;
         
-        // reset_n the system
+        // Reset the system
         #5 reset_n = 0;
         #20 reset_n = 1;
 
@@ -69,6 +69,24 @@ module four_bit_select_adder_test();
                 end
             end
         end
+
+        // Fully randomized stimulus to cover additional state transitions
+        // Primary area of concern: state transitions as Cin changes
+        for (int count = 0; count < (512*8); count++) begin
+            A = $random;
+            B = $random;
+            Cin = $random;
+                #10;
+                // Compare against value saved in last cycle since adder is pipelined
+                if ({Cout,sum} != (a_last + b_last + c_in_last)) begin
+                    $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_last, b_last, c_in_last, sum, Cout);
+                end
+                else begin
+                    $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_last, b_last, c_in_last, sum, Cout);
+                end
+                #10;
+        end
+
 
         // End simulation
         $finish;
