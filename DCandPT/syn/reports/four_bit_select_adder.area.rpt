@@ -1,39 +1,32 @@
 Warning: Can't read link_library file '+'. (UID-3)
-Warning: Can't read link_library file 'work/osu05_stdcells.db'. (UID-3)
-Error: Could not read the following target libraries:
-work/osu05_stdcells.db 
- (UIO-3)
-Information: Updating graph... (UID-83)
  
 ****************************************
 Report : area
 Design : four_bit_select_adder
 Version: Q-2019.12-SP3
-Date   : Fri Nov 17 23:36:05 2023
+Date   : Fri Nov 17 23:38:32 2023
 ****************************************
 
 Information: Updating design information... (UID-85)
 Library(s) Used:
 
-    gtech (File: /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db)
+    osu05_stdcells (File: /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db)
 
 Number of ports:                           70
-Number of nets:                           129
-Number of cells:                           72
-Number of combinational cells:             46
-Number of sequential cells:                15
+Number of nets:                           123
+Number of cells:                           67
+Number of combinational cells:             30
+Number of sequential cells:                13
 Number of macros/black boxes:               0
-Number of buf/inv:                          4
+Number of buf/inv:                          9
 Number of references:                       6
 
-Combinational area:                  0.000000
-Buf/Inv area:                        0.000000
-Noncombinational area:               0.000000
+Combinational area:              10800.000000
+Buf/Inv area:                     1296.000000
+Noncombinational area:           20592.000000
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                     0.000000
+Total cell area:                 31392.000000
 Total area:                 undefined
-
-Information: This design contains unmapped logic. (RPT-7)
 1

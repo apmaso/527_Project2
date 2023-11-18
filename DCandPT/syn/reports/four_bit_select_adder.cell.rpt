@@ -3,42 +3,56 @@
 Report : cell
 Design : four_bit_select_adder
 Version: Q-2019.12-SP3
-Date   : Fri Nov 17 23:36:05 2023
+Date   : Fri Nov 17 23:38:32 2023
 ****************************************
 
 Attributes:
     b - black box (unknown)
-    c - control logic
     h - hierarchical
     n - noncombinational
     r - removable
-    s - synthetic operator
     u - contains unmapped logic
 
 Cell                      Reference       Library             Area  Attributes
 --------------------------------------------------------------------------------
-A_reg_reg[0]              **SEQGEN**                      0.000000  n, u
-A_reg_reg[1]              **SEQGEN**                      0.000000  n, u
-A_reg_reg[2]              **SEQGEN**                      0.000000  n, u
-A_reg_reg[3]              **SEQGEN**                      0.000000  n, u
-B_0                       GTECH_BUF       gtech           0.000000  c, u
-B_1                       GTECH_BUF       gtech           0.000000  c, u
-B_reg_reg[0]              **SEQGEN**                      0.000000  n, u
-B_reg_reg[1]              **SEQGEN**                      0.000000  n, u
-B_reg_reg[2]              **SEQGEN**                      0.000000  n, u
-B_reg_reg[3]              **SEQGEN**                      0.000000  n, u
-C50                       *SELECT_OP_2.2_2.1_2            0.000000  s, u
-C51                       *SELECT_OP_2.1_2.1_1            0.000000  s, u
-Cout_reg_reg              **SEQGEN**                      0.000000  n, u
-I_0                       GTECH_NOT       gtech           0.000000  u
-I_1                       GTECH_NOT       gtech           0.000000  u
-lower_adder               two_bit_adder                   0.000000  h, u
-sum_reg_reg[0]            **SEQGEN**                      0.000000  n, u
-sum_reg_reg[1]            **SEQGEN**                      0.000000  n, u
-sum_reg_reg[2]            **SEQGEN**                      0.000000  n, u
-sum_reg_reg[3]            **SEQGEN**                      0.000000  n, u
-upper_adder_0             two_bit_adder                   0.000000  h, u
-upper_adder_1             two_bit_adder                   0.000000  h, u
+A_reg_reg[0]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+A_reg_reg[1]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+A_reg_reg[2]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+A_reg_reg[3]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+B_reg_reg[0]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+B_reg_reg[1]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+B_reg_reg[2]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+B_reg_reg[3]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+Cout_reg_reg              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+U23                       INVX1           osu05_stdcells  144.000000
+U24                       MUX2X1          osu05_stdcells  432.000000
+U25                       INVX1           osu05_stdcells  144.000000
+U26                       MUX2X1          osu05_stdcells  432.000000
+U27                       INVX1           osu05_stdcells  144.000000
+U28                       MUX2X1          osu05_stdcells  432.000000
+lower_adder               two_bit_adder_0                 3024.000000
+                                                                    h
+sum_reg_reg[0]            DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+sum_reg_reg[1]            DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+sum_reg_reg[2]            DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+sum_reg_reg[3]            DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+upper_adder_0             two_bit_adder_2                 3024.000000
+                                                                    h
+upper_adder_1             two_bit_adder_1                 3024.000000
+                                                                    h
 --------------------------------------------------------------------------------
-Total 22 cells                                            0.000000
+Total 22 cells                                            31392.000000
 1

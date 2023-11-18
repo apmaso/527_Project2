@@ -1,26 +1,35 @@
 /////////////////////////////////////////////////////////////
-// Created by: Synopsys Design Compiler(R)
+// Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : Q-2019.12-SP3
-// Date      : Fri Nov 17 23:36:05 2023
+// Date      : Fri Nov 17 23:38:32 2023
 /////////////////////////////////////////////////////////////
 
 
-module full_adder ( a, b, Cin, sum, Cout );
+module full_adder_0 ( a, b, Cin, sum, Cout );
   input a, b, Cin;
   output sum, Cout;
-  wire   N0, N1, N2, N3, N4;
+  wire   n1, n2;
 
-  GTECH_XOR2 C8 ( .A(N0), .B(Cin), .Z(sum) );
-  GTECH_XOR2 C9 ( .A(a), .B(b), .Z(N0) );
-  GTECH_OR2 C10 ( .A(N3), .B(N4), .Z(Cout) );
-  GTECH_OR2 C11 ( .A(N1), .B(N2), .Z(N3) );
-  GTECH_AND2 C12 ( .A(a), .B(b), .Z(N1) );
-  GTECH_AND2 C13 ( .A(a), .B(Cin), .Z(N2) );
-  GTECH_AND2 C14 ( .A(b), .B(Cin), .Z(N4) );
+  XOR2X1 U1 ( .A(Cin), .B(n1), .Y(sum) );
+  INVX1 U2 ( .A(n2), .Y(Cout) );
+  AOI22X1 U3 ( .A(b), .B(a), .C(n1), .D(Cin), .Y(n2) );
+  XOR2X1 U4 ( .A(a), .B(b), .Y(n1) );
 endmodule
 
 
-module two_bit_adder ( a, b, Cin, sum, Cout );
+module full_adder_5 ( a, b, Cin, sum, Cout );
+  input a, b, Cin;
+  output sum, Cout;
+  wire   n1, n2;
+
+  XOR2X1 U1 ( .A(Cin), .B(n1), .Y(sum) );
+  INVX1 U2 ( .A(n2), .Y(Cout) );
+  AOI22X1 U3 ( .A(b), .B(a), .C(n1), .D(Cin), .Y(n2) );
+  XOR2X1 U4 ( .A(a), .B(b), .Y(n1) );
+endmodule
+
+
+module two_bit_adder_0 ( a, b, Cin, sum, Cout );
   input [1:0] a;
   input [1:0] b;
   output [1:0] sum;
@@ -28,10 +37,85 @@ module two_bit_adder ( a, b, Cin, sum, Cout );
   output Cout;
   wire   carry;
 
-  full_adder fa0 ( .a(a[0]), .b(b[0]), .Cin(Cin), .sum(sum[0]), .Cout(carry)
+  full_adder_0 fa0 ( .a(a[0]), .b(b[0]), .Cin(Cin), .sum(sum[0]), .Cout(carry)
          );
-  full_adder fa1 ( .a(a[1]), .b(b[1]), .Cin(carry), .sum(sum[1]), .Cout(Cout)
+  full_adder_5 fa1 ( .a(a[1]), .b(b[1]), .Cin(carry), .sum(sum[1]), .Cout(Cout) );
+endmodule
+
+
+module full_adder_1 ( a, b, Cin, sum, Cout );
+  input a, b, Cin;
+  output sum, Cout;
+  wire   n1, n2;
+
+  XOR2X1 U1 ( .A(Cin), .B(n1), .Y(sum) );
+  INVX1 U2 ( .A(n2), .Y(Cout) );
+  AOI22X1 U3 ( .A(b), .B(a), .C(n1), .D(Cin), .Y(n2) );
+  XOR2X1 U4 ( .A(a), .B(b), .Y(n1) );
+endmodule
+
+
+module full_adder_2 ( a, b, Cin, sum, Cout );
+  input a, b, Cin;
+  output sum, Cout;
+  wire   n1, n2;
+
+  XOR2X1 U1 ( .A(Cin), .B(n1), .Y(sum) );
+  INVX1 U2 ( .A(n2), .Y(Cout) );
+  AOI22X1 U3 ( .A(b), .B(a), .C(n1), .D(Cin), .Y(n2) );
+  XOR2X1 U4 ( .A(a), .B(b), .Y(n1) );
+endmodule
+
+
+module two_bit_adder_1 ( a, b, Cin, sum, Cout );
+  input [1:0] a;
+  input [1:0] b;
+  output [1:0] sum;
+  input Cin;
+  output Cout;
+  wire   carry;
+
+  full_adder_2 fa0 ( .a(a[0]), .b(b[0]), .Cin(Cin), .sum(sum[0]), .Cout(carry)
          );
+  full_adder_1 fa1 ( .a(a[1]), .b(b[1]), .Cin(carry), .sum(sum[1]), .Cout(Cout) );
+endmodule
+
+
+module full_adder_3 ( a, b, Cin, sum, Cout );
+  input a, b, Cin;
+  output sum, Cout;
+  wire   n1, n2;
+
+  XOR2X1 U1 ( .A(Cin), .B(n1), .Y(sum) );
+  INVX1 U2 ( .A(n2), .Y(Cout) );
+  AOI22X1 U3 ( .A(b), .B(a), .C(n1), .D(Cin), .Y(n2) );
+  XOR2X1 U4 ( .A(a), .B(b), .Y(n1) );
+endmodule
+
+
+module full_adder_4 ( a, b, Cin, sum, Cout );
+  input a, b, Cin;
+  output sum, Cout;
+  wire   n1, n2;
+
+  XOR2X1 U1 ( .A(Cin), .B(n1), .Y(sum) );
+  INVX1 U2 ( .A(n2), .Y(Cout) );
+  AOI22X1 U3 ( .A(b), .B(a), .C(n1), .D(Cin), .Y(n2) );
+  XOR2X1 U4 ( .A(a), .B(b), .Y(n1) );
+endmodule
+
+
+module two_bit_adder_2 ( a, b, Cin, sum, Cout );
+  input [1:0] a;
+  input [1:0] b;
+  output [1:0] sum;
+  input Cin;
+  output Cout;
+  wire   carry;
+
+  full_adder_4 fa0 ( .a(a[0]), .b(b[0]), .Cin(Cin), .sum(sum[0]), .Cout(carry)
+         );
+  full_adder_3 fa1 ( .a(a[1]), .b(b[1]), .Cin(carry), .sum(sum[1]), .Cout(Cout) );
 endmodule
 
 
@@ -42,79 +126,50 @@ module four_bit_select_adder ( clk, reset_n, A, B, Cin, output_sum,
   output [3:0] output_sum;
   input clk, reset_n, Cin;
   output output_Cout;
-  wire   N0, N1, N2, Cout0, Cout1, Cout2, Cout, N3;
+  wire   Cout0, Cout1, Cout2, n14, n15, n16, n21, n22, n23;
   wire   [3:0] A_reg;
   wire   [3:0] B_reg;
   wire   [1:0] sum0;
   wire   [1:0] sum1;
   wire   [1:0] sum2;
-  wire   [3:2] sum;
 
-  \**SEQGEN**  \B_reg_reg[3]  ( .clear(N2), .preset(1'b0), .next_state(B[3]), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(B_reg[3]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \B_reg_reg[2]  ( .clear(N2), .preset(1'b0), .next_state(B[2]), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(B_reg[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \B_reg_reg[1]  ( .clear(N2), .preset(1'b0), .next_state(B[1]), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(B_reg[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \B_reg_reg[0]  ( .clear(N2), .preset(1'b0), .next_state(B[0]), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(B_reg[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \A_reg_reg[3]  ( .clear(N2), .preset(1'b0), .next_state(A[3]), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(A_reg[3]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \A_reg_reg[2]  ( .clear(N2), .preset(1'b0), .next_state(A[2]), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(A_reg[2]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \A_reg_reg[1]  ( .clear(N2), .preset(1'b0), .next_state(A[1]), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(A_reg[1]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \A_reg_reg[0]  ( .clear(N2), .preset(1'b0), .next_state(A[0]), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(A_reg[0]), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  two_bit_adder lower_adder ( .a(A_reg[1:0]), .b(B_reg[1:0]), .Cin(Cin), .sum(
-        sum0), .Cout(Cout0) );
-  two_bit_adder upper_adder_0 ( .a(A_reg[3:2]), .b(B_reg[3:2]), .Cin(1'b0), 
+  two_bit_adder_0 lower_adder ( .a(A_reg[1:0]), .b(B_reg[1:0]), .Cin(Cin), 
+        .sum(sum0), .Cout(Cout0) );
+  two_bit_adder_2 upper_adder_0 ( .a(A_reg[3:2]), .b(B_reg[3:2]), .Cin(1'b0), 
         .sum(sum1), .Cout(Cout1) );
-  two_bit_adder upper_adder_1 ( .a(A_reg[3:2]), .b(B_reg[3:2]), .Cin(1'b1), 
+  two_bit_adder_1 upper_adder_1 ( .a(A_reg[3:2]), .b(B_reg[3:2]), .Cin(1'b1), 
         .sum(sum2), .Cout(Cout2) );
-  \**SEQGEN**  Cout_reg_reg ( .clear(N2), .preset(1'b0), .next_state(Cout), 
-        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(output_Cout), 
-        .synch_clear(1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), 
-        .synch_enable(1'b1) );
-  \**SEQGEN**  \sum_reg_reg[3]  ( .clear(N2), .preset(1'b0), .next_state(
-        sum[3]), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        output_sum[3]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \sum_reg_reg[2]  ( .clear(N2), .preset(1'b0), .next_state(
-        sum[2]), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        output_sum[2]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \sum_reg_reg[1]  ( .clear(N2), .preset(1'b0), .next_state(
-        sum0[1]), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        output_sum[1]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  \**SEQGEN**  \sum_reg_reg[0]  ( .clear(N2), .preset(1'b0), .next_state(
-        sum0[0]), .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(
-        output_sum[0]), .synch_clear(1'b0), .synch_preset(1'b0), 
-        .synch_toggle(1'b0), .synch_enable(1'b1) );
-  GTECH_NOT I_0 ( .A(Cout0), .Z(N3) );
-  SELECT_OP C50 ( .DATA1(sum1), .DATA2(sum2), .CONTROL1(N0), .CONTROL2(N1), 
-        .Z(sum) );
-  GTECH_BUF B_0 ( .A(N3), .Z(N0) );
-  GTECH_BUF B_1 ( .A(Cout0), .Z(N1) );
-  SELECT_OP C51 ( .DATA1(Cout1), .DATA2(Cout2), .CONTROL1(N0), .CONTROL2(N1), 
-        .Z(Cout) );
-  GTECH_NOT I_1 ( .A(reset_n), .Z(N2) );
+  DFFSR \B_reg_reg[3]  ( .D(B[3]), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        B_reg[3]) );
+  DFFSR \B_reg_reg[2]  ( .D(B[2]), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        B_reg[2]) );
+  DFFSR \B_reg_reg[1]  ( .D(B[1]), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        B_reg[1]) );
+  DFFSR \B_reg_reg[0]  ( .D(B[0]), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        B_reg[0]) );
+  DFFSR \A_reg_reg[3]  ( .D(A[3]), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        A_reg[3]) );
+  DFFSR \A_reg_reg[2]  ( .D(A[2]), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        A_reg[2]) );
+  DFFSR \A_reg_reg[1]  ( .D(A[1]), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        A_reg[1]) );
+  DFFSR \A_reg_reg[0]  ( .D(A[0]), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        A_reg[0]) );
+  DFFSR Cout_reg_reg ( .D(n16), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        output_Cout) );
+  DFFSR \sum_reg_reg[3]  ( .D(n14), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        output_sum[3]) );
+  DFFSR \sum_reg_reg[2]  ( .D(n15), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        output_sum[2]) );
+  DFFSR \sum_reg_reg[1]  ( .D(sum0[1]), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        output_sum[1]) );
+  DFFSR \sum_reg_reg[0]  ( .D(sum0[0]), .CLK(clk), .R(reset_n), .S(1'b1), .Q(
+        output_sum[0]) );
+  INVX1 U23 ( .A(n21), .Y(n16) );
+  MUX2X1 U24 ( .B(Cout1), .A(Cout2), .S(Cout0), .Y(n21) );
+  INVX1 U25 ( .A(n22), .Y(n15) );
+  MUX2X1 U26 ( .B(sum1[0]), .A(sum2[0]), .S(Cout0), .Y(n22) );
+  INVX1 U27 ( .A(n23), .Y(n14) );
+  MUX2X1 U28 ( .B(sum1[1]), .A(sum2[1]), .S(Cout0), .Y(n23) );
 endmodule
 

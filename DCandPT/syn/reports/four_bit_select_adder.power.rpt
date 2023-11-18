@@ -1,4 +1,4 @@
-Warning: Main library 'gtech' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Warning: There is no defined clock in the design. (PWR-80)
 Warning: Design has unannotated primary inputs. (PWR-414)
@@ -9,48 +9,47 @@ Report : power
         -analysis_effort low
 Design : four_bit_select_adder
 Version: Q-2019.12-SP3
-Date   : Fri Nov 17 23:36:05 2023
+Date   : Fri Nov 17 23:38:32 2023
 ****************************************
 
 
 Library(s) Used:
 
-    gtech (File: /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db)
+    osu05_stdcells (File: /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db)
 
 
-Operating Conditions: nom_pvt   Library: gtech
+Operating Conditions: typical   Library: osu05_stdcells
 Wire Load Model Mode: top
 
 
 Global Operating Voltage = 5    
 Power-specific unit information :
     Voltage Units = 1V
-    Capacitance Units = 0.100000ff
+    Capacitance Units = 1.000000pf
     Time Units = 1ns
-    Dynamic Power Units = 100nW    (derived from V,C,T units)
-    Leakage Power Units = Unitless
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =   0.0000 nW        
-  Net Switching Power  =   0.0000 nW        
+  Cell Internal Power  =   3.7986 mW   (85%)
+  Net Switching Power  = 688.5215 uW   (15%)
                          ---------
-Total Dynamic Power    =   0.0000 nW        
+Total Dynamic Power    =   4.4871 mW  (100%)
 
-Cell Leakage Power     =   0.0000 
+Cell Leakage Power     =  10.3095 nW
 
-Error: Either dynamic power or leakage power, in the library, is unitless. Unable to display complete power group summary. (PWR-799)
 Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
 
                  Internal         Switching           Leakage            Total
 Power Group      Power            Power               Power              Power   (   %    )  Attrs
 --------------------------------------------------------------------------------------------------
-io_pad             0.0000            0.0000            0.0000               NA   (     N/A)
-memory             0.0000            0.0000            0.0000               NA   (     N/A)
-black_box          0.0000            0.0000            0.0000               NA   (     N/A)
-clock_network      0.0000            0.0000            0.0000               NA   (     N/A)
-register           0.0000            0.0000            0.0000               NA   (     N/A)
-sequential         0.0000            0.0000            0.0000               NA   (     N/A)
-combinational      0.0000            0.0000            0.0000               NA   (     N/A)
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         3.0564            0.2824            6.9287            3.3388  (  74.41%)
+combinational      0.7422            0.4061            3.3808            1.1484  (  25.59%)
 --------------------------------------------------------------------------------------------------
-Total              0.0000 nW         0.0000 nW         0.0000               NA        
+Total              3.7986 mW         0.6885 mW        10.3095 nW         4.4871 mW
 1
