@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version Q-2019.12-SP3 for linux64 -- Apr 21, 2020
-#@ # Date:   Fri Nov 17 21:42:57 2023
+#@ # Date:   Fri Nov 17 23:09:42 2023
 #@ # Run by: amaso@mo.ece.pdx.edu
 #@ 
 
@@ -6678,6 +6678,4 @@ source /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/admin/setup/.synops
 
 #@ # -- End source /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/admin/setup/.synopsys_dc.setup
 
-man analyze
-man elaborate
 exit
