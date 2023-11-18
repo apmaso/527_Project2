@@ -25,7 +25,7 @@ set top_design four_bit_select_adder
 #set rtl_list [list ./syn/rtl/$top_design.sv ]
 
 
-set rtl_list [list ./syn/rtl/*.sv ]
+set rtl_list [list ../rtl/*.sv ]
 
 
 #set slow_corner "ss0p95v125c"
