@@ -10,7 +10,7 @@ source -echo -verbose ../../$top_design.design_config.tcl
 
 lappend search_path /u/amaso/Documents/ECE527/527_Project2/DCandPT/syn/work
 set target_library osu05_stdcells.db
-set link_library [concat "+" $target_library]
+set link_library [concat "*" $target_library]
 link
 
 read_file -format sverilog ../rtl/$top_design.sv
