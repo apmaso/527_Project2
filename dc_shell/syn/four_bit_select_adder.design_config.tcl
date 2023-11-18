@@ -19,7 +19,7 @@
 
 # ICC2 NDM choosing also uses the sub_lib_types so that only the required libraries and extras are not loaded.
 
-set top_design four_bit_select 
+set top_design four_bit_select_adder 
 #set add_ios 0
 #set pad_design 0
 set rtl_list [list ./rtl/$top_design.sv ]
