@@ -1,0 +1,23 @@
+Error: Library Compiler executable path is not set. (PT-063)
+pt_shell> f
+setting top_design to: 
+four_bit_select_adder
+pt_shell> source ../scripts/netlist_dc.tcl
+Information: current_design won't return any data before link (DES-071)
+
+Loading verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/pt/netlist/four_bit_select_adder.netlist'
+Loading db file '/u/amaso/Documents/ECE527/527_Project2/DCandPT/pt/work/osu05_stdcells.db'
+Linking design four_bit_select_adder...
+Information: Removing 9 unneeded designs..... (LNK-034)
+Information: 34 (87.18%) library cells are unused in library osu05_stdcells..... (LNK-045)
+Information: total 34 library cells are unused (LNK-046)
+Design 'four_bit_select_adder' was successfully linked.
+Information: There are 69 leaf cells, ports, hiers and 108 nets in the design (LNK-047)
+pt_shell> exit
+Maximum memory usage for this session: 946.74 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 67 seconds
+Diagnostics summary: 1 error, 1 warning, 5 informationals
+
+Thank you for using pt_shell!
+

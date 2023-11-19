@@ -2,7 +2,7 @@
 #  Library Setup
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-set synthetic_library dw_foundation.sldb
+#set synthetic_library dw_foundation.sldb
 
 # This ensures that temporary files generated during
 # analysis [reading of verilog/vhdl] are stored in the directory "analyzed"
@@ -23,20 +23,16 @@ set sh_command_log_file "${synopsys_program_name}.cmd.$timestamp"
 set sh_new_variable_message false
 
 # No assign or tri in verilog netlist
-set verilogout_no_tri true
+#set verilogout_no_tri true
 
 
 # For ICC
-echo "setting auto_restore_mw_cel_lib_setup true"
-set auto_restore_mw_cel_lib_setup true
+#echo "setting auto_restore_mw_cel_lib_setup true"
+#set auto_restore_mw_cel_lib_setup true
 
-set enable_page_mode false
-set sh_enable_page_mode false
+#set enable_page_mode false
+#set sh_enable_page_mode false
 
-alias _ measure_time
+#alias _ measure_time
 
-alias o {puts "setting top_design to: " ; set top_design ORCA_TOP}
-alias e {puts "setting top_design to: " ; set top_design ExampleRocketSystem}
-alias f {puts "setting top_design to: " ; set top_design fifo1}
-alias fs {puts "setting top_design to: " ; set top_design fifo1_sram}
-
+alias f {puts "setting top_design to: " ; set top_design four_bit_select_adder}

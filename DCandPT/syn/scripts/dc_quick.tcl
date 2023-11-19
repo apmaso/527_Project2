@@ -25,3 +25,10 @@ report_timing -path_type min >> ../reports/$top_design.timing.rpt
 write -format verilog -hierarchy -output ../outputs/$top_design.netlist
 link
 
+# Set up our clock
+create_clock -name clk -period 10 [get_ports clk]
+set_clock_uncertainty 0.5 [all_clocks]
+set_clock_latency 0.5 [get_ports clk]
+
+report_timing -delay_type max >> ../reports/$top_design.timing.rpt
+report_timing -delay_type min >> ../reports/$top_design.timing.rpt
