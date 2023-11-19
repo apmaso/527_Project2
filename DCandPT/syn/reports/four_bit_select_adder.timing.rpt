@@ -1,0 +1,4 @@
+Error: value 'max' for option '-path_type' is not valid.  Specify one of:
+	full, end, only, short, start, full_clock, full_clock_expanded (CMD-031)
+Error: value 'min' for option '-path_type' is not valid.  Specify one of:
+	full, end, only, short, start, full_clock, full_clock_expanded (CMD-031)

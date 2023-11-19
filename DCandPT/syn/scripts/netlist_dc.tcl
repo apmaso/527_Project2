@@ -1,6 +1,7 @@
-# Framework for tcl file taken from ECE581 documentation
-# as well as from the source material for ECE530
+##########################################################
+# Quick and dirty synthesis to netlist with a few reports
 #
+# Framework for tcl file taken from ECE581 documentation
 #
 # Written by Alexander Maso
 ##########################################################
@@ -19,6 +20,8 @@ compile
 report_area > ../reports/$top_design.area.rpt
 report_cell > ../reports/$top_design.cell.rpt
 report_power > ../reports/$top_design.power.rpt
+report_timing -path_type max > ../reports/$top_design.timing.rpt
+report_timing -path_type min >> ../reports/$top_design.timing.rpt
 write -format verilog -hierarchy -output ../outputs/$top_design.netlist
 link
 
