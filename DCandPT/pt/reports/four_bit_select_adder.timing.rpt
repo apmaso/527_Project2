@@ -7,45 +7,46 @@ Report : timing
 	-sort_by slack
 Design : four_bit_select_adder
 Version: O-2018.06
-Date   : Sun Nov 19 13:43:29 2023
+Date   : Sun Nov 19 23:06:21 2023
 ****************************************
 
 
-  Startpoint: B_reg_reg[0]
+  Startpoint: A_reg_reg[0]
                (rising edge-triggered flip-flop clocked by clk)
   Endpoint: sum_reg_reg[3]
                (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
 
-  Point                                                   Incr       Path
-  ------------------------------------------------------------------------------
-  clock clk (rise edge)                                   0.00       0.00
-  clock network delay (ideal)                             0.50       0.50
-  B_reg_reg[0]/CLK (DFFSR)                                0.00       0.50 r
-  B_reg_reg[0]/Q (DFFSR)                                  0.63       1.13 f
-  lower_adder/fa0/U4/Y (XOR2X1)                           0.33       1.46 f
-  lower_adder/fa0/U3/Y (AOI22X1)                          0.15       1.61 r
-  lower_adder/fa0/U2/Y (INVX1)                            0.25       1.86 f
-  lower_adder/fa1/U3/Y (AOI22X1)                          0.13       1.98 r
-  lower_adder/fa1/U2/Y (INVX1)                            0.30       2.28 f
-  U28/Y (MUX2X1)                                          0.25       2.53 f
-  U27/Y (INVX1)                                           0.08       2.61 r
-  sum_reg_reg[3]/D (DFFSR)                                0.00       2.61 r
-  data arrival time                                                  2.61
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  A_reg_reg[0]/CLK (DFFSR)                 0.00       0.50 r
+  A_reg_reg[0]/Q (DFFSR)                   0.61       1.11 f
+  U40/Y (XOR2X1)                           0.30       1.41 f
+  U39/Y (AOI22X1)                          0.15       1.56 r
+  U38/Y (INVX1)                            0.27       1.83 f
+  U37/Y (XOR2X1)                           0.31       2.14 f
+  U36/Y (AOI22X1)                          0.27       2.41 r
+  U34/Y (AOI21X1)                          0.20       2.61 f
+  U33/Y (XNOR2X1)                          0.29       2.90 f
+  U32/Y (XOR2X1)                           0.18       3.08 r
+  sum_reg_reg[3]/D (DFFSR)                 0.00       3.08 r
+  data arrival time                                   3.08
 
-  clock clk (rise edge)                                  10.00      10.00
-  clock network delay (ideal)                             0.50      10.50
-  clock reconvergence pessimism                           0.00      10.50
-  clock uncertainty                                      -0.50      10.00
-  sum_reg_reg[3]/CLK (DFFSR)                                        10.00 r
-  library setup time                                     -0.21       9.79
-  data required time                                                 9.79
-  ------------------------------------------------------------------------------
-  data required time                                                 9.79
-  data arrival time                                                 -2.61
-  ------------------------------------------------------------------------------
-  slack (MET)                                                        7.18
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock reconvergence pessimism            0.00      10.50
+  clock uncertainty                       -0.50      10.00
+  sum_reg_reg[3]/CLK (DFFSR)                         10.00 r
+  library setup time                      -0.22       9.78
+  data required time                                  9.78
+  ---------------------------------------------------------------
+  data required time                                  9.78
+  data arrival time                                  -3.08
+  ---------------------------------------------------------------
+  slack (MET)                                         6.70
 
 
 1
@@ -57,40 +58,40 @@ Report : timing
 	-sort_by slack
 Design : four_bit_select_adder
 Version: O-2018.06
-Date   : Sun Nov 19 13:43:29 2023
+Date   : Sun Nov 19 23:06:21 2023
 ****************************************
 
 
-  Startpoint: A_reg_reg[1]
+  Startpoint: B_reg_reg[3]
                (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: sum_reg_reg[1]
+  Endpoint: Cout_reg_reg
                (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: min
 
-  Point                                                   Incr       Path
-  ------------------------------------------------------------------------------
-  clock clk (rise edge)                                   0.00       0.00
-  clock network delay (ideal)                             0.50       0.50
-  A_reg_reg[1]/CLK (DFFSR)                                0.00       0.50 r
-  A_reg_reg[1]/Q (DFFSR)                                  0.54       1.04 r
-  lower_adder/fa1/U4/Y (XOR2X1)                           0.29       1.32 r
-  lower_adder/fa1/U1/Y (XOR2X1)                           0.21       1.53 f
-  sum_reg_reg[1]/D (DFFSR)                                0.00       1.53 f
-  data arrival time                                                  1.53
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  B_reg_reg[3]/CLK (DFFSR)                 0.00       0.50 r
+  B_reg_reg[3]/Q (DFFSR)                   0.45       0.95 f
+  U42/Y (INVX1)                            0.19       1.15 r
+  U25/Y (OAI21X1)                          0.07       1.22 f
+  Cout_reg_reg/D (DFFSR)                   0.00       1.22 f
+  data arrival time                                   1.22
 
-  clock clk (rise edge)                                   0.00       0.00
-  clock network delay (ideal)                             0.50       0.50
-  clock reconvergence pessimism                           0.00       0.50
-  clock uncertainty                                       0.50       1.00
-  sum_reg_reg[1]/CLK (DFFSR)                                         1.00 r
-  library hold time                                       0.09       1.09
-  data required time                                                 1.09
-  ------------------------------------------------------------------------------
-  data required time                                                 1.09
-  data arrival time                                                 -1.53
-  ------------------------------------------------------------------------------
-  slack (MET)                                                        0.44
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock reconvergence pessimism            0.00       0.50
+  clock uncertainty                        0.50       1.00
+  Cout_reg_reg/CLK (DFFSR)                            1.00 r
+  library hold time                        0.09       1.09
+  data required time                                  1.09
+  ---------------------------------------------------------------
+  data required time                                  1.09
+  data arrival time                                  -1.22
+  ---------------------------------------------------------------
+  slack (MET)                                         0.13
 
 
 1

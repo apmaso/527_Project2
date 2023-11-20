@@ -1,0 +1,162 @@
+Error: Library Compiler executable path is not set. (PT-063)
+pt_shell> apropos gui
+ gui_append_utable    # Append data rows to an existing UserTable.
+ gui_change_highlight # Change the global highlight state.
+ gui_close_utable     # Close and free the given list of UserTables in memory.
+ gui_create_attrgroup # Creates gui attribute group
+ gui_create_pref_category # Create a preference category
+ gui_create_pref_key  # Create a preference key-value pair
+ gui_create_utable    # Create a new UserTable.
+ gui_create_vm        # Create new Visual Mode
+   -name string           (Visual Mode name)
+   [-update_cmd string]   (Tcl command string to update vm contents)
+   [-title string]        (String for title)
+   [-help_topic string]   (String for help topic)
+   [-infotip string]      (String for infotip)
+   [-netfilter string]    (Net connection filtering)
+   [-discrete sbool]      (Set visual mode to be discrete and allow reordering of buckets)
+   [-float sbool]         (Indicates that bucket contents have a floating point range)
+   [-show_only_pins_of_nets sbool]
+                          (Indicates that layout will only show pins of net objects in buckets)
+   [-icon string]         (Set the icon file to be used for gui menus)
+   [-top_exaggeration float]
+                          (Set the exaggeration for the top bucket: Value >= 0: 
+                           Value >= 0)
+   [-mid_exaggeration float]
+                          (Set the exaggeration for the middle bucket: Value >= -1: 
+                           Value >= -1)
+   [-bot_exaggeration float]
+                          (Set the exaggeration for the bottom bucket: Value >= 0: 
+                           Value >= 0)
+
+ gui_create_vm_objects # Create objects to hold annotations in visual modes
+ gui_create_vmbucket  # Create new Visual Mode Bucket
+ gui_delete_attrgroup # Deletes gui attribute group
+ gui_edit_vmbucket_contents # Edit contents of a Visual Mode Bucket
+ gui_eval_command     # Execute and log a Tcl command
+ gui_execute_menu_item # execute a menu item
+ gui_exist_pref_category # check for category existence, returns [0|1]
+ gui_exist_pref_key   # check for key existence, returns [0|1]
+ gui_export_utable    # Export the UserTable to a value file.
+ gui_get_bucket_option # Get option on a bucket for the specified Visual/Map Mode
+ gui_get_bucket_option_list # Get list of options supported for buckets of the specified Visual/Map Mode
+ gui_get_highlight    # Get a collection of highlighted objects.
+ gui_get_highlight_options # Get highlighting options.
+ gui_get_map_list     # Get list of Visual and Map Modes supported
+ gui_get_map_option   # Get option on a specified Visual/Map Mode
+ gui_get_map_option_list # Get list of options supported by specified Visual/Map Mode
+ gui_get_pref_keys    # get keys in specified categories
+ gui_get_pref_value   # Get value for specified key
+ gui_get_setting      # 
+ gui_get_vm           # Get attributes for Visual Mode
+   -name string           (Visual Mode name)
+   [-update_cmd]          (Return update tcl cmd)
+   [-title]               (Return title string)
+   [-help_topic]          (Return help topic string)
+   [-infotip]             (Return infotip string)
+   [-netfilter]           (Return net connection filtering)
+   [-discrete]            (Return whether visual mode is discrete)
+   [-float]               (Return whether the visual mode buckets have a floating point range)
+   [-show_only_pins_of_nets]
+                          (Return whether the layout will show only pins of net objects in buckets)
+   [-icon_file]           (Return the gui menu icon file)
+   [-top_exaggeration]    (Return the top bucket exaggeration)
+   [-mid_exaggeration]    (Return the middle bucket exaggeration)
+   [-bot_exaggeration]    (Return the bottom bucket exaggeration)
+   [-buckets]             (Return bucket name list)
+
+ gui_get_vmbucket     # Get attributes for Visual Mode Bucket
+ gui_get_window_ids   # Get a list of window ids
+ gui_get_window_types # Get a list of window types
+ gui_import_utable    # Create a UserTable and import records from a value file or a report.
+ gui_list_attrgroups  # List gui attribute groups
+ gui_open_utable      # Open the given UserTable file.
+ gui_remove_pref_key  # Remove a preference key
+ gui_remove_vm        # Remove Visual Mode
+ gui_remove_vmbucket  # Remove Visual Mode Bucket
+ gui_select_by_name   # select objects of a specified class by name
+ gui_set_bucket_option # Set option on a bucket for the specified Visual/Map Mode
+ gui_set_highlight_options # Set highlighting options.
+ gui_set_map_option   # Set option on a specified Visual/Map Mode
+ gui_set_pref_value   # Set value for specified key
+ gui_set_setting      # 
+ gui_set_vm           # Set Visual Mode attributes
+   -name string           (Visual Mode name)
+   [-update_cmd string]   (Tcl command string to update vm contents)
+   [-title string]        (String for title)
+   [-help_topic string]   (String for help topic)
+   [-infotip string]      (String for infotip)
+   [-netfilter string]    (Net connection filtering)
+   [-float sbool]         (Indicates that bucket contents have a floating point range)
+   [-show_only_pins_of_nets sbool]
+                          (Indicates that layout will only show pins of net objects in buckets)
+   [-icon string]         (Set the icon file to be used for gui menus)
+   [-top_exaggeration float]
+                          (Set the exaggeration for the top bucket: Value >= 0: 
+                           Value >= 0)
+   [-mid_exaggeration float]
+                          (Set the exaggeration for the middle bucket: Value >= -1: 
+                           Value >= -1)
+   [-bot_exaggeration float]
+                          (Set the exaggeration for the bottom bucket: Value >= 0: 
+                           Value >= 0)
+   [-set_exaggerations]   (Set the bucket exaggerations)
+   [-buckets string]      (Set the order of buckets)
+
+ gui_set_vmbucket     # Set attributes for Visual Mode Bucket
+ gui_show_man_page    # 
+ gui_show_map         # Show/Hide a specified Visual/Map Mode
+ gui_start            # Start GUI
+   [-no_windows]          (set flag not to load windows for this cmd)
+   [-file script]         (file to source on gui_start)
+   [ -- x_args ...]       (arguments to pass to the X connection)
+
+ gui_stop             # Stop GUI
+ gui_update_attrgroup # Updates gui attribute group
+ gui_update_pref_file # Update preference file
+ gui_update_vm        # Update Visual Mode
+ gui_update_vm_annotations # Update visual mode annotations
+ gui_write_timing_paths # write timing paths
+ gui_write_utable     # Write the UserTable to a file in native UserTable format.
+ report_hier_analysis # Report the configuration, settings and session attributes in HyperScale
+   [-config]              (Configuration used in HyperScale)
+   [-port_abstraction]    (Abstracted ports)
+   [-nosplit]             (whether to split the printout)
+   [-explore_partitions]  (Partition design to provide guidance for partitioning design optimally)
+   [-verbose]             (verbose output)
+
+ start_gui            # Synonym for 'gui_start'
+ stop_gui             # Synonym for 'gui_stop'
+pt_shell> f
+setting top_design to: 
+four_bit_select_adder
+pt_shell> source ../scripts/pt_quick.tcl
+Information: current_design won't return any data before link (DES-071)
+
+Loading verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/pt/netlist/four_bit_select_adder.netlist'
+Loading db file '/u/amaso/Documents/ECE527/527_Project2/DCandPT/pt/work/osu05_stdcells.db'
+Linking design four_bit_select_adder...
+Information: Removing 9 unneeded designs..... (LNK-034)
+Information: 34 (87.18%) library cells are unused in library osu05_stdcells..... (LNK-045)
+Information: total 34 library cells are unused (LNK-046)
+Design 'four_bit_select_adder' was successfully linked.
+Information: There are 69 leaf cells, ports, hiers and 108 nets in the design (LNK-047)
+pt_shell> sjow
+Error: unknown command 'sjow' (CMD-005)
+pt_shell> 
+pt_shell> show_gui
+Error: unknown command 'show_gui' (CMD-005)
+pt_shell> start_gui
+pt_shell> exit
+Suppressed Messages Summary:
+Id          Severity      Occurrences   Suppressed
+-------------------------------------------------------------------------------
+CMD-005     Error                  14           12
+Total 1 type of message is suppressed
+Maximum memory usage for this session: 1031.11 MB
+CPU usage for this session: 21 seconds 
+Elapsed time for this session: 301 seconds
+Diagnostics summary: 3 errors, 1 warning, 5 informationals
+
+Thank you for using pt_shell!
+
