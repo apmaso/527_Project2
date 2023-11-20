@@ -1,4 +1,64 @@
-Error: value 'max' for option '-path_type' is not valid.  Specify one of:
-	full, end, only, short, start, full_clock, full_clock_expanded (CMD-031)
-Error: value 'min' for option '-path_type' is not valid.  Specify one of:
-	full, end, only, short, start, full_clock, full_clock_expanded (CMD-031)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Mon Nov 20 15:03:06 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: sum_reg_reg[3]
+              (rising edge-triggered flip-flop)
+  Endpoint: output_sum[3]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  sum_reg_reg[3]/CLK (DFFSR)               0.00       0.00 r
+  sum_reg_reg[3]/Q (DFFSR)                 0.42       0.42 f
+  output_sum[3] (out)                      0.00       0.42 f
+  data arrival time                                   0.42
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Mon Nov 20 15:03:06 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: sum_reg_reg[3]
+              (rising edge-triggered flip-flop)
+  Endpoint: output_sum[3]
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  sum_reg_reg[3]/CLK (DFFSR)               0.00       0.00 r
+  sum_reg_reg[3]/Q (DFFSR)                 0.38       0.38 r
+  output_sum[3] (out)                      0.00       0.38 r
+  data arrival time                                   0.38
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

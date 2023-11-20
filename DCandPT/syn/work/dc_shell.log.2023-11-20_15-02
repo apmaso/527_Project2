@@ -1,0 +1,348 @@
+Initializing gui preferences from file  /u/amaso/.synopsys_dv_prefs.tcl
+dc_shell> f
+setting top_design to: 
+four_bit_select_adder
+dc_shell> ll
+Error: unknown command 'll' (CMD-005)
+dc_shell> source ../scripts/dc_quick.tcl
+#set lib_dir /pkgs/synopsys/2020/32_28nm/SAED32_EDK
+# Decoder ring for the libraries
+# You will need to follow another example or look in the library directories to understand.
+# lib_types is used for the dc/dct linking variables and ICC2 NDM lcoations.
+# /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm
+# /          $lib_dir                   /lib/ $lib_type /db_nldm
+# link_library, Target_library use the sub_lib_types and corner variables. 
+# For sub_lib_types and corner:
+# Example:
+#     saed32hvt_ss0p75v125c.db
+#     |sub_lib  corner    .db
+# The current flow tries to find all sub_lib and all corners in all the search paths.  Any match will be put in the library list.
+# Wild cards can be used, but be careful.  Multiple matches can occur in ways you don't want.
+# For the target library, the same method is used as the link library except only HVT and RVT lib_types are used.
+# ICC2 NDM choosing also uses the sub_lib_types so that only the required libraries and extras are not loaded.
+set top_design four_bit_select_adder 
+four_bit_select_adder
+#set add_ios 0
+#set pad_design 0
+set rtl_list [list ./syn/rtl/$top_design.sv ]
+./syn/rtl/four_bit_select_adder.sv
+#set slow_corner "ss0p95v125c"
+#set fast_corner "ff1p16vn40c"
+#set synth_corners $slow_corner
+#set slow_metal Cmax_125
+#set fast_metal Cmax_125
+#set lib_types "stdcell_hvt stdcell_rvt stdcell_lvt"
+# Get just the main standard cells, srams and IOs
+#set sub_lib_type "saed32?vt_ "
+#set topdir /u/$env(USER)/PSU_RTL2GDS
+#set topdir [ lindex [ regexp -inline "(.*)\(syn\|pt\|apr\)" [pwd] ] 1 ]
+Error: Current design is not defined. (UID-4)
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Loading sverilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 28 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      A_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 87 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db:four_bit_select_adder'
+Loaded 3 designs.
+Current design is 'four_bit_select_adder'.
+Current design is 'four_bit_select_adder'.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'full_adder_0'
+  Processing 'two_bit_adder_0'
+  Processing 'four_bit_select_adder'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'four_bit_select_adder' has no optimization constraints set. (OPT-108)
+Information: Ungrouping hierarchy lower_adder. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa0. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa1. (OPT-772)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'four_bit_select_adder'
+  Mapping 'four_bit_select_adder'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+    0:00:33   27270.0      0.00       0.0       0.0                          
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Writing verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/outputs/four_bit_select_adder.netlist'.
+
+  Linking design 'four_bit_select_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  four_bit_select_adder       /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db
+  osu05_stdcells (library)    /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+
+1
+dc_shell> check_design
+1
+dc_shell> man check_design
+2.  Synopsys Commands                                        Command Reference
+                                 check_design
+
+NAME
+       check_design
+              Checks the current design for consistency.
+
+SYNTAX
+       status check_design
+               [-summary]
+               [-no_warnings]
+               [-one_level]
+               [-multiple_designs]
+               [-no_connection_class]
+               [-nosplit]
+               [-unmapped]
+               [-cells]
+               [-ports]
+               [-designs]
+               [-nets]
+               [-tristates]
+               [error-ids]
+               [-html_file_name html_file]
+
+ARGUMENTS
+       -summary
+dc_shell> check_design error-ids
+1
+dc_shell> status check_design
+Error: unknown command 'status' (CMD-005)
+dc_shell> man check_design
+2.  Synopsys Commands                                        Command Reference
+                                 check_design
+
+NAME
+       check_design
+              Checks the current design for consistency.
+
+SYNTAX
+       status check_design
+               [-summary]
+               [-no_warnings]
+               [-one_level]
+               [-multiple_designs]
+               [-no_connection_class]
+               [-nosplit]
+               [-unmapped]
+               [-cells]
+               [-ports]
+               [-designs]
+               [-nets]
+               [-tristates]
+               [error-ids]
+               [-html_file_name html_file]
+
+ARGUMENTS
+       -summary
+              Displays  a  summary of the warning messages instead of one mes-
+              sage per warning.  This does not affect the way  error  messages
+              are issued.
+
+       -no_warnings
+              Suppresses warning messages, so only error messages are printed.
+
+       -one_level
+              Performs checks at only the  current  level  of  hierarchy.   By
+              default,  check_design  checks the current level and all designs
+              below the current level.
+
+       -multiple_designs
+              Reports  warning  messages  related   to   multiply-instantiated
+              designs.   With this option, the tool lists all multiply-instan-
+              tiated  designs  along  with  instance  names   and   associated
+              attributes,  such  as  dont_touch,  black_box,  and ungroup.  By
+              default, these messages are suppressed.
+
+       -no_connection_class
+              Suppresses connection class warning messages.   This  switch  is
+              useful while working on GTECH designs and netlists on which con-
+              nection class violations are expected.  By default,  these  mes-
+              sages are reported.
+
+       -nosplit
+              Prevents  lines  from  being  split when column fields overflow.
+              Most of the design information is listed in fixed-width columns.
+              If  the  information for a given field exceeds the column width,
+              the next field begins on a new line in the correct column.
+
+       -unmapped
+              Reports warning messages for unmapped cells when the  cells  are
+              being checked. By default, these messages are suppressed.
+
+       -cells Reports  the  following  warning  messages  for  cells:  LINT-0,
+              LINT-1, LINT-10, LINT-32, LINT-33,  LINT-58,  LINT-59,  LINT-60,
+              and LINT-61 (if the -unmapped option is used).
+
+       -ports Reports  the  following  warning  messages  for  ports:  LINT-5,
+              LINT-6, LINT-8, LINT-28, LINT-29, LINT-31, and LINT-52.
+
+       -designs
+              Reports the following warning  messages  for  designs:  LINT-25,
+              LINT-46, and LINT-55.
+
+       -nets  Reports the following warning messages for nets: LINT-2, LINT-3,
+              LINT-4, LINT-35, LINT-38, LINT-47, and LINT-54.
+
+       -tristates
+              Reports the following warning messages  for  tristates:  LINT-34
+              and LINT-63.
+
+       error-ids
+              Reports  warning  messages  for  specified  error  IDs,  such as
+              LINT-2.
+
+       -html_file_name html_file
+              Generates a report for the check_design command in HTML  format.
+              By  default, the check_design command writes reports in standard
+              output. The -html_file_name option redirects  the  output  to  a
+              specified HTML file.
+
+DESCRIPTION
+       The check_design command checks the internal representation of the cur-
+       rent design for consistency, and issues error and warning  messages  as
+       appropriate.
+
+       Error  messages indicate design problems of such severity that the com-
+       pile command does not accept the design; for example, recursive hierar-
+       chy in a design (when a design references itself) is an error.  Warning
+       messages are informational and do not necessarily indicate design prob-
+       lems.  However, these messages should be investigated.
+
+       The  check_design command flags multiple instances of a design within a
+       system.  If a design is instantiated in two different designs, a  warn-
+       ing message is issued.  For information on how to respond to error mes-
+       sages dealing with multiple instances, see  the  uniquify  command  man
+       page.
+
+       The  check_design  -summary  command automatically runs on every design
+       that is compiled.   However,  you  can  use  the  check_design  command
+       explicitly to see warning messages.
+
+       Potential  problems  detected  by  this  command include unloaded input
+       ports or undriven output ports, nets without loads or drivers  or  with
+       multiple  drivers,  cells  or  designs  without inputs or outputs, mis-
+       matched pin counts between an  instance  and  its  reference,  tristate
+       buses with non-tristate drivers, wire loops (timing loops with no cells
+       in them) across hierarchies, and so forth.
+
+   Multicorner-Multimode Support
+       This command has no dependency on scenario-specific information.
+
+EXAMPLES
+       The following command checks the current design for problems and issues
+       error and warning messages:
+
+         prompt> check_design
+
+       The following command checks only the current level of the design:
+dc_shell> exit
+
+Memory usage for this session 68 Mbytes.
+Memory usage for this session including child processes 68 Mbytes.
+CPU usage for this session 3 seconds ( 0.00 hours ).
+Elapsed time for this session 153 seconds ( 0.04 hours ).
+
+Thank you...
+
