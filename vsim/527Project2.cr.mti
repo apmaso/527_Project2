@@ -5,22 +5,6 @@ QuestaSim-64 vlog 2019.2_1 Compiler 2019.05 May 13 2019
 Top level modules:
 	four_bit_select_adder_test
 
-} {} {}} /home/amaso/common/Documents/ECE527/527_Project2/vsim/four_bit_select_adder.netlist {1 {vlog -work work -vopt -stats=none /home/amaso/common/Documents/ECE527/527_Project2/vsim/four_bit_select_adder.netlist
-QuestaSim-64 vlog 2019.2_1 Compiler 2019.05 May 13 2019
--- Compiling module full_adder_0
--- Compiling module full_adder_5
--- Compiling module two_bit_adder_0
--- Compiling module full_adder_1
--- Compiling module full_adder_2
--- Compiling module two_bit_adder_1
--- Compiling module full_adder_3
--- Compiling module full_adder_4
--- Compiling module two_bit_adder_2
--- Compiling module four_bit_select_adder
-
-Top level modules:
-	four_bit_select_adder
-
 } {} {}} /home/amaso/common/Documents/ECE527/527_Project2/vsim/osu05_stdcells.v {1 {vlog -work work -vopt -stats=none /home/amaso/common/Documents/ECE527/527_Project2/vsim/osu05_stdcells.v
 QuestaSim-64 vlog 2019.2_1 Compiler 2019.05 May 13 2019
 -- Compiling module AND2X1
@@ -107,5 +91,21 @@ Top level modules:
 	PADFC
 	PADGND
 	PADVDD
+
+} {} {}} /home/amaso/common/Documents/ECE527/527_Project2/vsim/four_bit_select_adder.netlist {1 {vlog -work work -vopt -stats=none /home/amaso/common/Documents/ECE527/527_Project2/vsim/four_bit_select_adder.netlist
+QuestaSim-64 vlog 2019.2_1 Compiler 2019.05 May 13 2019
+-- Compiling module full_adder_0
+-- Compiling module full_adder_5
+-- Compiling module two_bit_adder_0
+-- Compiling module full_adder_1
+-- Compiling module full_adder_2
+-- Compiling module two_bit_adder_1
+-- Compiling module full_adder_3
+-- Compiling module full_adder_4
+-- Compiling module two_bit_adder_2
+-- Compiling module four_bit_select_adder
+
+Top level modules:
+	four_bit_select_adder
 
 } {} {}}
