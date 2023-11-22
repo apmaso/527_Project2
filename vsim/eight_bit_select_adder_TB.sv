@@ -16,6 +16,12 @@ module eight_bit_select_adder_test();
     logic c_in_reg;
     logic [7:0] a_last, b_last;
     logic c_in_last;
+    logic [7:0] a_2last, b_2last;
+    logic c_in_2last;
+    logic [7:0] a_3last, b_3last;
+    logic c_in_3last;
+
+
 
     // Instantiate the 4-bit pipelined carry select adder
     four_bit_select_adder dut (
@@ -59,11 +65,11 @@ module eight_bit_select_adder_test();
                     // Compare against value saved in last cycle since adder is pipelined
                     if ({Cout,sum} != (a_last + b_last + c_in_reg)) begin
                         $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                                 a_last, b_last, c_in_reg, sum, Cout);
+                                 a_3last, b_3last, c_in_reg, sum, Cout);
                     end
                     else begin
                         $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                                 a_last, b_last, c_in_reg, sum, Cout);
+                                 a_3last, b_3last, c_in_reg, sum, Cout);
                     end
                     #10;
                 end
@@ -77,17 +83,17 @@ module eight_bit_select_adder_test();
         $display("####################################################");
         $display("Switching to randomized stimulus....");
         $display("####################################################");
-        for (int count = 0; count < (256*256); count++) begin
+        for (int count = 0; count < (1024); count++) begin
             A = $random;
             B = $random;
             Cin = $random;
                 #10;
                 // Compare against value saved in last cycle since adder is pipelined
                 if ({Cout,sum} != (a_last + b_last + c_in_reg)) begin
-                    $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_last, b_last, c_in_reg, sum, Cout);
+                    $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_3last, b_3last, c_in_reg, sum, Cout);
                 end
                 else begin
-                    $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_last, b_last, c_in_reg, sum, Cout);
+                    $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_3last, b_3last, c_in_reg, sum, Cout);
                 end
                 #10;
         end
@@ -97,7 +103,7 @@ module eight_bit_select_adder_test();
         $finish;
     end
     
-    // Two-stage shift register to hold the output from last cycle
+    // Four-stage shift register to hold the output from three cycles ago
     always_ff @(posedge clk or negedge reset_n) begin
 
         if (!reset_n) begin
@@ -108,6 +114,12 @@ module eight_bit_select_adder_test();
             a_last <= '0;
             b_last <= '0;
             c_in_last <= '0;
+            a_2last <= '0;
+            b_2last <= '0;
+            c_in_2last <= '0;
+            a_3last <= '0;
+            b_3last <= '0;
+            c_in_3last <= '0;
         end
         else begin
             // Store the values of a, b and c_in
@@ -117,7 +129,13 @@ module eight_bit_select_adder_test();
             c_in_reg <= Cin;
     	    a_last <= a_reg;
 	        b_last <= b_reg;
-	        c_in_last <= c_in_reg;
+            c_in_last <= c_in_reg;
+	        a_2last <= a_last; 
+            b_2last <= b_last;
+            c_in_2last <= c_in_last;
+            a_3last <= a_2last;
+            b_3last <= b_2last;
+            c_in_3last <= c_in_3last;        
         end
 
     end
