@@ -63,13 +63,13 @@ module eight_bit_select_adder_test();
                     Cin = c;
                     #10;
                     // Compare against value saved in last cycle since adder is pipelined
-                    if ({Cout,sum} != (a_last + b_last + c_in_reg)) begin
+                    if ({Cout,sum} != (a_2last + b_2last + c_in_reg)) begin
                         $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                                 a_3last, b_3last, c_in_reg, sum, Cout);
+                                 a_2last, b_2last, c_in_reg, sum, Cout);
                     end
                     else begin
                         $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                                 a_3last, b_3last, c_in_reg, sum, Cout);
+                                 a_2last, b_2last, c_in_reg, sum, Cout);
                     end
                     #10;
                 end
@@ -89,11 +89,11 @@ module eight_bit_select_adder_test();
             Cin = $random;
                 #10;
                 // Compare against value saved in last cycle since adder is pipelined
-                if ({Cout,sum} != (a_last + b_last + c_in_reg)) begin
-                    $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_3last, b_3last, c_in_reg, sum, Cout);
+                if ({Cout,sum} != (a_2last + b_2last + c_in_reg)) begin
+                    $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_2last, b_2last, c_in_reg, sum, Cout);
                 end
                 else begin
-                    $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_3last, b_3last, c_in_reg, sum, Cout);
+                    $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_2last, b_2last, c_in_reg, sum, Cout);
                 end
                 #10;
         end
