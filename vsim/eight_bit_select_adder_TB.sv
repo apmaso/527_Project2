@@ -24,7 +24,7 @@ module eight_bit_select_adder_test();
 
 
     // Instantiate the 4-bit pipelined carry select adder
-    four_bit_select_adder dut (
+    eight_bit_select_adder dut (
         .clk(clk),
         .reset_n(reset_n),
         .A(A),
