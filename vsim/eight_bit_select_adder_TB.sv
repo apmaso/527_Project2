@@ -18,8 +18,6 @@ module eight_bit_select_adder_test();
     logic c_in_last;
     logic [7:0] a_2last, b_2last;
     logic c_in_2last;
-    logic [7:0] a_3last, b_3last;
-    logic c_in_3last;
 
 
 
@@ -34,10 +32,10 @@ module eight_bit_select_adder_test();
         .output_Cout(Cout)
     );
 
-    // Clock generation
+    // Generate a clock with 20ns period
     initial begin
         clk = 0;
-        forever #10 clk = !clk;  // Generate a clock with 20ns period
+        forever #10 clk = !clk; 
     end
 
     // Test stimulus
@@ -63,13 +61,13 @@ module eight_bit_select_adder_test();
                     Cin = c;
                     #10;
                     // Compare against value saved in last cycle since adder is pipelined
-                    if ({Cout,sum} != (a_2last + b_2last + c_in_reg)) begin
+                    if ({Cout,sum} != (a_2last + b_2last + c_in_last)) begin
                         $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                                 a_2last, b_2last, c_in_reg, sum, Cout);
+                                 a_2last, b_2last, c_in_last, sum, Cout);
                     end
                     else begin
                         $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b",
-                                 a_2last, b_2last, c_in_reg, sum, Cout);
+                                 a_2last, b_2last, c_in_last, sum, Cout);
                     end
                     #10;
                 end
@@ -90,10 +88,10 @@ module eight_bit_select_adder_test();
                 #10;
                 // Compare against value saved in last cycle since adder is pipelined
                 if ({Cout,sum} != (a_2last + b_2last + c_in_reg)) begin
-                    $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_2last, b_2last, c_in_reg, sum, Cout);
+                    $display("ERROR: A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_2last, b_2last, c_in_last, sum, Cout);
                 end
                 else begin
-                    $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_2last, b_2last, c_in_reg, sum, Cout);
+                    $display("PASS:  A: %b, B: %b, Cin: %b | Sum: %b, Cout: %b", a_2last, b_2last, c_in_last, sum, Cout);
                 end
                 #10;
         end
@@ -103,7 +101,7 @@ module eight_bit_select_adder_test();
         $finish;
     end
     
-    // Four-stage shift register to hold the output from three cycles ago
+    // Three-stage shift register to hold the output from three cycles ago
     always_ff @(posedge clk or negedge reset_n) begin
 
         if (!reset_n) begin
@@ -117,9 +115,6 @@ module eight_bit_select_adder_test();
             a_2last <= '0;
             b_2last <= '0;
             c_in_2last <= '0;
-            a_3last <= '0;
-            b_3last <= '0;
-            c_in_3last <= '0;
         end
         else begin
             // Store the values of a, b and c_in
@@ -133,13 +128,9 @@ module eight_bit_select_adder_test();
 	        a_2last <= a_last; 
             b_2last <= b_last;
             c_in_2last <= c_in_last;
-            a_3last <= a_2last;
-            b_3last <= b_2last;
-            c_in_3last <= c_in_3last;        
         end
 
     end
-
 
 
 endmodule
