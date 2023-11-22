@@ -20,7 +20,7 @@ set sh_output_log_file "${synopsys_program_name}.log.$timestamp"
 set sh_command_log_file "${synopsys_program_name}.cmd.$timestamp"
 
 # Disable tracking and reporting of when new variables are created
-set sh_new_variable_message false
+#set sh_new_variable_message false
 
 # No assign or tri in verilog netlist
 #set verilogout_no_tri true

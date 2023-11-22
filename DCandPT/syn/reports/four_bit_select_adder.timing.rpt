@@ -1,3 +1,4 @@
+Information: Updating design information... (UID-85)
  
 ****************************************
 Report : timing
@@ -6,59 +7,48 @@ Report : timing
         -max_paths 1
 Design : four_bit_select_adder
 Version: Q-2019.12-SP3
-Date   : Mon Nov 20 15:03:06 2023
+Date   : Tue Nov 21 18:45:52 2023
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
 Wire Load Model Mode: top
 
-  Startpoint: sum_reg_reg[3]
-              (rising edge-triggered flip-flop)
-  Endpoint: output_sum[3]
-            (output port)
-  Path Group: (none)
+  Startpoint: A_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Cout_reg_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
   Path Type: max
 
   Point                                    Incr       Path
   -----------------------------------------------------------
-  sum_reg_reg[3]/CLK (DFFSR)               0.00       0.00 r
-  sum_reg_reg[3]/Q (DFFSR)                 0.42       0.42 f
-  output_sum[3] (out)                      0.00       0.42 f
-  data arrival time                                   0.42
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.20       0.20
+  A_reg_reg[0]/CLK (DFFSR)                 0.00       0.20 r
+  A_reg_reg[0]/Q (DFFSR)                   0.57       0.77 f
+  lower_adder/fa0/U4/Y (XOR2X1)            0.29       1.06 f
+  lower_adder/fa0/U3/Y (AOI22X1)           0.18       1.24 r
+  U31/Y (INVX2)                            0.14       1.38 f
+  lower_adder/fa1/U4/Y (XOR2X1)            0.27       1.65 f
+  lower_adder/fa1/U3/Y (AOI22X1)           0.20       1.85 r
+  U26/Y (INVX2)                            0.09       1.94 f
+  U25/Y (INVX2)                            0.13       2.07 r
+  U22/Y (AOI22X1)                          0.14       2.21 f
+  U28/Y (INVX1)                            0.08       2.29 r
+  Cout_reg_reg/D (DFFSR)                   0.00       2.29 r
+  data arrival time                                   2.29
+
+  clock clk (rise edge)                    2.81       2.81
+  clock network delay (ideal)              0.20       3.01
+  clock uncertainty                       -0.50       2.51
+  Cout_reg_reg/CLK (DFFSR)                 0.00       2.51 r
+  library setup time                      -0.21       2.30
+  data required time                                  2.30
   -----------------------------------------------------------
-  (Path is unconstrained)
-
-
-1
- 
-****************************************
-Report : timing
-        -path full
-        -delay min
-        -max_paths 1
-Design : four_bit_select_adder
-Version: Q-2019.12-SP3
-Date   : Mon Nov 20 15:03:06 2023
-****************************************
-
-Operating Conditions: typical   Library: osu05_stdcells
-Wire Load Model Mode: top
-
-  Startpoint: sum_reg_reg[3]
-              (rising edge-triggered flip-flop)
-  Endpoint: output_sum[3]
-            (output port)
-  Path Group: (none)
-  Path Type: min
-
-  Point                                    Incr       Path
+  data required time                                  2.30
+  data arrival time                                  -2.29
   -----------------------------------------------------------
-  sum_reg_reg[3]/CLK (DFFSR)               0.00       0.00 r
-  sum_reg_reg[3]/Q (DFFSR)                 0.38       0.38 r
-  output_sum[3] (out)                      0.00       0.38 r
-  data arrival time                                   0.38
-  -----------------------------------------------------------
-  (Path is unconstrained)
+  slack (MET)                                         0.01
 
 
 1
