@@ -18,6 +18,7 @@ module eight_bit_select_adder (
     logic lower_Cout, upper_Cout, upper_Cout_0, upper_Cout_1;
 
     // Instantiate three 4-bit carry-select adders
+    // Adder for the lower 4 bits
     four_bit_select_adder lower_adder (
         .clk(clk),
         .reset_n(reset_n),
@@ -28,6 +29,7 @@ module eight_bit_select_adder (
         .output_Cout(lower_Cout)
     );
 
+    // Adder for upper for bits when lower_Cout = 0
     four_bit_select_adder upper_adder_cin_0 (
         .clk(clk),
         .reset_n(reset_n),
@@ -38,6 +40,7 @@ module eight_bit_select_adder (
         .output_Cout(upper_Cout_0)
     );
 
+    // Adder for upper for bits when lower_Cout = 1
     four_bit_select_adder upper_adder_cin_1 (
         .clk(clk),
         .reset_n(reset_n),
@@ -75,7 +78,7 @@ module eight_bit_select_adder (
         end
     end
 
-    // Assigning output
+    // Assign output
     assign output_sum = sum_reg;
     assign output_Cout = Cout_reg;
 
