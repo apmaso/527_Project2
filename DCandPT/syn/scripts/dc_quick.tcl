@@ -13,7 +13,7 @@ set target_library osu05_stdcells.db
 set link_library [concat "*" $target_library]
 
 read_file -format sverilog ../rtl/$top_design.sv
-current_design four_bit_select_adder
+current_design $top_design 
 link
 
 #setting timing constraints

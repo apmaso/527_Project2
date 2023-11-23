@@ -20,20 +20,21 @@ link_design $top_design
 
 #setting timing constraints
 create_clock -period 2.81 -name clk [get_ports clk ]
-#set_input_delay 0.6 -clock clk [all_inputs]
-set_input_delay 0.6 -clock clk { A B Cin } 
-set_clock_uncertainty 0.5 -hold [all_clocks]
-set_clock_uncertainty 0.5 -setup [all_clocks]
+set_input_delay 0.6 -clock clk [all_inputs]
+#set_input_delay 0.6 -clock clk { A B Cin reset_n}
+#set_clock_uncertainty 0.5 -hold [all_clocks]
+#set_clock_uncertainty 0.5 -setup [all_clocks]
+set_clock_uncertainty 0.5 [all_clocks]
 set_clock_latency 0.2 -source [get_ports clk]
+#set_load 0.5 [all_outputs]
 
-
-#set timing_report_unconstrained_paths "true"
-#set_clock_uncertainty 0.5 [all_clocks]
+set timing_report_unconstrained_paths "true"
 
 #get the pins,ports
 all_registers
 get_pins
 
 #display the timing report
-#report_timing -from fifo_reg[7][5]/CLK -delay_type max
-#report_timing -from fifo_reg[7][5]/CLK -delay_type min
+report_timing 
+#report_timing -delay_type max
+#report_timing -delay_type min

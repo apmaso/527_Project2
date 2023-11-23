@@ -1,0 +1,224 @@
+Initializing gui preferences from file  /u/amaso/.synopsys_dv_prefs.tcl
+dc_shell> e
+setting top_design to: 
+eight_bit_select_adder
+dc_shell> source ../scripts/dc_quick.tcl
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Loading sverilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/eight_bit_select_adder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/eight_bit_select_adder.sv
+
+Inferred memory devices in process
+        in routine eight_bit_select_adder line 101 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/eight_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/eight_bit_select_adder.sv:31: Netlist for always_ff block is empty. (ELAB-984)
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 133 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/eight_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      A_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 192 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/eight_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/eight_bit_select_adder.db:eight_bit_select_adder'
+Loaded 4 designs.
+Current design is 'eight_bit_select_adder'.
+Current design is 'four_bit_select_adder'.
+
+  Linking design 'four_bit_select_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (4 designs)               /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db, etc
+  osu05_stdcells (library)    /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'full_adder_0'
+  Processing 'two_bit_adder_0'
+  Processing 'four_bit_select_adder'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Ungrouping hierarchy lower_adder. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa0. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa1. (OPT-772)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:12   30672.0      0.00       0.0       0.0                          
+    0:00:12   30672.0      0.00       0.0       0.0                          
+    0:00:12   30672.0      0.00       0.0       0.0                          
+    0:00:12   30672.0      0.00       0.0       0.0                          
+    0:00:12   30672.0      0.00       0.0       0.0                          
+    0:00:12   30600.0      0.00       0.0       0.0                          
+    0:00:12   30600.0      0.00       0.0       0.0                          
+    0:00:12   30600.0      0.00       0.0       0.0                          
+    0:00:12   30600.0      0.00       0.0       0.0                          
+    0:00:12   30600.0      0.00       0.0       0.0                          
+    0:00:12   30600.0      0.00       0.0       0.0                          
+    0:00:12   30600.0      0.00       0.0       0.0                          
+    0:00:12   30600.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:12   30600.0      0.00       0.0       0.0                          
+    0:00:12   30600.0      0.00       0.0       0.0                          
+    0:00:12   30600.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:12   30600.0      0.00       0.0       0.0                          
+    0:00:12   30600.0      0.00       0.0       0.0                          
+    0:00:12   30456.0      0.00       0.0       0.0                          
+    0:00:12   30456.0      0.00       0.0       0.0                          
+    0:00:12   30456.0      0.00       0.0       0.0                          
+    0:00:12   30456.0      0.00       0.0       0.0                          
+    0:00:12   30456.0      0.00       0.0       0.0                          
+    0:00:12   30456.0      0.00       0.0       0.0                          
+    0:00:12   30456.0      0.00       0.0       0.0                          
+    0:00:12   30456.0      0.00       0.0       0.0                          
+    0:00:12   30456.0      0.00       0.0       0.0                          
+    0:00:12   30456.0      0.00       0.0       0.0                          
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Writing verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/outputs/eight_bit_select_adder.netlist'.
+1
+dc_shell> report_timing
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Wed Nov 22 22:48:17 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: A_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Cout_reg_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.20       0.20
+  A_reg_reg[0]/CLK (DFFSR)                 0.00       0.20 r
+  A_reg_reg[0]/Q (DFFSR)                   0.57       0.77 f
+  lower_adder/fa0/U4/Y (XOR2X1)            0.29       1.06 f
+  lower_adder/fa0/U3/Y (AOI22X1)           0.18       1.24 r
+  U31/Y (INVX2)                            0.14       1.38 f
+  lower_adder/fa1/U4/Y (XOR2X1)            0.27       1.65 f
+  lower_adder/fa1/U3/Y (AOI22X1)           0.20       1.85 r
+  U26/Y (INVX2)                            0.09       1.94 f
+  U25/Y (INVX2)                            0.13       2.07 r
+  U22/Y (AOI22X1)                          0.14       2.21 f
+  U28/Y (INVX1)                            0.08       2.29 r
+  Cout_reg_reg/D (DFFSR)                   0.00       2.29 r
+  data arrival time                                   2.29
+
+  clock clk (rise edge)                    2.81       2.81
+  clock network delay (ideal)              0.20       3.01
+  clock uncertainty                       -0.50       2.51
+  Cout_reg_reg/CLK (DFFSR)                 0.00       2.51 r
+  library setup time                      -0.21       2.30
+  data required time                                  2.30
+  -----------------------------------------------------------
+  data required time                                  2.30
+  data arrival time                                  -2.29
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+1
+dc_shell> gui_start
+Current design is 'four_bit_select_adder'.
+4.1
+Current design is 'four_bit_select_adder'.
+dc_shell> 
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/generic.sdb'
+dc_shell> exit
+
+Memory usage for this session 97 Mbytes.
+Memory usage for this session including child processes 97 Mbytes.
+CPU usage for this session 7 seconds ( 0.00 hours ).
+Elapsed time for this session 92 seconds ( 0.03 hours ).
+
+Thank you...
+

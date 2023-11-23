@@ -36,3 +36,4 @@ set sh_command_log_file "${synopsys_program_name}.cmd.$timestamp"
 #alias _ measure_time
 
 alias f {puts "setting top_design to: " ; set top_design four_bit_select_adder}
+alias e {puts "setting top_design to: " ; set top_design eight_bit_select_adder}

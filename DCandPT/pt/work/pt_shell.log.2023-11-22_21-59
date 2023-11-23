@@ -1,0 +1,81 @@
+Error: Library Compiler executable path is not set. (PT-063)
+pt_shell> f
+setting top_design to: 
+Information: Defining new variable 'top_design'. (CMD-041)
+four_bit_select_adder
+pt_shell> source ../scripts/pt_quick.tcl
+Information: current_design won't return any data before link (DES-071)
+
+Loading verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/pt/netlist/four_bit_select_adder.netlist'
+Loading db file '/u/amaso/Documents/ECE527/527_Project2/DCandPT/pt/work/osu05_stdcells.db'
+Linking design four_bit_select_adder...
+Information: 32 (82.05%) library cells are unused in library osu05_stdcells..... (LNK-045)
+Information: total 32 library cells are unused (LNK-046)
+Design 'four_bit_select_adder' was successfully linked.
+Information: There are 61 leaf cells, ports, hiers and 55 nets in the design (LNK-047)
+pt_shell> timing_report
+Error: unknown command 'timing_report' (CMD-005)
+pt_shell> report_timing
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : four_bit_select_adder
+Version: O-2018.06
+Date   : Wed Nov 22 22:01:08 2023
+****************************************
+
+
+  Startpoint: A_reg_reg[0]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Cout_reg_reg
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.20       0.20
+  A_reg_reg[0]/CLK (DFFSR)                                0.00       0.20 r
+  A_reg_reg[0]/Q (DFFSR)                                  0.57       0.77 f
+  lower_adder/fa0/U4/Y (XOR2X1)                           0.29       1.06 f
+  lower_adder/fa0/U3/Y (AOI22X1)                          0.18       1.24 r
+  U31/Y (INVX2)                                           0.14       1.38 f
+  lower_adder/fa1/U4/Y (XOR2X1)                           0.27       1.65 f
+  lower_adder/fa1/U3/Y (AOI22X1)                          0.20       1.85 r
+  U26/Y (INVX2)                                           0.09       1.94 f
+  U25/Y (INVX2)                                           0.13       2.07 r
+  U22/Y (AOI22X1)                                         0.14       2.21 f
+  U28/Y (INVX1)                                           0.08       2.29 r
+  Cout_reg_reg/D (DFFSR)                                  0.00       2.29 r
+  data arrival time                                                  2.29
+
+  clock clk (rise edge)                                   2.81       2.81
+  clock network delay (ideal)                             0.20       3.01
+  clock reconvergence pessimism                           0.00       3.01
+  clock uncertainty                                      -0.50       2.51
+  Cout_reg_reg/CLK (DFFSR)                                           2.51 r
+  library setup time                                     -0.21       2.30
+  data required time                                                 2.30
+  ------------------------------------------------------------------------------
+  data required time                                                 2.30
+  data arrival time                                                 -2.29
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1
+pt_shell> exity
+Error: unknown command 'exity' (CMD-005)
+pt_shell> exit
+Maximum memory usage for this session: 975.52 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 181 seconds
+Diagnostics summary: 3 errors, 1 warning, 5 informationals
+
+Thank you for using pt_shell!
+
