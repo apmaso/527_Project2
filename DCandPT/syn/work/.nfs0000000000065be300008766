@@ -85,7 +85,8 @@
 /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
 /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db
 /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/standard.sldb
-/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/eight_bit_select_adder.sv
+/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv
+/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
 /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
 /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/auxx/tcllib/lib/tk8.6/tk.tcl
 /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/auxx/tcllib/lib/tk8.6/msgs/en.msg
@@ -269,3 +270,7 @@
 /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/auxx/gui/common/table/table.tcl
 /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/auxx/gui/common/table/table_internal.tcl
 /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/generic.sdb
+/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/scripts/dc_quick.tcl
+/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/eight_bit_select_adder.sv
+/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db

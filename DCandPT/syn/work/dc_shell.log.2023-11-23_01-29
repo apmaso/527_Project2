@@ -1,0 +1,164 @@
+Initializing gui preferences from file  /u/amaso/.synopsys_dv_prefs.tcl
+dc_shell> f
+setting top_design to: 
+four_bit_select_adder
+dc_shell> sources ../scripts/dc_no_report.tcl
+Error: unknown command 'sources' (CMD-005)
+dc_shell> source ../scripts/dc_no_report.tcl
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Loading sverilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 29 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      A_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 88 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db:four_bit_select_adder'
+Loaded 3 designs.
+Current design is 'four_bit_select_adder'.
+Current design is 'four_bit_select_adder'.
+
+  Linking design 'four_bit_select_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db, etc
+  osu05_stdcells (library)    /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+
+Writing verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/outputs/four_bit_select_adder.netlist'.
+Warning: Module four_bit_select_adder contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+1
+dc_shell> report_timing
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 01:30:33 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: A[0] (input port clocked by clk)
+  Endpoint: A_reg_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.60       0.60 r
+  A[0] (in)                                               0.00       0.60 r
+  A_reg_reg[0]/next_state (**SEQGEN**)                    0.00       0.60 r
+  data arrival time                                                  0.60
+
+  clock clk (rise edge)                                   2.81       2.81
+  clock network delay (ideal)                             0.20       3.01
+  clock uncertainty                                      -0.50       2.51
+  A_reg_reg[0]/clocked_on (**SEQGEN**)                    0.00       2.51 r
+  library setup time                                      0.00       2.51
+  data required time                                                 2.51
+  --------------------------------------------------------------------------
+  data required time                                                 2.51
+  data arrival time                                                 -0.60
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.91
+
+
+1
+dc_shell> report_timing -delay_type min
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 01:31:08 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: B_reg_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Cout_reg_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.20       0.20
+  B_reg_reg[3]/clocked_on (**SEQGEN**)                    0.00       0.20 r
+  B_reg_reg[3]/Q (**SEQGEN**)                             0.00       0.20 r
+  upper_adder_0/b[1] (two_bit_adder)                      0.00       0.20 r
+  upper_adder_0/fa1/b (full_adder)                        0.00       0.20 r
+  upper_adder_0/fa1/C14/Z (GTECH_AND2)                    0.00       0.20 r
+  upper_adder_0/fa1/C10/Z (GTECH_OR2)                     0.00       0.20 r
+  upper_adder_0/fa1/Cout (full_adder)                     0.00       0.20 r
+  upper_adder_0/Cout (two_bit_adder)                      0.00       0.20 r
+  C51/Z_0 (*SELECT_OP_2.1_2.1_1)                          0.00       0.20 r
+  Cout_reg_reg/next_state (**SEQGEN**)                    0.00       0.20 r
+  data arrival time                                                  0.20
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.20       0.20
+  clock uncertainty                                       0.50       0.70
+  Cout_reg_reg/clocked_on (**SEQGEN**)                    0.00       0.70 r
+  library hold time                                       0.00       0.70
+  data required time                                                 0.70
+  --------------------------------------------------------------------------
+  data required time                                                 0.70
+  data arrival time                                                 -0.20
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.50
+
+
+1
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> exit
+
+Memory usage for this session 65 Mbytes.
+Memory usage for this session including child processes 65 Mbytes.
+CPU usage for this session 2 seconds ( 0.00 hours ).
+Elapsed time for this session 135 seconds ( 0.04 hours ).
+
+Thank you...
+

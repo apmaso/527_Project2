@@ -3,29 +3,28 @@
 Report : area
 Design : four_bit_select_adder
 Version: Q-2019.12-SP3
-Date   : Mon Nov 20 15:03:05 2023
+Date   : Thu Nov 23 00:36:55 2023
 ****************************************
 
-Information: Updating design information... (UID-85)
 Library(s) Used:
 
     osu05_stdcells (File: /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db)
 
 Number of ports:                           16
-Number of nets:                            57
-Number of cells:                           46
-Number of combinational cells:             20
+Number of nets:                            68
+Number of cells:                           57
+Number of combinational cells:             31
 Number of sequential cells:                13
 Number of macros/black boxes:               0
-Number of buf/inv:                          3
-Number of references:                      10
+Number of buf/inv:                         12
+Number of references:                       7
 
-Combinational area:               6678.000000
-Buf/Inv area:                      432.000000
+Combinational area:               9864.000000
+Buf/Inv area:                     1728.000000
 Noncombinational area:           20592.000000
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                 27270.000000
+Total cell area:                 30456.000000
 Total area:                 undefined
 1

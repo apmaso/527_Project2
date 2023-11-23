@@ -21,9 +21,10 @@ module eight_bit_select_adder (
     output logic output_Cout
 );
 
+    // Uncomment to tie reset high and disable it
+    // reset_n = 1'b1;
 
-
-   // Input flip-flops
+    // Input flip-flops
     logic [7:0] A_reg, B_reg;
 
     // Cin does not need to 
@@ -44,6 +45,7 @@ module eight_bit_select_adder (
     assign lower_B = B[3:0];
     assign upper_A = A[7:4];
     assign upper_B = B[7:4];
+    
     // Carry Select Logic
     logic [3:0] lower_sum, upper_sum, upper_sum_0, upper_sum_1;
     logic lower_Cout, upper_Cout, upper_Cout_0, upper_Cout_1;
@@ -123,6 +125,9 @@ module four_bit_select_adder (
     output logic [3:0] output_sum,
     output logic output_Cout
 );
+
+    // Uncomment to tie reset high and disable it
+    // reset_n = 1'b1;
 
     // Input flip-flops
     logic [3:0] A_reg, B_reg;
@@ -211,6 +216,9 @@ module two_bit_adder (
     output logic 	[1:0] 		sum, 
     output logic 			Cout);
 
+    // Uncomment to tie reset high and disable it
+    // reset_n = 1'b1;
+    
     // Internal carry signal
     logic carry;
 
@@ -239,6 +247,9 @@ module full_adder (
     input logic 		a, b, Cin,
     output logic 		sum, Cout);
 
+    // Uncomment to tie reset high and disable it
+    // reset_n = 1'b1;
+    
     assign sum= a ^ b ^ Cin;
     assign Cout = (a & b) | (a & Cin) | (b & Cin);
 

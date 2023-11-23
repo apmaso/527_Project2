@@ -6,9 +6,9 @@ Warning: Design has unannotated sequential cell outputs. (PWR-415)
 ****************************************
 Report : power
         -analysis_effort low
-Design : four_bit_select_adder
+Design : eight_bit_select_adder
 Version: Q-2019.12-SP3
-Date   : Thu Nov 23 00:36:55 2023
+Date   : Thu Nov 23 00:41:32 2023
 ****************************************
 
 
@@ -30,12 +30,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =  12.5822 mW   (91%)
-  Net Switching Power  =   1.2090 mW    (9%)
+  Cell Internal Power  =  45.8265 mW   (92%)
+  Net Switching Power  =   3.9717 mW    (8%)
                          ---------
-Total Dynamic Power    =  13.7912 mW  (100%)
+Total Dynamic Power    =  49.7981 mW  (100%)
 
-Cell Leakage Power     =   9.9665 nW
+Cell Leakage Power     =  34.7127 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -45,9 +45,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register          11.2408            0.4088            6.9287           11.6496  (  84.47%)
+register          41.6853            1.5875           25.5829           43.2729  (  86.90%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      1.3414            0.8002            3.0377            2.1416  (  15.53%)
+combinational      4.1411            2.3842            9.1298            6.5253  (  13.10%)
 --------------------------------------------------------------------------------------------------
-Total             12.5822 mW         1.2090 mW         9.9665 nW        13.7912 mW
+Total             45.8265 mW         3.9717 mW        34.7127 nW        49.7982 mW
 1

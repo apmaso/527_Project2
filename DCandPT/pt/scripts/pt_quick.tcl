@@ -20,8 +20,8 @@ link_design $top_design
 
 #setting timing constraints
 create_clock -period 2.81 -name clk [get_ports clk ]
-set_input_delay 0.6 -clock clk [all_inputs]
-#set_input_delay 0.6 -clock clk { A B Cin reset_n}
+#set_input_delay 0.6 -clock clk [all_inputs]
+set_input_delay 0.6 -clock clk { A B Cin }
 #set_clock_uncertainty 0.5 -hold [all_clocks]
 #set_clock_uncertainty 0.5 -setup [all_clocks]
 set_clock_uncertainty 0.5 [all_clocks]
@@ -31,10 +31,17 @@ set_clock_latency 0.2 -source [get_ports clk]
 set timing_report_unconstrained_paths "true"
 
 #get the pins,ports
-all_registers
-get_pins
+#all_registers
+#get_pins
 
-#display the timing report
-report_timing 
+#diaplay the timing report
+report_timing > ../reports/$top_design.timing.rpt
+#reporting all the references(cell) in the design
+report_reference > ../reports/$top_design.references.rpt
+
+#report_area > ../reports/$top_design.area.rpt
+report_cell > ../reports/$top_design.cell.rpt
+report_power > ../reports/$top_design.power.rpt
+
 #report_timing -delay_type max
 #report_timing -delay_type min

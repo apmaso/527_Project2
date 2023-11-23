@@ -1,0 +1,41 @@
+****************************************
+Report : reference
+Design : eight_bit_select_adder
+Version: O-2018.06
+Date   : Thu Nov 23 01:00:03 2023
+****************************************
+
+
+Attributes:
+    b - black-box (unknown)
+    h - hierarchical
+    n - noncombinational
+    u - contains unmapped logic
+    A - abstracted timing model
+    E - extracted timing model
+    S - Stamp timing model
+    Q - Quick timing model (QTM)
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+--------------------------------------------------------------------------------
+AND2X2             osu05_stdcells
+                                  288.00     4        1152.00      
+AOI22X1            osu05_stdcells
+                                  360.00     24       8640.00      
+DFFSR              osu05_stdcells
+                                 1584.00     48       76032.00     n
+INVX1              osu05_stdcells
+                                  144.00     5         720.00      
+INVX2              osu05_stdcells
+                                  144.00     27       3888.00      
+OR2X1              osu05_stdcells
+                                  288.00     1         288.00      
+OR2X2              osu05_stdcells
+                                  288.00     3         864.00      
+XNOR2X1            osu05_stdcells
+                                  504.00     1         504.00      
+XOR2X1             osu05_stdcells
+                                  504.00     27       13608.00     
+--------------------------------------------------------------------------------
+Total 9 references                                    105696.00
+1

@@ -114,7 +114,6 @@ module eight_bit_select_adder_test();
             c_in_last <= '0;
             a_2last <= '0;
             b_2last <= '0;
-            c_in_2last <= '0;
         end
         else begin
             // Store the values of a, b and c_in
@@ -127,7 +126,6 @@ module eight_bit_select_adder_test();
             c_in_last <= c_in_reg;
 	        a_2last <= a_last; 
             b_2last <= b_last;
-            c_in_2last <= c_in_last;
         end
 
     end

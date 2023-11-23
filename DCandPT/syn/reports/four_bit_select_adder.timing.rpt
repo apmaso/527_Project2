@@ -7,7 +7,7 @@ Report : timing
         -max_paths 1
 Design : four_bit_select_adder
 Version: Q-2019.12-SP3
-Date   : Wed Nov 22 22:39:11 2023
+Date   : Thu Nov 23 00:36:55 2023
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells

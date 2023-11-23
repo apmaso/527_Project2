@@ -1,0 +1,9 @@
+Error: Library Compiler executable path is not set. (PT-063)
+pt_shell> exit
+Maximum memory usage for this session: 910.55 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 15 seconds
+Diagnostics summary: 1 error
+
+Thank you for using pt_shell!
+

@@ -18,6 +18,8 @@ module four_bit_select_adder (
     output logic [3:0] output_sum,
     output logic output_Cout
 );
+    // Uncomment to tie reset high and disable
+    // reset_n = 1'b1;
 
     // Input flip-flops
     logic [3:0] A_reg, B_reg;
@@ -105,6 +107,9 @@ module two_bit_adder (
     output logic 	[1:0] 		sum, 
     output logic 			Cout);
 
+    // Uncomment to tie reset high and disable
+    // reset_n = 1'b1;
+    
     // Internal carry signal
     logic carry;
 
@@ -133,6 +138,9 @@ module full_adder (
     input logic 		a, b, Cin,
     output logic 		sum, Cout);
 
+    // Uncomment to tie reset high and disable
+    // reset_n = 1'b1;
+    
     assign sum= a ^ b ^ Cin;
     assign Cout = (a & b) | (a & Cin) | (b & Cin);
 

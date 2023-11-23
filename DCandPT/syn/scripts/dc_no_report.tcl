@@ -28,13 +28,13 @@ set_clock_latency 0.2 -source [get_ports clk]
 #compile the design to obtain gate level netlist
 compile -ungroup_all
 #diaplay the timing report
-report_timing > ../reports/$top_design.timing.rpt
+#report_timing > ../reports/$top_design.timing.rpt
 #reporting all the references(cell) in the design
-report_reference > ../reports/$top_design.references.rpt
+#report_reference > ../reports/$top_design.references.rpt
 
-report_area > ../reports/$top_design.area.rpt
-report_cell > ../reports/$top_design.cell.rpt
-report_power > ../reports/$top_design.power.rpt
+#report_area > ../reports/$top_design.area.rpt
+#report_cell > ../reports/$top_design.cell.rpt
+#report_power > ../reports/$top_design.power.rpt
 #report_timing -delay_type max > ../reports/$top_design.timing.rpt
 #report_timing -delay_type min >> ../reports/$top_design.timing.rpt
 write -format verilog -hierarchy -output ../outputs/$top_design.netlist

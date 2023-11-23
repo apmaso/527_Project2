@@ -3,7 +3,7 @@
 Report : cell
 Design : four_bit_select_adder
 Version: Q-2019.12-SP3
-Date   : Mon Nov 20 15:03:05 2023
+Date   : Thu Nov 23 00:36:55 2023
 ****************************************
 
 Attributes:
@@ -33,26 +33,27 @@ B_reg_reg[3]              DFFSR           osu05_stdcells  1584.000000
                                                                     n
 Cout_reg_reg              DFFSR           osu05_stdcells  1584.000000
                                                                     n
-U23                       XOR2X1          osu05_stdcells  504.000000
-U24                       XOR2X1          osu05_stdcells  504.000000
-U25                       OAI21X1         osu05_stdcells  207.000000
-U26                       NAND2X1         osu05_stdcells  216.000000
-U27                       OAI21X1         osu05_stdcells  207.000000
-U28                       MUX2X1          osu05_stdcells  432.000000
-U29                       XNOR2X1         osu05_stdcells  504.000000
-U30                       NOR2X1          osu05_stdcells  216.000000
-U31                       INVX1           osu05_stdcells  144.000000
-U32                       XOR2X1          osu05_stdcells  504.000000
-U33                       XNOR2X1         osu05_stdcells  504.000000
-U34                       AOI21X1         osu05_stdcells  288.000000
-U35                       NOR2X1          osu05_stdcells  216.000000
-U36                       AOI22X1         osu05_stdcells  360.000000
-U37                       XOR2X1          osu05_stdcells  504.000000
-U38                       INVX1           osu05_stdcells  144.000000
-U39                       AOI22X1         osu05_stdcells  360.000000
-U40                       XOR2X1          osu05_stdcells  504.000000
-U41                       NAND2X1         osu05_stdcells  216.000000
-U42                       INVX1           osu05_stdcells  144.000000
+U20                       AOI22X1         osu05_stdcells  360.000000
+U21                       AOI22X1         osu05_stdcells  360.000000
+U22                       AOI22X1         osu05_stdcells  360.000000
+U23                       OR2X2           osu05_stdcells  288.000000
+U24                       AND2X2          osu05_stdcells  288.000000
+U25                       INVX2           osu05_stdcells  144.000000
+U26                       INVX2           osu05_stdcells  144.000000
+U27                       INVX1           osu05_stdcells  144.000000
+U28                       INVX1           osu05_stdcells  144.000000
+U29                       INVX1           osu05_stdcells  144.000000
+U30                       INVX1           osu05_stdcells  144.000000
+U31                       INVX2           osu05_stdcells  144.000000
+U32                       INVX1           osu05_stdcells  144.000000
+U33                       INVX2           osu05_stdcells  144.000000
+U34                       INVX2           osu05_stdcells  144.000000
+lower_adder/fa0/U2        XOR2X1          osu05_stdcells  504.000000
+lower_adder/fa0/U3        AOI22X1         osu05_stdcells  360.000000
+lower_adder/fa0/U4        XOR2X1          osu05_stdcells  504.000000
+lower_adder/fa1/U2        XOR2X1          osu05_stdcells  504.000000
+lower_adder/fa1/U3        AOI22X1         osu05_stdcells  360.000000
+lower_adder/fa1/U4        XOR2X1          osu05_stdcells  504.000000
 sum_reg_reg[0]            DFFSR           osu05_stdcells  1584.000000
                                                                     n
 sum_reg_reg[1]            DFFSR           osu05_stdcells  1584.000000
@@ -61,6 +62,16 @@ sum_reg_reg[2]            DFFSR           osu05_stdcells  1584.000000
                                                                     n
 sum_reg_reg[3]            DFFSR           osu05_stdcells  1584.000000
                                                                     n
+upper_adder_0/fa0/U2      XOR2X1          osu05_stdcells  504.000000
+upper_adder_0/fa1/U1      INVX2           osu05_stdcells  144.000000
+upper_adder_0/fa1/U2      XOR2X1          osu05_stdcells  504.000000
+upper_adder_0/fa1/U3      AOI22X1         osu05_stdcells  360.000000
+upper_adder_0/fa1/U4      XOR2X1          osu05_stdcells  504.000000
+upper_adder_1/fa0/U2      XOR2X1          osu05_stdcells  504.000000
+upper_adder_1/fa1/U1      INVX2           osu05_stdcells  144.000000
+upper_adder_1/fa1/U2      XOR2X1          osu05_stdcells  504.000000
+upper_adder_1/fa1/U3      AOI22X1         osu05_stdcells  360.000000
+upper_adder_1/fa1/U4      XOR2X1          osu05_stdcells  504.000000
 --------------------------------------------------------------------------------
-Total 33 cells                                            27270.000000
+Total 44 cells                                            30456.000000
 1
