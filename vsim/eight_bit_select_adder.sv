@@ -21,13 +21,29 @@ module eight_bit_select_adder (
     output logic output_Cout
 );
 
+
+
+   // Input flip-flops
+    logic [7:0] A_reg, B_reg;
+
+    // Cin does not need to 
+    // be stored in a flip flop
+    always_ff @(posedge clk or negedge reset_n) begin
+        if (!reset_n) begin
+            A_reg <= 8'b0;
+            B_reg <= 8'b0;
+        end else begin
+            A_reg <= A;
+            B_reg <= B;
+        end
+    end
+
     // Splitting the 8-bit inputs into two 4-bit parts
     logic [3:0] lower_A, lower_B, upper_A, upper_B;
     assign lower_A = A[3:0];
     assign lower_B = B[3:0];
     assign upper_A = A[7:4];
     assign upper_B = B[7:4];
-
     // Carry Select Logic
     logic [3:0] lower_sum, upper_sum, upper_sum_0, upper_sum_1;
     logic lower_Cout, upper_Cout, upper_Cout_0, upper_Cout_1;
@@ -110,10 +126,10 @@ module four_bit_select_adder (
 
     // Input flip-flops
     logic [3:0] A_reg, B_reg;
-    logic Cin_reg;
+   
 
-    // Mo pointed out that Cin does not 
-    // need to be store in a flip flop
+    // Cin does not need to 
+    // be stored in a flip flop
     always_ff @(posedge clk or negedge reset_n) begin
         if (!reset_n) begin
             A_reg <= 4'b0;

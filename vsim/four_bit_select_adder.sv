@@ -21,10 +21,9 @@ module four_bit_select_adder (
 
     // Input flip-flops
     logic [3:0] A_reg, B_reg;
-    logic Cin_reg;
 
-    // Mo pointed out that Cin does not 
-    // need to be store in a flip flop
+    // Cin does not need 
+    // to be store in a flip flop
     always_ff @(posedge clk or negedge reset_n) begin
         if (!reset_n) begin
             A_reg <= 4'b0;
