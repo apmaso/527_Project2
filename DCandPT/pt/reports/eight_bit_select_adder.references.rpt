@@ -2,7 +2,7 @@
 Report : reference
 Design : eight_bit_select_adder
 Version: O-2018.06
-Date   : Thu Nov 23 01:00:03 2023
+Date   : Thu Nov 23 15:56:20 2023
 ****************************************
 
 
@@ -19,23 +19,35 @@ Attributes:
 Reference          Library       Unit Area   Count    Total Area   Attributes
 --------------------------------------------------------------------------------
 AND2X2             osu05_stdcells
-                                  288.00     4        1152.00      
+                                  288.00     2         576.00      
+AOI21X1            osu05_stdcells
+                                  288.00     3         864.00      
 AOI22X1            osu05_stdcells
-                                  360.00     24       8640.00      
+                                  360.00     3        1080.00      
+BUFX2              osu05_stdcells
+                                  216.00     1         216.00      
+BUFX4              osu05_stdcells
+                                  288.00     1         288.00      
 DFFSR              osu05_stdcells
                                  1584.00     48       76032.00     n
+FAX1               osu05_stdcells
+                                 1080.00     1        1080.00      
 INVX1              osu05_stdcells
                                   144.00     5         720.00      
 INVX2              osu05_stdcells
-                                  144.00     27       3888.00      
-OR2X1              osu05_stdcells
-                                  288.00     1         288.00      
-OR2X2              osu05_stdcells
-                                  288.00     3         864.00      
+                                  144.00     32       4608.00      
+MUX2X1             osu05_stdcells
+                                  432.00     8        3456.00      
+NAND2X1            osu05_stdcells
+                                  216.00     15       3240.00      
+NOR2X1             osu05_stdcells
+                                  216.00     2         432.00      
+OAI21X1            osu05_stdcells
+                                  207.00     18       3726.00      
 XNOR2X1            osu05_stdcells
-                                  504.00     1         504.00      
+                                  504.00     5        2520.00      
 XOR2X1             osu05_stdcells
-                                  504.00     27       13608.00     
+                                  504.00     19       9576.00      
 --------------------------------------------------------------------------------
-Total 9 references                                    105696.00
+Total 15 references                                   108414.00
 1

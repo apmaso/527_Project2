@@ -1,0 +1,2023 @@
+Initializing gui preferences from file  /u/amaso/.synopsys_dv_prefs.tcl
+dc_shell> f
+setting top_design to: 
+four_bit_select_adder
+dc_shell> source ../scripts/dc_quick.tcl
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Loading sverilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 26 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      A_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 85 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db:four_bit_select_adder'
+Loaded 3 designs.
+Current design is 'four_bit_select_adder'.
+Current design is 'four_bit_select_adder'.
+
+  Linking design 'four_bit_select_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db, etc
+  osu05_stdcells (library)    /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'full_adder_0'
+  Processing 'two_bit_adder_0'
+  Processing 'four_bit_select_adder'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Ungrouping hierarchy lower_adder. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa0. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa1. (OPT-772)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   31032.0      0.00       0.0       0.0                          
+    0:00:12   30744.0      0.00       0.0       0.0                          
+    0:00:12   30744.0      0.00       0.0       0.0                          
+    0:00:12   30744.0      0.00       0.0       0.0                          
+    0:00:12   30744.0      0.00       0.0       0.0                          
+    0:00:12   30744.0      0.00       0.0       0.0                          
+    0:00:12   30744.0      0.00       0.0       0.0                          
+    0:00:12   30744.0      0.00       0.0       0.0                          
+    0:00:12   30744.0      0.00       0.0       0.0                          
+    0:00:12   30744.0      0.00       0.0       0.0                          
+    0:00:12   30744.0      0.00       0.0       0.0                          
+    0:00:12   30744.0      0.00       0.0       0.0                          
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:25:22 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: A_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sum_reg_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.20       0.20
+  A_reg_reg[0]/CLK (DFFSR)                 0.00       0.20 r
+  A_reg_reg[0]/Q (DFFSR)                   0.57       0.77 f
+  lower_adder/fa0/U4/Y (XOR2X1)            0.29       1.06 f
+  lower_adder/fa0/U3/Y (AOI22X1)           0.18       1.24 r
+  U33/Y (INVX2)                            0.12       1.36 f
+  lower_adder/fa1/U4/Y (XOR2X1)            0.26       1.62 f
+  lower_adder/fa1/U3/Y (AOI22X1)           0.19       1.81 r
+  U28/Y (INVX2)                            0.09       1.90 f
+  U25/Y (INVX2)                            0.13       2.03 r
+  U21/Y (AOI22X1)                          0.12       2.15 f
+  U32/Y (INVX1)                            0.08       2.24 r
+  sum_reg_reg[2]/D (DFFSR)                 0.00       2.24 r
+  data arrival time                                   2.24
+
+  clock clk (rise edge)                    2.76       2.76
+  clock network delay (ideal)              0.20       2.96
+  clock uncertainty                       -0.50       2.46
+  sum_reg_reg[2]/CLK (DFFSR)               0.00       2.46 r
+  library setup time                      -0.21       2.25
+  data required time                                  2.25
+  -----------------------------------------------------------
+  data required time                                  2.25
+  data arrival time                                  -2.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+ 
+****************************************
+Report : reference
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:25:25 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             osu05_stdcells
+                                288.000000       1    288.000000  
+AOI22X1            osu05_stdcells
+                                360.000000       7   2520.000000  
+DFFSR              osu05_stdcells
+                               1584.000000      13  20592.000000  n
+INVX1              osu05_stdcells
+                                144.000000       6    864.000000  
+INVX2              osu05_stdcells
+                                144.000000       8   1152.000000  
+OR2X2              osu05_stdcells
+                                288.000000       1    288.000000  
+XOR2X1             osu05_stdcells
+                                504.000000      10   5040.000000  
+-----------------------------------------------------------------------------
+Total 7 references                                  30744.000000
+Writing verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/outputs/four_bit_select_adder.netlist'.
+1
+dc_shell> source ../scripts/dc_quick.tcl
+Loading sverilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 26 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      A_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 85 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db:four_bit_select_adder'
+Warning: Overwriting design file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db'. (DDB-24)
+Loaded 3 designs.
+Current design is 'four_bit_select_adder'.
+Current design is 'four_bit_select_adder'.
+
+  Linking design 'four_bit_select_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db, etc
+  osu05_stdcells (library)    /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+
+Warning: "The variable 'compile_high_effort_area_in_incremental' is supported in DC NXT only. Ignoring this setting." (OPT-1726)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'full_adder_0'
+  Processing 'two_bit_adder_0'
+  Processing 'four_bit_select_adder'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Ungrouping hierarchy lower_adder. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa0. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa1. (OPT-772)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:08   31032.0      0.00       0.0       0.0                          
+    0:01:08   31032.0      0.00       0.0       0.0                          
+    0:01:08   31032.0      0.00       0.0       0.0                          
+    0:01:08   31032.0      0.00       0.0       0.0                          
+    0:01:08   31032.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+    0:01:08   30888.0      0.00       0.0       0.0                          
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:26:19 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: A_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sum_reg_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.20       0.20
+  A_reg_reg[0]/CLK (DFFSR)                 0.00       0.20 r
+  A_reg_reg[0]/Q (DFFSR)                   0.57       0.77 f
+  lower_adder/fa0/U4/Y (XOR2X1)            0.29       1.06 f
+  lower_adder/fa0/U3/Y (AOI22X1)           0.18       1.24 r
+  U34/Y (INVX2)                            0.12       1.36 f
+  lower_adder/fa1/U4/Y (XOR2X1)            0.26       1.62 f
+  lower_adder/fa1/U3/Y (AOI22X1)           0.19       1.81 r
+  U29/Y (INVX2)                            0.11       1.92 f
+  U26/Y (INVX2)                            0.11       2.03 r
+  U21/Y (AOI22X1)                          0.12       2.15 f
+  U33/Y (INVX1)                            0.08       2.23 r
+  sum_reg_reg[2]/D (DFFSR)                 0.00       2.23 r
+  data arrival time                                   2.23
+
+  clock clk (rise edge)                    2.75       2.75
+  clock network delay (ideal)              0.20       2.95
+  clock uncertainty                       -0.50       2.45
+  sum_reg_reg[2]/CLK (DFFSR)               0.00       2.45 r
+  library setup time                      -0.21       2.24
+  data required time                                  2.24
+  -----------------------------------------------------------
+  data required time                                  2.24
+  data arrival time                                  -2.23
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+ 
+****************************************
+Report : reference
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:26:22 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             osu05_stdcells
+                                288.000000       1    288.000000  
+AOI22X1            osu05_stdcells
+                                360.000000       7   2520.000000  
+DFFSR              osu05_stdcells
+                               1584.000000      13  20592.000000  n
+INVX1              osu05_stdcells
+                                144.000000       7   1008.000000  
+INVX2              osu05_stdcells
+                                144.000000       8   1152.000000  
+OR2X1              osu05_stdcells
+                                288.000000       1    288.000000  
+XOR2X1             osu05_stdcells
+                                504.000000      10   5040.000000  
+-----------------------------------------------------------------------------
+Total 7 references                                  30888.000000
+Writing verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/outputs/four_bit_select_adder.netlist'.
+1
+dc_shell> 
+dc_shell> 
+dc_shell> source ../scripts/dc_quick.tcl
+Loading sverilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 26 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      A_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 85 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db:four_bit_select_adder'
+Warning: Overwriting design file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db'. (DDB-24)
+Loaded 3 designs.
+Current design is 'four_bit_select_adder'.
+Current design is 'four_bit_select_adder'.
+
+  Linking design 'four_bit_select_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db, etc
+  osu05_stdcells (library)    /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+
+Warning: "The variable 'compile_high_effort_area_in_incremental' is supported in DC NXT only. Ignoring this setting." (OPT-1726)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'full_adder_0'
+  Processing 'two_bit_adder_0'
+  Processing 'four_bit_select_adder'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Ungrouping hierarchy lower_adder. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa0. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa1. (OPT-772)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:29   31032.0      0.00       0.0       0.0                          
+    0:01:29   31032.0      0.00       0.0       0.0                          
+    0:01:29   31032.0      0.00       0.0       0.0                          
+    0:01:29   31032.0      0.00       0.0       0.0                          
+    0:01:29   31032.0      0.00       0.0       0.0                          
+    0:01:29   30888.0      0.00       0.0       0.0                          
+    0:01:29   30888.0      0.00       0.0       0.0                          
+    0:01:29   30888.0      0.00       0.0       0.0                          
+    0:01:29   30888.0      0.00       0.0       0.0                          
+    0:01:29   30888.0      0.00       0.0       0.0                          
+    0:01:29   30888.0      0.00       0.0       0.0                          
+    0:01:29   30888.0      0.00       0.0       0.0                          
+    0:01:29   30888.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:29   30888.0      0.00       0.0       0.0                          
+    0:01:29   30888.0      0.00       0.0       0.0                          
+    0:01:29   30888.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:29   30888.0      0.00       0.0       0.0                          
+    0:01:29   30888.0      0.00       0.0       0.0                          
+    0:01:29   30600.0      0.00       0.0       0.0                          
+    0:01:29   30456.0      0.00       0.0       0.0                          
+    0:01:29   30456.0      0.00       0.0       0.0                          
+    0:01:29   30456.0      0.00       0.0       0.0                          
+    0:01:29   30456.0      0.00       0.0       0.0                          
+    0:01:29   30456.0      0.00       0.0       0.0                          
+    0:01:29   30456.0      0.00       0.0       0.0                          
+    0:01:29   30456.0      0.00       0.0       0.0                          
+    0:01:29   30456.0      0.00       0.0       0.0                          
+    0:01:29   30456.0      0.00       0.0       0.0                          
+    0:01:29   30456.0      0.00       0.0       0.0                          
+    0:01:29   30456.0      0.00       0.0       0.0                          
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:26:40 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: A_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sum_reg_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.20       0.20
+  A_reg_reg[0]/CLK (DFFSR)                 0.00       0.20 r
+  A_reg_reg[0]/Q (DFFSR)                   0.57       0.77 f
+  lower_adder/fa0/U4/Y (XOR2X1)            0.29       1.06 f
+  lower_adder/fa0/U3/Y (AOI22X1)           0.23       1.29 r
+  U25/Y (XNOR2X1)                          0.30       1.59 f
+  lower_adder/fa1/U3/Y (AOI22X1)           0.20       1.79 r
+  U28/Y (INVX2)                            0.09       1.88 f
+  U27/Y (INVX2)                            0.13       2.01 r
+  U21/Y (AOI22X1)                          0.12       2.13 f
+  U32/Y (INVX1)                            0.08       2.22 r
+  sum_reg_reg[2]/D (DFFSR)                 0.00       2.22 r
+  data arrival time                                   2.22
+
+  clock clk (rise edge)                    2.74       2.74
+  clock network delay (ideal)              0.20       2.94
+  clock uncertainty                       -0.50       2.44
+  sum_reg_reg[2]/CLK (DFFSR)               0.00       2.44 r
+  library setup time                      -0.21       2.23
+  data required time                                  2.23
+  -----------------------------------------------------------
+  data required time                                  2.23
+  data arrival time                                  -2.22
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+ 
+****************************************
+Report : reference
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:26:43 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             osu05_stdcells
+                                288.000000       1    288.000000  
+AOI22X1            osu05_stdcells
+                                360.000000       7   2520.000000  
+DFFSR              osu05_stdcells
+                               1584.000000      13  20592.000000  n
+INVX1              osu05_stdcells
+                                144.000000       6    864.000000  
+INVX2              osu05_stdcells
+                                144.000000       6    864.000000  
+OR2X1              osu05_stdcells
+                                288.000000       1    288.000000  
+XNOR2X1            osu05_stdcells
+                                504.000000       1    504.000000  
+XOR2X1             osu05_stdcells
+                                504.000000       9   4536.000000  
+Writing verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/outputs/four_bit_select_adder.netlist'.
+1
+dc_shell> source ../scripts/dc_quick.tcl
+Loading sverilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 26 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      A_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 85 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db:four_bit_select_adder'
+Warning: Overwriting design file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db'. (DDB-24)
+Loaded 3 designs.
+Current design is 'four_bit_select_adder'.
+Current design is 'four_bit_select_adder'.
+
+  Linking design 'four_bit_select_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db, etc
+  osu05_stdcells (library)    /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+
+Warning: "The variable 'compile_high_effort_area_in_incremental' is supported in DC NXT only. Ignoring this setting." (OPT-1726)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'full_adder_0'
+  Processing 'two_bit_adder_0'
+  Processing 'four_bit_select_adder'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Ungrouping hierarchy lower_adder. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa0. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa1. (OPT-772)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:57   30456.0      0.00       0.0       0.0                          
+    0:01:57   30456.0      0.00       0.0       0.0                          
+    0:01:57   30456.0      0.00       0.0       0.0                          
+    0:01:57   30456.0      0.00       0.0       0.0                          
+    0:01:57   30456.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+    0:01:57   30168.0      0.00       0.0       0.0                          
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:27:07 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: A_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sum_reg_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.20       0.20
+  A_reg_reg[0]/CLK (DFFSR)                 0.00       0.20 r
+  A_reg_reg[0]/Q (DFFSR)                   0.68       0.88 f
+  U28/Y (NAND2X1)                          0.30       1.18 r
+  U29/Y (AND2X2)                           0.17       1.34 r
+  U32/Y (AOI21X1)                          0.20       1.55 f
+  U37/Y (OAI21X1)                          0.21       1.76 r
+  U49/Y (INVX2)                            0.17       1.93 f
+  U53/Y (MUX2X1)                           0.21       2.14 r
+  sum_reg_reg[3]/D (DFFSR)                 0.00       2.14 r
+  data arrival time                                   2.14
+
+  clock clk (rise edge)                    2.70       2.70
+  clock network delay (ideal)              0.20       2.90
+  clock uncertainty                       -0.50       2.40
+  sum_reg_reg[3]/CLK (DFFSR)               0.00       2.40 r
+  library setup time                      -0.22       2.18
+  data required time                                  2.18
+  -----------------------------------------------------------
+  data required time                                  2.18
+  data arrival time                                  -2.14
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+ 
+****************************************
+Report : reference
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:27:10 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             osu05_stdcells
+                                288.000000       1    288.000000  
+AOI21X1            osu05_stdcells
+                                288.000000       2    576.000000  
+AOI22X1            osu05_stdcells
+                                360.000000       1    360.000000  
+DFFSR              osu05_stdcells
+                               1584.000000      13  20592.000000  n
+INVX2              osu05_stdcells
+                                144.000000       7   1008.000000  
+MUX2X1             osu05_stdcells
+                                432.000000       1    432.000000  
+NAND2X1            osu05_stdcells
+                                216.000000       4    864.000000  
+Writing verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/outputs/four_bit_select_adder.netlist'.
+1
+dc_shell> source ../scripts/dc_quick.tcl
+Loading sverilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 26 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      A_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 85 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db:four_bit_select_adder'
+Warning: Overwriting design file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db'. (DDB-24)
+Loaded 3 designs.
+Current design is 'four_bit_select_adder'.
+Current design is 'four_bit_select_adder'.
+
+  Linking design 'four_bit_select_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db, etc
+  osu05_stdcells (library)    /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+
+Warning: "The variable 'compile_high_effort_area_in_incremental' is supported in DC NXT only. Ignoring this setting." (OPT-1726)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'full_adder_0'
+  Processing 'two_bit_adder_0'
+  Processing 'four_bit_select_adder'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Ungrouping hierarchy lower_adder. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa0. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa1. (OPT-772)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 2)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:28   31158.0      0.00       0.0       0.0                          
+    0:02:28   31158.0      0.00       0.0       0.0                          
+    0:02:28   31158.0      0.00       0.0       0.0                          
+    0:02:28   31158.0      0.00       0.0       0.0                          
+    0:02:28   31158.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+    0:02:28   30726.0      0.00       0.0       0.0                          
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:27:38 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: B_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sum_reg_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.20       0.20
+  B_reg_reg[0]/CLK (DFFSR)                 0.00       0.20 r
+  B_reg_reg[0]/Q (DFFSR)                   0.66       0.86 f
+  U35/Y (INVX2)                            0.15       1.01 r
+  U36/Y (NOR2X1)                           0.13       1.14 f
+  U37/Y (OAI21X1)                          0.13       1.27 r
+  U38/Y (OAI21X1)                          0.10       1.36 f
+  U39/Y (AOI21X1)                          0.20       1.56 r
+  U43/Y (OAI21X1)                          0.18       1.74 f
+  U53/Y (INVX2)                            0.17       1.91 r
+  U57/Y (MUX2X1)                           0.21       2.12 r
+  sum_reg_reg[3]/D (DFFSR)                 0.00       2.12 r
+  data arrival time                                   2.12
+
+  clock clk (rise edge)                    2.65       2.65
+  clock network delay (ideal)              0.20       2.85
+  clock uncertainty                       -0.50       2.35
+  sum_reg_reg[3]/CLK (DFFSR)               0.00       2.35 r
+  library setup time                      -0.22       2.13
+  data required time                                  2.13
+  -----------------------------------------------------------
+  data required time                                  2.13
+  data arrival time                                  -2.12
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+ 
+****************************************
+Report : reference
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:27:41 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21X1            osu05_stdcells
+                                288.000000       2    576.000000  
+AOI22X1            osu05_stdcells
+                                360.000000       1    360.000000  
+BUFX2              osu05_stdcells
+                                216.000000       1    216.000000  
+DFFSR              osu05_stdcells
+                               1584.000000      13  20592.000000  n
+INVX2              osu05_stdcells
+                                144.000000       8   1152.000000  
+MUX2X1             osu05_stdcells
+                                432.000000       1    432.000000  
+NAND2X1            osu05_stdcells
+                                216.000000       4    864.000000  
+NAND3X1            osu05_stdcells
+                                324.000000       1    324.000000  
+NOR2X1             osu05_stdcells
+                                216.000000       2    432.000000  
+Writing verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/outputs/four_bit_select_adder.netlist'.
+1
+dc_shell> source ../scripts/dc_quick.tcl
+Loading sverilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 26 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      A_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 85 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db:four_bit_select_adder'
+Warning: Overwriting design file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db'. (DDB-24)
+Loaded 3 designs.
+Current design is 'four_bit_select_adder'.
+Current design is 'four_bit_select_adder'.
+
+  Linking design 'four_bit_select_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db, etc
+  osu05_stdcells (library)    /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+
+Warning: "The variable 'compile_high_effort_area_in_incremental' is supported in DC NXT only. Ignoring this setting." (OPT-1726)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'full_adder_0'
+  Processing 'two_bit_adder_0'
+  Processing 'four_bit_select_adder'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Ungrouping hierarchy lower_adder. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa0. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa1. (OPT-772)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 3)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:51   32877.0      0.00       0.0       0.0                          
+    0:02:51   32877.0      0.00       0.0       0.0                          
+    0:02:51   32877.0      0.00       0.0       0.0                          
+    0:02:51   32877.0      0.00       0.0       0.0                          
+    0:02:51   32877.0      0.00       0.0       0.0                          
+    0:02:51   32661.0      0.01       0.0       0.0                          
+    0:02:51   32805.0      0.00       0.0       0.0                          
+    0:02:51   32805.0      0.00       0.0       0.0                          
+    0:02:51   32805.0      0.00       0.0       0.0                          
+    0:02:51   32805.0      0.00       0.0       0.0                          
+    0:02:51   32805.0      0.00       0.0       0.0                          
+    0:02:51   32805.0      0.00       0.0       0.0                          
+    0:02:51   32805.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:51   32805.0      0.00       0.0       0.0                          
+    0:02:51   32805.0      0.00       0.0       0.0                          
+    0:02:51   32805.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:51   32805.0      0.00       0.0       0.0                          
+    0:02:51   32805.0      0.00       0.0       0.0                          
+    0:02:51   32661.0      0.01       0.0       0.0                          
+    0:02:51   32661.0      0.01       0.0       0.0                          
+    0:02:51   32661.0      0.01       0.0       0.0                          
+    0:02:51   32661.0      0.01       0.0       0.0                          
+    0:02:51   32661.0      0.00       0.0       0.0                          
+    0:02:51   32661.0      0.00       0.0       0.0                          
+    0:02:51   32661.0      0.00       0.0       0.0                          
+    0:02:51   32661.0      0.00       0.0       0.0                          
+    0:02:51   32661.0      0.00       0.0       0.0                          
+    0:02:51   32661.0      0.00       0.0       0.0                          
+    0:02:51   32661.0      0.00       0.0       0.0                          
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:28:02 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: A_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sum_reg_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.20       0.20
+  A_reg_reg[0]/CLK (DFFSR)                 0.00       0.20 r
+  A_reg_reg[0]/Q (DFFSR)                   0.54       0.74 f
+  U33/Y (AND2X2)                           0.26       1.00 f
+  U49/Y (NOR2X1)                           0.09       1.09 r
+  U50/Y (OAI21X1)                          0.08       1.18 f
+  U51/Y (NAND2X1)                          0.19       1.37 r
+  U63/Y (NAND2X1)                          0.12       1.49 f
+  U24/Y (AND2X2)                           0.24       1.72 f
+  U66/Y (MUX2X1)                           0.19       1.92 r
+  sum_reg_reg[3]/D (DFFSR)                 0.00       1.92 r
+  data arrival time                                   1.92
+
+  clock clk (rise edge)                    2.50       2.50
+  clock network delay (ideal)              0.20       2.70
+  clock uncertainty                       -0.50       2.20
+  sum_reg_reg[3]/CLK (DFFSR)               0.00       2.20 r
+  library setup time                      -0.22       1.98
+  data required time                                  1.98
+  -----------------------------------------------------------
+  data required time                                  1.98
+  data arrival time                                  -1.92
+  -----------------------------------------------------------
+  slack (MET)                                         0.06
+
+
+ 
+****************************************
+Report : reference
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:28:04 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             osu05_stdcells
+                                288.000000       3    864.000000  
+AOI21X1            osu05_stdcells
+                                288.000000       1    288.000000  
+AOI22X1            osu05_stdcells
+                                360.000000       3   1080.000000  
+BUFX2              osu05_stdcells
+                                216.000000       1    216.000000  
+DFFSR              osu05_stdcells
+                               1584.000000      13  20592.000000  n
+INVX1              osu05_stdcells
+                                144.000000       2    288.000000  
+INVX2              osu05_stdcells
+                                144.000000      11   1584.000000  
+MUX2X1             osu05_stdcells
+Writing verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/outputs/four_bit_select_adder.netlist'.
+1
+dc_shell> source ../scripts/dc_quick.tcl
+Loading sverilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 26 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      A_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 85 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db:four_bit_select_adder'
+Warning: Overwriting design file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db'. (DDB-24)
+Loaded 3 designs.
+Current design is 'four_bit_select_adder'.
+Current design is 'four_bit_select_adder'.
+
+  Linking design 'four_bit_select_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db, etc
+  osu05_stdcells (library)    /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+
+Warning: "The variable 'compile_high_effort_area_in_incremental' is supported in DC NXT only. Ignoring this setting." (OPT-1726)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'full_adder_0'
+  Processing 'two_bit_adder_0'
+  Processing 'four_bit_select_adder'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Ungrouping hierarchy lower_adder. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa0. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa1. (OPT-772)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34650.0      0.06       0.1       0.0                          
+    0:03:24   34362.0      0.06       0.1       0.0                          
+    0:03:24   34362.0      0.06       0.1       0.0                          
+    0:03:24   34362.0      0.06       0.1       0.0                          
+    0:03:24   34362.0      0.06       0.1       0.0                          
+    0:03:24   34362.0      0.06       0.1       0.0                          
+    0:03:24   34362.0      0.06       0.1       0.0                          
+    0:03:24   34362.0      0.06       0.1       0.0                          
+    0:03:24   34362.0      0.06       0.1       0.0                          
+    0:03:24   34362.0      0.06       0.1       0.0                          
+    0:03:24   34362.0      0.06       0.1       0.0                          
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:28:34 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: A_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sum_reg_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.20       0.20
+  A_reg_reg[0]/CLK (DFFSR)                 0.00       0.20 r
+  A_reg_reg[0]/Q (DFFSR)                   0.52       0.72 f
+  U41/Y (BUFX4)                            0.23       0.95 f
+  U35/Y (XNOR2X1)                          0.18       1.13 f
+  U58/Y (NAND2X1)                          0.14       1.28 r
+  U59/Y (NAND2X1)                          0.08       1.36 f
+  U28/Y (INVX1)                            0.10       1.46 r
+  U76/Y (AOI21X1)                          0.16       1.61 f
+  U77/Y (MUX2X1)                           0.22       1.84 r
+  sum_reg_reg[3]/D (DFFSR)                 0.00       1.84 r
+  data arrival time                                   1.84
+
+  clock clk (rise edge)                    2.30       2.30
+  clock network delay (ideal)              0.20       2.50
+  clock uncertainty                       -0.50       2.00
+  sum_reg_reg[3]/CLK (DFFSR)               0.00       2.00 r
+  library setup time                      -0.22       1.78
+  data required time                                  1.78
+  -----------------------------------------------------------
+  data required time                                  1.78
+  data arrival time                                  -1.84
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.06
+
+
+ 
+****************************************
+Report : reference
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:28:38 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21X1            osu05_stdcells
+                                288.000000       3    864.000000  
+AOI22X1            osu05_stdcells
+                                360.000000       3   1080.000000  
+BUFX4              osu05_stdcells
+                                288.000000       1    288.000000  
+DFFSR              osu05_stdcells
+                               1584.000000      13  20592.000000  n
+INVX1              osu05_stdcells
+                                144.000000       9   1296.000000  
+INVX2              osu05_stdcells
+                                144.000000      13   1872.000000  
+MUX2X1             osu05_stdcells
+                                432.000000       1    432.000000  
+NAND2X1            osu05_stdcells
+                                216.000000       8   1728.000000  
+NOR2X1             osu05_stdcells
+                                216.000000       2    432.000000  
+OAI21X1            osu05_stdcells
+Writing verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/outputs/four_bit_select_adder.netlist'.
+1
+dc_shell> source ../scripts/dc_quick.tcl
+Loading sverilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 26 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      A_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 85 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db:four_bit_select_adder'
+Warning: Overwriting design file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db'. (DDB-24)
+Loaded 3 designs.
+Current design is 'four_bit_select_adder'.
+Current design is 'four_bit_select_adder'.
+
+  Linking design 'four_bit_select_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db, etc
+  osu05_stdcells (library)    /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+
+Warning: "The variable 'compile_high_effort_area_in_incremental' is supported in DC NXT only. Ignoring this setting." (OPT-1726)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'full_adder_0'
+  Processing 'two_bit_adder_0'
+  Processing 'four_bit_select_adder'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Ungrouping hierarchy lower_adder. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa0. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa1. (OPT-772)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 7)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:03:48   34299.0      0.01       0.0       0.0                          
+    0:03:48   34299.0      0.01       0.0       0.0                          
+    0:03:48   34299.0      0.01       0.0       0.0                          
+    0:03:48   34299.0      0.01       0.0       0.0                          
+    0:03:48   34299.0      0.01       0.0       0.0                          
+    0:03:48   34155.0      0.02       0.0       0.0                          
+    0:03:48   34083.0      0.04       0.0       0.0                          
+    0:03:48   33867.0      0.04       0.0       0.0                          
+    0:03:48   33867.0      0.02       0.0       0.0                          
+    0:03:48   33939.0      0.01       0.0       0.0                          
+    0:03:48   34146.0      0.01       0.0       0.0                          
+    0:03:48   34362.0      0.01       0.0       0.0                          
+    0:03:48   34362.0      0.01       0.0       0.0                          
+    0:03:48   34362.0      0.01       0.0       0.0                          
+    0:03:48   34362.0      0.01       0.0       0.0                          
+    0:03:48   34362.0      0.01       0.0       0.0                          
+    0:03:48   34362.0      0.01       0.0       0.0                          
+    0:03:48   34362.0      0.01       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:03:48   34362.0      0.01       0.0       0.0                          
+    0:03:48   34362.0      0.01       0.0       0.0                          
+    0:03:48   34362.0      0.01       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:03:49   34362.0      0.01       0.0       0.0                          
+    0:03:49   34362.0      0.01       0.0       0.0                          
+    0:03:49   33714.0      0.01       0.0       0.0                          
+    0:03:49   33714.0      0.01       0.0       0.0                          
+    0:03:49   33714.0      0.01       0.0       0.0                          
+    0:03:49   33714.0      0.01       0.0       0.0                          
+    0:03:49   33714.0      0.01       0.0       0.0                          
+    0:03:49   33714.0      0.01       0.0       0.0                          
+    0:03:49   33714.0      0.01       0.0       0.0                          
+    0:03:49   33714.0      0.01       0.0       0.0                          
+    0:03:49   33714.0      0.01       0.0       0.0                          
+    0:03:49   33714.0      0.01       0.0       0.0                          
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:28:59 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: A_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sum_reg_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.20       0.20
+  A_reg_reg[0]/CLK (DFFSR)                 0.00       0.20 r
+  A_reg_reg[0]/Q (DFFSR)                   0.52       0.72 f
+  U24/Y (BUFX4)                            0.23       0.95 f
+  U23/Y (XNOR2X1)                          0.18       1.13 f
+  U25/Y (NAND2X1)                          0.14       1.28 r
+  U29/Y (NAND2X1)                          0.08       1.36 f
+  U31/Y (INVX1)                            0.10       1.46 r
+  U40/Y (AOI21X1)                          0.16       1.61 f
+  U35/Y (MUX2X1)                           0.22       1.84 r
+  sum_reg_reg[3]/D (DFFSR)                 0.00       1.84 r
+  data arrival time                                   1.84
+
+  clock clk (rise edge)                    2.35       2.35
+  clock network delay (ideal)              0.20       2.55
+  clock uncertainty                       -0.50       2.05
+  sum_reg_reg[3]/CLK (DFFSR)               0.00       2.05 r
+  library setup time                      -0.22       1.83
+  data required time                                  1.83
+  -----------------------------------------------------------
+  data required time                                  1.83
+  data arrival time                                  -1.84
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.01
+
+ 
+****************************************
+Report : reference
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:29:16 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             osu05_stdcells
+                                288.000000       1    288.000000  
+AOI21X1            osu05_stdcells
+                                288.000000       3    864.000000  
+AOI22X1            osu05_stdcells
+                                360.000000       3   1080.000000  
+BUFX2              osu05_stdcells
+                                216.000000       1    216.000000  
+BUFX4              osu05_stdcells
+                                288.000000       1    288.000000  
+DFFSR              osu05_stdcells
+                               1584.000000      13  20592.000000  n
+INVX1              osu05_stdcells
+                                144.000000       6    864.000000  
+Writing verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/outputs/four_bit_select_adder.netlist'.
+1
+dc_shell> 
+dc_shell> source ../scripts/dc_quick.tcl
+Loading sverilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 26 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      A_reg_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine four_bit_select_adder line 85 in file
+                '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Cout_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     sum_reg_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db:four_bit_select_adder'
+Warning: Overwriting design file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db'. (DDB-24)
+Loaded 3 designs.
+Current design is 'four_bit_select_adder'.
+Current design is 'four_bit_select_adder'.
+
+  Linking design 'four_bit_select_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/rtl/four_bit_select_adder.db, etc
+  osu05_stdcells (library)    /home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db
+
+Warning: "The variable 'compile_high_effort_area_in_incremental' is supported in DC NXT only. Ignoring this setting." (OPT-1726)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'full_adder_0'
+  Processing 'two_bit_adder_0'
+  Processing 'four_bit_select_adder'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Ungrouping hierarchy lower_adder. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_1/fa0. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa1. (OPT-772)
+Information: Ungrouping hierarchy upper_adder_0/fa0. (OPT-772)
+Information: Ungrouping hierarchy lower_adder/fa1. (OPT-772)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 8)
+  Mapping Optimization (Phase 9)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:04:10   34011.0      0.00       0.0       0.0                          
+    0:04:10   34011.0      0.00       0.0       0.0                          
+    0:04:10   34011.0      0.00       0.0       0.0                          
+    0:04:10   34011.0      0.00       0.0       0.0                          
+    0:04:10   34011.0      0.00       0.0       0.0                          
+    0:04:10   33795.0      0.01       0.0       0.0                          
+    0:04:10   33723.0      0.03       0.0       0.0                          
+    0:04:10   33579.0      0.02       0.0       0.0                          
+    0:04:10   33579.0      0.00       0.0       0.0                          
+    0:04:10   33579.0      0.00       0.0       0.0                          
+    0:04:10   33579.0      0.00       0.0       0.0                          
+    0:04:10   33579.0      0.00       0.0       0.0                          
+    0:04:10   33579.0      0.00       0.0       0.0                          
+    0:04:10   33579.0      0.00       0.0       0.0                          
+    0:04:10   33579.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:04:10   33579.0      0.00       0.0       0.0                          
+    0:04:10   33579.0      0.00       0.0       0.0                          
+    0:04:10   33579.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:04:10   33579.0      0.00       0.0       0.0                          
+    0:04:10   33579.0      0.00       0.0       0.0                          
+    0:04:10   33147.0      0.00       0.0       0.0                          
+    0:04:10   33147.0      0.00       0.0       0.0                          
+    0:04:10   33147.0      0.00       0.0       0.0                          
+    0:04:10   33147.0      0.00       0.0       0.0                          
+    0:04:10   33147.0      0.00       0.0       0.0                          
+    0:04:10   33147.0      0.00       0.0       0.0                          
+    0:04:10   33147.0      0.00       0.0       0.0                          
+    0:04:10   33147.0      0.00       0.0       0.0                          
+    0:04:10   33147.0      0.00       0.0       0.0                          
+    0:04:10   33147.0      0.00       0.0       0.0                          
+    0:04:10   33147.0      0.00       0.0       0.0                          
+Loading db file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/work/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:29:20 2023
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: A_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sum_reg_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.20       0.20
+  A_reg_reg[0]/CLK (DFFSR)                 0.00       0.20 r
+  A_reg_reg[0]/Q (DFFSR)                   0.52       0.72 f
+  U27/Y (BUFX4)                            0.23       0.95 f
+  U32/Y (XNOR2X1)                          0.18       1.13 f
+  U49/Y (NAND2X1)                          0.14       1.28 r
+  U28/Y (AND2X2)                           0.18       1.46 r
+  U67/Y (AOI21X1)                          0.16       1.62 f
+  U68/Y (MUX2X1)                           0.22       1.84 r
+  sum_reg_reg[3]/D (DFFSR)                 0.00       1.84 r
+  data arrival time                                   1.84
+
+  clock clk (rise edge)                    2.36       2.36
+  clock network delay (ideal)              0.20       2.56
+  clock uncertainty                       -0.50       2.06
+  sum_reg_reg[3]/CLK (DFFSR)               0.00       2.06 r
+  library setup time                      -0.22       1.84
+  data required time                                  1.84
+  -----------------------------------------------------------
+  data required time                                  1.84
+  data arrival time                                  -1.84
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+ 
+****************************************
+Report : reference
+Design : four_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:29:24 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             osu05_stdcells
+                                288.000000       2    576.000000  
+AOI21X1            osu05_stdcells
+                                288.000000       3    864.000000  
+AOI22X1            osu05_stdcells
+                                360.000000       3   1080.000000  
+BUFX2              osu05_stdcells
+                                216.000000       1    216.000000  
+BUFX4              osu05_stdcells
+                                288.000000       1    288.000000  
+DFFSR              osu05_stdcells
+                               1584.000000      13  20592.000000  n
+INVX1              osu05_stdcells
+                                144.000000       5    720.000000  
+INVX2              osu05_stdcells
+                                144.000000       9   1296.000000  
+MUX2X1             osu05_stdcells
+                                432.000000       1    432.000000  
+NAND2X1            osu05_stdcells
+                                216.000000       5   1080.000000  
+NOR2X1             osu05_stdcells
+                                216.000000       2    432.000000  
+OAI21X1            osu05_stdcells
+                                207.000000       5   1035.000000  
+XNOR2X1            osu05_stdcells
+                                504.000000       3   1512.000000  
+XOR2X1             osu05_stdcells
+                                504.000000       6   3024.000000  
+-----------------------------------------------------------------------------
+Total 14 references                                 33147.000000
+Writing verilog file '/home/amaso/common/Documents/ECE527/527_Project2/DCandPT/syn/outputs/four_bit_select_adder.netlist'.
+1
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> exit
+
+Memory usage for this session 74 Mbytes.
+Memory usage for this session including child processes 74 Mbytes.
+CPU usage for this session 7 seconds ( 0.00 hours ).
+Elapsed time for this session 356 seconds ( 0.10 hours ).
+
+Thank you...
+

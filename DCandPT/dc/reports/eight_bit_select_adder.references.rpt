@@ -1,0 +1,54 @@
+ 
+****************************************
+Report : reference
+Design : eight_bit_select_adder
+Version: Q-2019.12-SP3
+Date   : Thu Nov 23 15:40:44 2023
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X2             osu05_stdcells
+                                288.000000       2    576.000000  
+AOI21X1            osu05_stdcells
+                                288.000000       3    864.000000  
+AOI22X1            osu05_stdcells
+                                360.000000       3   1080.000000  
+BUFX2              osu05_stdcells
+                                216.000000       1    216.000000  
+BUFX4              osu05_stdcells
+                                288.000000       1    288.000000  
+DFFSR              osu05_stdcells
+                               1584.000000      48  76032.000000  n
+FAX1               osu05_stdcells
+                               1080.000000       1   1080.000000  r
+INVX1              osu05_stdcells
+                                144.000000       5    720.000000  
+INVX2              osu05_stdcells
+                                144.000000      32   4608.000000  
+MUX2X1             osu05_stdcells
+                                432.000000       8   3456.000000  
+NAND2X1            osu05_stdcells
+                                216.000000      15   3240.000000  
+NOR2X1             osu05_stdcells
+                                216.000000       2    432.000000  
+OAI21X1            osu05_stdcells
+                                207.000000      18   3726.000000  
+XNOR2X1            osu05_stdcells
+                                504.000000       5   2520.000000  
+XOR2X1             osu05_stdcells
+                                504.000000      19   9576.000000  
+-----------------------------------------------------------------------------
+Total 15 references                                 108414.000000
+1
