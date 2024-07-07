@@ -53,7 +53,7 @@ The project involves designing a 4-bit and an 8-bit pipelined carry select adder
 
 This project provided hands-on experience with Verilog design, synthesis using Design Compiler, and static timing analysis using Prime Time. The pipelined carry select adder design demonstrates the trade-offs between complexity, speed, and area in digital design.
 
-## References
+## Documentation
 
 - [Project 2 Assignment](./docs/Project_2_Assignment.pdf)
 - [Project 2 Report](./docs/Project_2_Report.pdf)
